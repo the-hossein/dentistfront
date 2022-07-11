@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Header from "../src/components/header/Header";
 import Register from "../src/components/register/Register";
+import { BasicSection } from "../styles/globalStyleComponents";
 
 export default function registerPage() {
   return (
@@ -14,7 +15,9 @@ export default function registerPage() {
         <Header />
       </header>
       <main>
-        <Register />
+        <BasicSection>
+          <Register />
+        </BasicSection>
       </main>
     </div>
   );
