@@ -1,6 +1,7 @@
 import Head from "next/head";
 import Image from "next/image";
 import Header from "../src/components/header/Header";
+import Landing from "../src/components/landing/Landing";
 import { BasicSection } from "../styles/globalStyleComponents";
 
 export default function Home() {
@@ -13,9 +14,7 @@ export default function Home() {
       </Head>
       <Header />
       <main>
-        <BasicSection>
-          hello
-        </BasicSection>
+        <Landing />
       </main>
     </div>
   );
