@@ -5,27 +5,22 @@ import {
   UlMenu
 } from "../../../styles/globalStyleComponents";
 import ButtonRound from "../../tools/buttonRound/ButtonRound";
+import Link from "next/link";
 
 const Header = ({ path }) => {
-
-  const setActive = (event, target) => {
-    const text = event.target.innerText;
-    if(text === target){
-      console.log("worked")
-      return "active"
-    }else{
-      console.log("not worked")
-    }
-  }
 
   return (
     <HeaderBasic>
       <Navbar>
         <UlMenu>
-          <li className={path === "Home" && "active"} >Home</li>
+          <Link href="/">
+            <a><li className={path === "Home" && "active"} >Home</li></a>
+          </Link>
           <li className={path === "Service" && "active"}>Service</li>
           <li className={path === "Samples" && "active"}>Samples</li>
-          <li className={path === "About" && "active"}>About Us</li>
+          <Link href="/aboutus">
+            <a><li className={path === "About" && "active"}>About Us</li></a>
+          </Link>
           <li className={path === "Contact" && "active"}>Contact</li>
         </UlMenu>
       </Navbar>
