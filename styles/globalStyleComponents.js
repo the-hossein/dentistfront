@@ -34,6 +34,9 @@ export const UlMenu = styled.ul`
     li{
         cursor: pointer;
     }
+    .active{
+        font-weight:700;
+    }
 `;
 
 export const ButtonRoundBasic = styled.button`
