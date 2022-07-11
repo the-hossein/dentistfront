@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const ArrowText = styled.div`
-    width: 40%;
+    width: 50%;
     display: flex;
     flex-direction: column;
     justify-content: center;

@@ -1,11 +1,16 @@
 import styled from "styled-components";
 export const RowJustifyBetween = styled.div`
-  width: 100%;
+  width:${props => props.width ? props.width : "100%"};
   display: flex;
   justify-content: space-between;
   align-items: ${props => props.align ? props.align : "center"};
 `;
 
+export const RowJustifyStart = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+`;
 
 export const HeaderBasic = styled.header`
     padding: 1rem 3rem;
@@ -96,10 +101,10 @@ export const MainDiv = styled.div`
         margin-bottom: 2rem;
         color: var(--whitePen);
         h1{
-            font-size: 55pt;
+            font-size: 70pt;
         }
         h2{
-            font-size: 50pt;
+            font-size: 60pt;
         }
     }
 

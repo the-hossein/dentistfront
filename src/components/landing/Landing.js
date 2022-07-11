@@ -17,7 +17,7 @@ const Landing = () => {
             <h2>Dental Group</h2>
             <p>slogan slogan slogan slogan slogan slogan slogan slogan</p>
           </div> 
-          <RowJustifyBetween>
+          <RowJustifyBetween align={"flex-start"}>
             <ButtonRound
               text={"Make Appointment"}
               width={"205px"}
@@ -27,7 +27,7 @@ const Landing = () => {
               <ArrowLeftIcon fontSize="large" />
             </ArrowText>
           </RowJustifyBetween>
-          <RowJustifyBetween>
+          <RowJustifyBetween align={"flex-end"}>
             <Simple />
             <ArrowText reverse>
               <h2>Dental Advice</h2>
