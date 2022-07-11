@@ -21,7 +21,9 @@ const Header = ({ path }) => {
           <Link href="/aboutus">
             <a><li className={path === "About" && "active"}>About Us</li></a>
           </Link>
-          <li className={path === "Contact" && "active"}>Contact</li>
+          <Link href='/contact'>
+            <a><li className={path === "Contact" && "active"}>Contact</li></a>
+          </Link>
         </UlMenu>
       </Navbar>
       <ButtonRound text={"Login"} />
