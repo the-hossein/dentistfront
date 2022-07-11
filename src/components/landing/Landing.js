@@ -2,8 +2,10 @@ import React from 'react'
 
 const Landing = () => {
   return (
-    <div>Landing</div>
+    <section>
+      
+    </section>
   )
 }
 
-export default Landingfc
+export default Landing
