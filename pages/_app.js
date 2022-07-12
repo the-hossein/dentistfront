@@ -34,7 +34,9 @@ function MyApp({ Component, pageProps }) {
     <Provider store={store}>
       <Component {...pageProps} />
       <ToastContainer />
+    
     </Provider>
+    
   );
 }
 
