@@ -3,6 +3,7 @@ export const RegisterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--mainColor);
   .registerImg {
     width: 40%;
     span {
@@ -24,6 +25,16 @@ export const RegisterContainer = styled.div`
     }
     button {
       margin: 0 0 0 1.5rem;
+    }
+    .socialMedia {
+      margin-top: 6rem;
+      svg {
+        cursor: pointer;
+        color: var(--whitePen);
+        &:hover {
+          color: var(--bluePen);
+        }
+      }
     }
   }
 `;

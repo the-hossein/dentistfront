@@ -7,4 +7,16 @@ export const SecondlyButtonStyle = styled.button`
   height: 50px;
   color: var(--darkPen);
   cursor: pointer;
+  &:hover {
+    background-color: var(--bluePen);
+    color: var(--whitePen);
+  }
+  &:disabled{
+      opacity: 50%;
+  }
+  &:disabled:hover {
+    background-color: var(--whitePen);
+  color: var(--darkPen);
+   
+  }
 `;

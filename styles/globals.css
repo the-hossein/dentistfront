@@ -8,7 +8,7 @@
    --primaryBtnRadius: 30px;
    --secondlyBtnRadius: 12px;
    --inputRadius: 12px;
-   --sm-font: 7pt;
+   --sm-font: 8pt;
 
    --xs-font: 10pt;
    --md-font: 12pt;
@@ -36,6 +36,10 @@
    box-sizing: border-box;
    margin: 0;
    padding: 0;
+ }
+
+ button {
+   transition: all 0.3s ease-in !important;
  }
 
  .Toastify__toast,
