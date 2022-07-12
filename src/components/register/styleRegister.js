@@ -3,6 +3,7 @@ export const RegisterContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background-color: var(--mainColor);
   .registerImg {
     width: 40%;
     span {

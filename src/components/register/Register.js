@@ -65,7 +65,7 @@ const Register = () => {
     <RegisterContainer>
       <div className="registreForm">
         <h5>Phone number</h5>
-        <RowJustifyBetween className="mb">
+        <RowJustifyBetween align="normal"  className="mb">
           <Input
             placeHolder="Enter Phone number"
             valiStatus={errors.number}
@@ -79,7 +79,7 @@ const Register = () => {
           <SecondlyBtn text="Send  Code" onClick={(e) => sendCodeHandler()} />
         </RowJustifyBetween>
 
-        <RowJustifyBetween className="mb">
+        <RowJustifyBetween  align="normal" className="mb">
           <Input
             placeHolder="Enter Code Here"
             valiStatus={errors.code}

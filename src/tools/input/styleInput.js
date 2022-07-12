@@ -12,6 +12,7 @@ export const InputContainer = styled.div`
 width: 100%;
   span {
     color: var(--redPen);
+    font-size: var(--xs-font);
     display: inline-block;
     margin-top: 0.3rem;
   }
