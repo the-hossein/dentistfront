@@ -76,8 +76,9 @@ const Register = () => {
             legth={11}
             keyDown={(e) => TypeNumber(e)}
           />
-          <SecondlyBtn text="Send Code" onClick={(e) => sendCodeHandler()} />
+          <SecondlyBtn text="Send  Code" onClick={(e) => sendCodeHandler()} />
         </RowJustifyBetween>
+
         <RowJustifyBetween className="mb">
           <Input
             placeHolder="Enter Code Here"
