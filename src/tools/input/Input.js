@@ -11,7 +11,8 @@ const Input = ({
   name,
   keyDown,
   legth,
-  onFocus
+  onFocus,
+  disabled
 }) => {
   return (
     <InputContainer>
@@ -24,6 +25,7 @@ const Input = ({
         onKeyDown={keyDown}
         maxLength={legth}
         onFocus={onFocus}
+        disabled={disabled}
       />
       {valiStatus && <span>{textError}</span>}
     </InputContainer>

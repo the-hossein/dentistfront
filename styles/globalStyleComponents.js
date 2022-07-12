@@ -69,8 +69,9 @@ export const ButtonRoundBasic = styled.button`
 
 export const BasicSection = styled.section`
   padding: 2rem 3rem;
-  min-height: 85vh;
+  min-height: ${props=>props.footer===true?"65vh":"85vh"};
   background-color: var(--mainColor);
+
 `;
 
 export const MainDiv = styled.div`

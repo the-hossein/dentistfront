@@ -1,6 +1,11 @@
 const initializeState = {
   phoneNumber: "",
-  code: ""
+  code: "",
+  phoneLoading: false,
+  codeLoading: false,
+  loginStatus: false,
+  userDataLoader: false,
+  userId: ""
 };
 
 const registerReducer = (state = initializeState, action) => {
@@ -10,7 +15,37 @@ const registerReducer = (state = initializeState, action) => {
         ...state,
         [action.e.target.name]: action.e.target.value
       };
-
+    case "PRELOAD_REGISTER":
+      return {
+        ...state,
+        [action.name]: true
+      };
+    case "PAUSE_PRELOAD_REGISTER":
+      return {
+        ...state,
+        [action.name]: false
+      };
+    case "LOGIN_STATUS_TRUE":
+      return {
+        ...state,
+        loginStatus: true
+      };
+    case "LOGIN_STATUS_FALSE":
+      return {
+        ...state,
+        loginStatus: false
+      };
+    case "USER_DATA_LOADER":
+      return {
+        ...state,
+        userDataLoader: true
+      };
+    case "USER_DATA":
+      return {
+        ...state,
+        userDataLoader: false,
+        userId: action.user.user.id
+      };
     default:
       return state;
   }
