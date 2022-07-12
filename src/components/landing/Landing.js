@@ -6,6 +6,7 @@ import ButtonRound from '../../tools/buttonRound/ButtonRound';
 import { ArrowText } from './style';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import Simple from '../../tools/simple/Simple';
+import Link from 'next/link';
 
 const Landing = () => {
   return (
@@ -22,17 +23,21 @@ const Landing = () => {
               text={"Make Appointment"}
               width={"205px"}
             />
+            <Link href='samples' replace>
             <ArrowText>
               <h2>Work Sample</h2>
               <ArrowLeftIcon fontSize="large" />
             </ArrowText>
+            </Link>
           </RowJustifyBetween>
           <RowJustifyBetween align={"flex-end"}>
             <Simple />
+            <Link href='/dentaladvince' replace>
             <ArrowText reverse>
               <h2>Dental Advice</h2>
               <ArrowLeftIcon fontSize="large" />
             </ArrowText>
+            </Link>
           </RowJustifyBetween>
         </div>
         <div className='child banner'>

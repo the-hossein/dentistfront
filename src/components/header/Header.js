@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import {
   HeaderBasic,
+  IconDiv,
   Navbar,
   UlMenu
 } from "../../../styles/globalStyleComponents";
@@ -19,6 +20,8 @@ import {
 import { notify } from "../../tools/toast/toast";
 import { useRouter } from "next/router";
 import FullScreenLoader from "../../tools/loader/FullScreenLoader";
+import Image from 'next/image';
+import Logo from '../../../public/Assets/images/kremLogo.png';
 
 
 const Header = ({ path }) => {
@@ -110,31 +113,36 @@ const Header = ({ path }) => {
   return (
     <HeaderBasic>
       {state.userDataLoader && <FullScreenLoader />}
+      <IconDiv>
+        <Image src={Logo} alt="logo" />
+      </IconDiv>
       <Navbar>
         <UlMenu>
           <Link href="/">
             <a><li className={path === "Home" && "active"} >
               {t("home")}</li></a>
           </Link>
-          <li className={path === "Service" && "active"}>Service</li>
+          <Link href="service">
+            <a><li className={path === "Service" && "active"}>{t("service")}</li></a>
+          </Link>
           <Link href='/samples'>
-            <a><li className={path === "Samples" && "active"}>Samples</li></a>
+            <a><li className={path === "Samples" && "active"}>{t("samples")}</li></a>
           </Link>
           <Link href="/aboutus">
             <a>
-              <li className={path === "About" && "active"}>About Us</li>
+              <li className={path === "About" && "active"}>{t("aboutus")}</li>
             </a>
           </Link>
           <Link href="/contact">
             <a>
-              <li className={path === "Contact" && "active"}>Contact</li>
+              <li className={path === "Contact" && "active"}>{t("contact")}</li>
             </a>
           </Link>
           <li>
             {
               lang === "en" ? 
-              <span onClick={() => changeLng("fa")}>En</span> :
-              <span onClick={() => changeLng("en")}>Fa</span> 
+              <span onClick={() => changeLng("fa")}>Fa</span> :
+              <span onClick={() => changeLng("en")}>En</span> 
             }
           </li>
         </UlMenu>
@@ -142,7 +150,7 @@ const Header = ({ path }) => {
       <Link href={state.loginStatus ? "/" : "/register"}>
         <a>
           <ButtonRound
-            text={state.loginStatus ? "logout" : "Login"}
+            text={state.loginStatus ? t("logout") : t("login")}
             status={state.loginStatus ? "logout" : "Login"}
             click={state.loginStatus ? logoutHandler : (e) => {}}
           />

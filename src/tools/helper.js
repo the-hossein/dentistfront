@@ -53,3 +53,8 @@ export const validationPhone = (phoneNum) => {
       };
     return fixNumbers(e);
   };
+
+  export const validationName = (str) => {
+    const newStr = str.trim();
+    return (newStr === "") ? true : false
+  }

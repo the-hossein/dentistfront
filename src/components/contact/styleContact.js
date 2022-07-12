@@ -14,7 +14,7 @@ export const DivContainer = styled.div`
     .text{
         width: 50%;
         /* height: 84vh;     */
-        padding: 3rem;
+        padding: 3rem 7rem 3rem 5rem;
         color: var(--whitePen);
         display: flex;
         flex-direction: column;
@@ -36,30 +36,24 @@ export const DivContainer = styled.div`
             padding: 0 0 0 1rem;
         }
         input{
-            border-radius: var(--secondlyBtnRadius);
-            background-color: var(--whitePen);
             color: var(--darkPen);
-            padding: 1rem 2rem;
-            outline: none;
-            border: none;
-            font-size: 12pt;
             margin-bottom: 1rem;
         }
         button{
-            width: 30%;
-            min-height: 50px;
-            background-color: var(--whitePen);
+            /* width: 30%; */
+            /* min-height: 50px; */
+            /* background-color: var(--whitePen);
             color: var(--darkPen);
-            border-radius: var(--secondlyBtnRadius);
+            border-radius: var(--secondlyBtnRadius); */
             float: right !important;
-            outline: none;
+            /* outline: none;
             border: none;
-            cursor: pointer;
-            transition: all .3s ease-in-out;
+            cursor: pointer; */
+            /* transition: all .3s ease-in-out;
             &:hover{
                 background-color: var(--bluePen);
                 color: var(--whitePen);
-            }
+            } */
         }
 
         svg{
