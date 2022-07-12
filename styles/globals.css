@@ -42,6 +42,22 @@
    transition: all 0.3s ease-in !important;
  }
 
+ #datePicker {
+   display: none;
+ }
+
+ .JDatePicker {
+   width: 100% !important;
+   background-color: var(--backWhite) !important;
+   direction: rtl;
+ }
+
+ .JDatePicker .JDheader .right,
+ .JDatePicker .JDheader .left {
+
+   width: 100% !important;
+ }
+
  .Toastify__toast,
  .Toastify__toast>div {
    font-family: var(--fontFamily) !important;

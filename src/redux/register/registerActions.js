@@ -2,8 +2,8 @@ import callApi from "../../api/callApi";
 import { BASE_URL, CHECK_OTP, GET_PROFILE, LOGIN_SIGNUP } from "../../api/urls";
 import { notify } from "../../tools/toast/toast";
 if (typeof window !== "undefined") {
-    var ls = localStorage.getItem("userToken");
-  }
+  var ls = localStorage.getItem("userToken");
+}
 export const fillInputRegistr = (e) => {
   return {
     type: "FILL_INPUT_REGISTER",
@@ -142,6 +142,11 @@ const userDataLoader = () => {
     type: "USER_DATA_LOADER"
   };
 };
+export const logout = () => {
+  return {
+    type: "LOGOUT"
+  };
+};
 export const getProfile = () => {
   return (dispatch) => {
     dispatch(userDataLoader());
@@ -157,17 +162,16 @@ export const getProfile = () => {
       var raw = JSON.stringify({
         phonenumber: `${phone}`
       });
-  
-        const user = await callApi(
-          BASE_URL + GET_PROFILE,
-          raw,
-          myHeaders,
-          "POST"
-        );
-        if (user[0].code === 200 && user[0].data !== null) {
-          dispatch(userData(user[0].data));
-        }
-  
+
+      const user = await callApi(
+        BASE_URL + GET_PROFILE,
+        raw,
+        myHeaders,
+        "POST"
+      );
+      if (user[0].code === 200 && user[0].data !== null) {
+        dispatch(userData(user[0].data));
+      }
     };
     profile();
   };
