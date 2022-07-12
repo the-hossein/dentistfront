@@ -1,8 +1,8 @@
 import React from "react";
 import { SecondlyButtonStyle } from "./styleSecondlyBtn";
 
-const SecondlyBtn = () => {
-  return <SecondlyButtonStyle></SecondlyButtonStyle>;
+const SecondlyBtn = ({ text, onClick }) => {
+  return <SecondlyButtonStyle onClick={onClick}>{text}</SecondlyButtonStyle>;
 };
 
 export default SecondlyBtn;
