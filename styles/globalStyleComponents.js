@@ -36,6 +36,7 @@ export const Navbar = styled.nav`
 `;
 
 export const UlMenu = styled.ul`
+direction: var(--dirRi);
   width: 100%;
   list-style: none;
   display: flex;

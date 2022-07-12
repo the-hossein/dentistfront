@@ -6,7 +6,11 @@ import {
 } from "../../../styles/globalStyleComponents";
 import ButtonRound from "../../tools/buttonRound/ButtonRound";
 import Link from "next/link";
-import { useDispatch, useSelector } from "react-redux";
+import { useTranslation } from "react-i18next";
+import { useSelector, useDispatch } from "react-redux";
+import Cookies from "js-cookie";
+import i18next from "i18next";
+import { changeLang } from '../../redux/lang/langAction';
 import {
   getProfile,
   loginStatusFalse,
@@ -16,14 +20,62 @@ import { notify } from "../../tools/toast/toast";
 import { useRouter } from "next/router";
 import FullScreenLoader from "../../tools/loader/FullScreenLoader";
 
+
 const Header = ({ path }) => {
+  const lang = useSelector(state => state.stateLang.lng);
+  const dispatch = useDispatch();
   const router = useRouter();
   const state = useSelector((state) => state.stateRegister);
-  const dispatch = useDispatch();
+
+  const { t } = useTranslation();
+
   if (typeof window !== "undefined") {
     var root = document.documentElement;
     var ls = localStorage.getItem("userToken");
   }
+  const rightDir = () => {
+    root.style.setProperty("--dirRi", "rtl");
+  };
+  const leftDir = () => {
+    root.style.setProperty("--dirRi", "ltr");
+  };
+
+  const changeLng = (lng) => {
+    dispatch(changeLang(lng));
+    i18next.changeLanguage(lng);
+    if (lng === "en") {
+      leftDir();
+    } else {
+      rightDir();
+    }
+  };
+
+  useEffect(()=> {
+    dispatch(changeLang(Cookies.get("i18next")));
+    
+    const lngCookie = Cookies.get("i18next");
+
+    if (lngCookie === undefined) {
+      dispatch(changeLang("fa"));
+      i18next.changeLanguage("fa");
+      rightDir();
+    }
+    if (lngCookie === "en") {
+      leftDir();
+    } else {
+      rightDir();
+    }
+
+  }, [])
+
+
+// const Header = ({ path }) => {
+  
+  // const dispatch = useDispatch();
+  // if (typeof window !== "undefined") {
+  //   var root = document.documentElement;
+    
+  // }
 
   useEffect(() => {
     if (ls !== null) {
@@ -61,12 +113,13 @@ const Header = ({ path }) => {
       <Navbar>
         <UlMenu>
           <Link href="/">
-            <a>
-              <li className={path === "Home" && "active"}>Home</li>
-            </a>
+            <a><li className={path === "Home" && "active"} >
+              {t("home")}</li></a>
           </Link>
           <li className={path === "Service" && "active"}>Service</li>
-          <li className={path === "Samples" && "active"}>Samples</li>
+          <Link href='/samples'>
+            <a><li className={path === "Samples" && "active"}>Samples</li></a>
+          </Link>
           <Link href="/aboutus">
             <a>
               <li className={path === "About" && "active"}>About Us</li>
@@ -77,6 +130,13 @@ const Header = ({ path }) => {
               <li className={path === "Contact" && "active"}>Contact</li>
             </a>
           </Link>
+          <li>
+            {
+              lang === "en" ? 
+              <span onClick={() => changeLng("fa")}>En</span> :
+              <span onClick={() => changeLng("en")}>Fa</span> 
+            }
+          </li>
         </UlMenu>
       </Navbar>
       <Link href={state.loginStatus ? "/" : "/register"}>
