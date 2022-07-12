@@ -39,7 +39,7 @@ const Appointment = () => {
         myHeaders,
         "GET"
       );
-      dispatch(getTime(testRes[0].data))
+      dispatch(getTime(testRes[0].data));
     };
     testapi();
   };
