@@ -5,17 +5,23 @@ import {
   UlMenu
 } from "../../../styles/globalStyleComponents";
 import ButtonRound from "../../tools/buttonRound/ButtonRound";
+import Link from "next/link";
 
-const Header = () => {
+const Header = ({ path }) => {
+
   return (
     <HeaderBasic>
       <Navbar>
         <UlMenu>
-          <li>Home</li>
-          <li>Service</li>
-          <li>Samples</li>
-          <li>About Us</li>
-          <li>Contact</li>
+          <Link href="/">
+            <a><li className={path === "Home" && "active"} >Home</li></a>
+          </Link>
+          <li className={path === "Service" && "active"}>Service</li>
+          <li className={path === "Samples" && "active"}>Samples</li>
+          <Link href="/aboutus">
+            <a><li className={path === "About" && "active"}>About Us</li></a>
+          </Link>
+          <li className={path === "Contact" && "active"}>Contact</li>
         </UlMenu>
       </Navbar>
       <ButtonRound text={"Login"} />

@@ -15,9 +15,9 @@ export default function registerPage() {
         <Header />
       </header>
       <main>
-        <BasicSection>
+
           <Register />
-        </BasicSection>
+     
       </main>
     </div>
   );

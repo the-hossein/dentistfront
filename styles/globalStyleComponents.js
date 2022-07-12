@@ -1,7 +1,15 @@
 import styled from "styled-components";
 export const RowJustifyBetween = styled.div`
+  width:${props => props.width ? props.width : "100%"};
   display: flex;
   justify-content: space-between;
+  align-items: ${props => props.align ? props.align : "center"};
+`;
+
+export const RowJustifyStart = styled.div`
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 `;
 
 export const HeaderBasic = styled.header`
@@ -21,18 +29,82 @@ export const Navbar = styled.nav`
 `;
 
 export const UlMenu = styled.ul`
-  width: 100%;
-  list-style: none;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--darkPen);
-  li {
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: var(--darkPen);
+    li{
+        cursor: pointer;
+    }
+    .active{
+        font-weight:700;
+    }
+`;
+
+export const ButtonRoundBasic = styled.button`
+    min-width: ${props => props.width ? props.width : "135px"};
+    min-height: 55px;
+    background-color: var(--whitePen);
+    color: var(--darkPen);
+    border-radius: var(--primaryBtnRadius);
+    transition: all .3s ease-in;
+    border: none;
+    outline: none;
+    font-weight: 700;
     cursor: pointer;
-  }
+    &:hover{
+        background-color: var(--bluePen);
+        color: var(--whitePen);
+    }
 `;
 
 export const BasicSection = styled.section`
-  min-height: 85vh;
-  background-color: var(--mainColor);
+    padding: 2rem 3rem;
+    min-height: 85vh;
+    background-color: var(--mainColor);
+`;
+
+export const MainDiv = styled.div`
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .child{
+        width: 50%;
+        /* padding: 1rem; */
+    }
+    .banner{
+        img{
+            float: right;
+            height: 70vh;
+            border-top-left-radius: 50%;
+            border-top-right-radius: 50%;
+            border-bottom-right-radius: 50%;
+            transition: all .4s linear;
+            &:hover{
+                border-radius: 0;
+            }
+        }
+    }
+    .text{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: flex-start;
+    }
+    
+    .description{
+        margin-bottom: 2rem;
+        color: var(--whitePen);
+        h1{
+            font-size: 70pt;
+        }
+        h2{
+            font-size: 60pt;
+        }
+    }
+
 `;
