@@ -2,7 +2,9 @@ import styled from "styled-components";
 
 export const MainDiv = styled.div`
     /* width: 100%; */
+    direction: initial;
     display: flex;
+    flex-direction: ${props => props.lang==="fa" ? "row-reverse" : "row"};
     justify-content: center;
     align-items: center;
     div{

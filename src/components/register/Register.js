@@ -23,9 +23,12 @@ import CircularProgress from "@mui/material/CircularProgress";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
+import { useTranslation } from "react-i18next";
 const Register = () => {
+  const { t } = useTranslation();
   const router = useRouter();
   const state = useSelector((state) => state.stateRegister);
+  const lang = useSelector((state) => state.stateLang.lng);
   const [errors, setErrors] = useState({});
   const [errorsCode, setErrorsCode] = useState({});
   const [focus, setFocus] = useState({});
@@ -58,13 +61,13 @@ const Register = () => {
     setFocus({ ...focus, [e.target.name]: true });
   };
   return (
-    <RegisterContainer>
+    <RegisterContainer lang={lang}>
       <div className="registreForm">
-        <h5>Phone number</h5>
+        <h5>{t("phoneNumber")}</h5>
         <RowJustifyBetween align="normal" className="mb">
           {console.log(errors.number && focus.phoneNumber)}
           <Input
-            placeHolder="Enter Phone number"
+            placeHolder={t("plcNumberPhone")}
             valiStatus={errors.number && focus.phoneNumber}
             textError={errors.number}
             value={state.phoneNumber}
@@ -81,7 +84,7 @@ const Register = () => {
                   sx={{ width: "27px !important", height: "27px !important" }}
                 />
               ) : (
-                "Send  Code"
+                t("SendCode")
               )
             }
             onClick={(e) => sendCodeHandler()}
@@ -90,7 +93,7 @@ const Register = () => {
 
         <RowJustifyBetween align="normal" className="mb">
           <Input
-            placeHolder="Enter Code Here"
+            placeHolder={t("enterCodeHere")}
             valiStatus={errorsCode.code && focus.code}
             textError={errorsCode.code}
             value={state.code}
@@ -108,7 +111,7 @@ const Register = () => {
                   sx={{ width: "27px !important", height: "27px !important" }}
                 />
               ) : (
-                "Enter"
+                t("enter")
               )
             }
             onClick={codeHandler}

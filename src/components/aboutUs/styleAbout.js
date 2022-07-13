@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const DivMain = styled.div`
+    direction: var(--dirRi);
     width: 100%;
     height: 100%;
     display: flex;
@@ -42,14 +43,34 @@ export const DivMain = styled.div`
         
         width: 40%;
         img{
-            float: right !important;
+            float: var(--floatRi) !important;
             height: 70vh !important;
-            border-top-left-radius: 50% 30%;
+            border-top-left-radius: ${props => props.lang === "fa" ? "" : "50% 30%" };
+            border-top-right-radius:${props => props.lang === "fa" ? "50% 30%" : "" } ;
             transition: all .3s linear;
 
             &:hover{
                 border-radius: unset;
             }
+        }
+    }
+
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
+        /* padding: 1rem; */
+        .pic{
+            width: 100%;
+            img{
+                width: 90%;
+                object-fit: cover;
+            }
+        }
+        .text{
+            margin-top: 1rem;
+            width: 100%;
+        }
+        .parent-col{
+            width: 100%;
         }
     }
 `;

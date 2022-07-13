@@ -5,7 +5,7 @@ import { FooterContainer } from "./styleFooter";
 const Footer = () => {
   return (
     <FooterContainer>
-      <RowJustifyBetween>
+      <RowJustifyBetween footer>
         <div>
           <h6>Phone 1: 00000000</h6>
           <h6>Phone 1: 00000000</h6>

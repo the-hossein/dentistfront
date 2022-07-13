@@ -1,6 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   HeaderBasic,
+  Humber,
+  IconDiv,
+  MenuSider,
   Navbar,
   UlMenu
 } from "../../../styles/globalStyleComponents";
@@ -20,6 +23,8 @@ import {
 import { notify } from "../../tools/toast/toast";
 import { useRouter } from "next/router";
 import FullScreenLoader from "../../tools/loader/FullScreenLoader";
+import Image from 'next/image';
+import Logo from '../../../public/Assets/images/kremLogo.png';
 
 
 const Header = ({ path }) => {
@@ -27,6 +32,8 @@ const Header = ({ path }) => {
   const dispatch = useDispatch();
   const router = useRouter();
   const state = useSelector((state) => state.stateRegister);
+
+  const [open, setOpen] = useState(false)
 
   const { t } = useTranslation();
 
@@ -36,9 +43,13 @@ const Header = ({ path }) => {
   }
   const rightDir = () => {
     root.style.setProperty("--dirRi", "rtl");
+    root.style.setProperty("--floatRi", "left");
+    root.style.setProperty("--floatLf", "right");
   };
   const leftDir = () => {
     root.style.setProperty("--dirRi", "ltr");
+    root.style.setProperty("--floatRi", "right");
+    root.style.setProperty("--floatLf", "left");
   };
 
   const changeLng = (lng) => {
@@ -66,8 +77,7 @@ const Header = ({ path }) => {
     } else {
       rightDir();
     }
-
-  }, [])
+  }, [lang])
 
 
 // const Header = ({ path }) => {
@@ -112,31 +122,70 @@ const Header = ({ path }) => {
   return (
     <HeaderBasic>
       {state.userDataLoader && <FullScreenLoader />}
+      <IconDiv>
+        <Image src={Logo} alt="logo" />
+      </IconDiv>
+      <Humber open={open} onClick={()=> setOpen(prevOpen=> !prevOpen)}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </Humber>
+      <MenuSider lang={lang} open={open}>
+        <Link href="/">
+            <a><li className={path === "Home" && "active"} >
+              {t("home")}</li></a>
+          </Link>
+          <Link href="service">
+            <a><li className={path === "Service" && "active"}>{t("service")}</li></a>
+          </Link>
+          <Link href='/samples'>
+            <a><li className={path === "Samples" && "active"}>{t("samples")}</li></a>
+          </Link>
+          <Link href="/aboutus">
+            <a>
+              <li className={path === "About" && "active"}>{t("aboutus")}</li>
+            </a>
+          </Link>
+          <Link href="/contact">
+            <a>
+              <li className={path === "Contact" && "active"}>{t("contact")}</li>
+            </a>
+          </Link>
+          <li>
+            {
+              lang === "en" ? 
+              <span onClick={() => changeLng("fa")}>Fa</span> :
+              <span onClick={() => changeLng("en")}>En</span> 
+            }
+          </li>
+      </MenuSider>
       <Navbar>
         <UlMenu>
           <Link href="/">
             <a><li className={path === "Home" && "active"} >
               {t("home")}</li></a>
           </Link>
-          <li className={path === "Service" && "active"}>Service</li>
+          <Link href="service">
+            <a><li className={path === "Service" && "active"}>{t("service")}</li></a>
+          </Link>
           <Link href='/samples'>
-            <a><li className={path === "Samples" && "active"}>Samples</li></a>
+            <a><li className={path === "Samples" && "active"}>{t("samples")}</li></a>
           </Link>
           <Link href="/aboutus">
             <a>
-              <li className={path === "About" && "active"}>About Us</li>
+              <li className={path === "About" && "active"}>{t("aboutus")}</li>
             </a>
           </Link>
           <Link href="/contact">
             <a>
-              <li className={path === "Contact" && "active"}>Contact</li>
+              <li className={path === "Contact" && "active"}>{t("contact")}</li>
             </a>
           </Link>
           <li>
             {
               lang === "en" ? 
-              <span onClick={() => changeLng("fa")}>En</span> :
-              <span onClick={() => changeLng("en")}>Fa</span> 
+              <span onClick={() => changeLng("fa")}>Fa</span> :
+              <span onClick={() => changeLng("en")}>En</span> 
             }
           </li>
         </UlMenu>
@@ -144,7 +193,7 @@ const Header = ({ path }) => {
       <Link href={state.loginStatus ? "/" : "/register"}>
         <a>
           <ButtonRound
-            text={state.loginStatus ? "logout" : "Login"}
+            text={state.loginStatus ? t("logout") : t("login")}
             status={state.loginStatus ? "logout" : "Login"}
             click={state.loginStatus ? logoutHandler : (e) => {}}
           />

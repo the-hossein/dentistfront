@@ -86,4 +86,7 @@ export function toPersianNum(num, dontTrim) {
 
   return res;
 }
-export default toPersianNum;
+export const validationName = (str) => {
+  const newStr = str.trim();
+  return newStr === "" ? true : false;
+};
