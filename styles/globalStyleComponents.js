@@ -93,7 +93,7 @@ export const MenuSider = styled.ul`
   background-color: var(--darkPen);
   list-style: none;
   padding: 2rem;
-  display: flex;
+  display: none;
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
@@ -108,12 +108,15 @@ export const MenuSider = styled.ul`
   .active{
     font-weight: 700;
   }
+  @media (max-width: 525px) {
+    display: flex;
+  }
 `;
 
 export const Humber = styled.div`
   display: none;
-  width: 45px;
-  height: 25px;
+  width: 27px;
+  height: 15px;
   /* display: flex; */
   flex-direction: column;
   justify-content: space-between;
@@ -124,10 +127,10 @@ export const Humber = styled.div`
   /* left: 30%; */
   div{
     border-radius: 10px;
-    width: 45px;
+    width: 27px;
     height: 3px;
     background-color :${props => props.open ? "var(--whitePen)" : "var(--darkPen)"};
-    transform-origin: 6.5px;
+    transform-origin: 4.5px;
     transition: all .3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     :nth-child(1){
       transform: ${props => props.open ? "rotateZ(45deg)" : ""};
