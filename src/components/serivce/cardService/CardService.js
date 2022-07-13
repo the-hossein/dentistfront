@@ -4,9 +4,9 @@ import picService from "../../../../public/Assets/images/s-1.png";
 import Image from 'next/image';
 
 
-const CardService = ({ id }) => {
+const CardService = ({ id, lang }) => {
     return (
-        <Card>
+        <Card lang={lang}>
             <Image src={picService} alt="service" />
             <div className='name'>
                 Service {id}

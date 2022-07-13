@@ -10,6 +10,7 @@ import { notify } from '../../tools/toast/toast';
 import { CircularProgress } from '@mui/material';
 import callApi from '../../api/callApi';
 import { BASE_URL, SET_DENTAL_ADVICE } from '../../api/urls';
+import { useSelector } from 'react-redux';
 
 
 const DentalAdvice = () => {
@@ -21,6 +22,8 @@ const DentalAdvice = () => {
     const [service, setService] = useState("");
 
     const [loader, setLoader] = useState(false);
+
+    const lang = useSelector(state => state.stateLang.lng);
 
     const { t } = useTranslation();
 
@@ -76,7 +79,7 @@ const DentalAdvice = () => {
 
     return (
         <MainSection>
-            <DivContainer>
+            <DivContainer lang={lang}>
                 <TextContainer>
                     <h1>{t("dentalAdvice")}</h1>
                     <p>{t("lorem20")}</p>

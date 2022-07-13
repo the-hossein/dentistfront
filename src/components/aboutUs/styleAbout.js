@@ -54,4 +54,23 @@ export const DivMain = styled.div`
             }
         }
     }
+
+    @media (max-width: 768px) {
+        flex-direction: column-reverse;
+        /* padding: 1rem; */
+        .pic{
+            width: 100%;
+            img{
+                width: 90%;
+                object-fit: cover;
+            }
+        }
+        .text{
+            margin-top: 1rem;
+            width: 100%;
+        }
+        .parent-col{
+            width: 100%;
+        }
+    }
 `;

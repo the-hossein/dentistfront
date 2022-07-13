@@ -22,6 +22,9 @@ export const DivContainer = styled.div`
     h2{
         font-size: var(--title-font);
     }
+    @media (max-width: 969px) {
+        margin-top: 3rem;
+    }
 `;
 
 export const DivRow = styled.div`
@@ -45,5 +48,15 @@ export const DivRow = styled.div`
     .images{
         width: 65% !important;
         height: 100%;
+    }
+    @media (max-width: 969px) {
+        flex-direction: column-reverse;
+        .images{
+            width: 100% !important;
+            margin-bottom: 1rem;
+        }
+        .text{
+            width: 100%;
+        }
     }
 `;

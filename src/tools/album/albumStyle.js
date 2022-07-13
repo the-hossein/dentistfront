@@ -45,4 +45,14 @@ export const Container = styled.div`
             }
         }
     }
+    @media (max-width: 969px) {
+        .first{
+            img{
+                height: 50vh !important;
+            }
+        }
+        .second{
+            height: 50vh;
+        }
+    }
 `;

@@ -38,4 +38,30 @@ export const RegisterContainer = styled.div`
       }
     }
   }
+
+  @media (max-width: 798px) {
+    flex-direction: column-reverse;
+    .registerImg{
+      width: 100%;
+      span{
+        height: 50vh !important;
+        img{
+          object-fit: cover;
+        }
+      }
+    }
+    .registreForm {
+      margin-top: 2rem;
+      width: 90%;
+      .mb{
+        flex-direction: column;
+        button{
+          margin:1rem 0 !important;
+        }
+      }
+      .socialMedia {
+        text-align: var(--floatRi);
+      }
+    }
+  }
 `;

@@ -13,10 +13,14 @@ const Samples = () => {
             <DivContainer>
                 <h1>{t("WSamples")}</h1>    
                 <div className='row'>
-                    <CardSample id={"1"} />
-                    <CardSample id={"2"} />
-                    <CardSample id={"3"} />
-                    <CardSample id={"4"} />
+                    <div className='col'>
+                        <CardSample id={"1"} />
+                        <CardSample id={"2"} />
+                    </div>
+                    <div className='col'>
+                        <CardSample id={"3"} />
+                        <CardSample id={"4"} />
+                    </div>
                 </div>
             </DivContainer>            
         </BasicSection>
