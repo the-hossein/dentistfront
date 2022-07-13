@@ -11,7 +11,7 @@ const Service = () => {
     return (
         <BasicSection>
             <DivContainer>
-                <h1>{t("Service")}</h1>
+                <h1>{t("service")}</h1>
                 <div className='row' >
                     <CardService id={"1"} />
                     <CardService id={"2"} />

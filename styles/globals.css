@@ -15,7 +15,10 @@
    --lg-font: 14pt;
    --xl-font: 16pt;
    --xxl-font: 18pt;
+   --title-font: 30pt;
    --dirRi: ltr;
+   --floatRi: right;
+   --floatLf: left;
  }
 
 

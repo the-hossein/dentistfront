@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const DivMain = styled.div`
+    direction: var(--dirRi);
     width: 100%;
     height: 100%;
     display: flex;
@@ -42,9 +43,10 @@ export const DivMain = styled.div`
         
         width: 40%;
         img{
-            float: right !important;
+            float: var(--floatRi) !important;
             height: 70vh !important;
-            border-top-left-radius: 50% 30%;
+            border-top-left-radius: ${props => props.lang === "fa" ? "" : "50% 30%" };
+            border-top-right-radius:${props => props.lang === "fa" ? "50% 30%" : "" } ;
             transition: all .3s linear;
 
             &:hover{

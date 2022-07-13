@@ -39,9 +39,13 @@ const Header = ({ path }) => {
   }
   const rightDir = () => {
     root.style.setProperty("--dirRi", "rtl");
+    root.style.setProperty("--floatRi", "left");
+    root.style.setProperty("--floatLf", "right");
   };
   const leftDir = () => {
     root.style.setProperty("--dirRi", "ltr");
+    root.style.setProperty("--floatRi", "right");
+    root.style.setProperty("--floatLf", "left");
   };
 
   const changeLng = (lng) => {

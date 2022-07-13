@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const DivContainer = styled.div`
+    direction: var(--dirRi);
     width: 100%;
     height: 100%;
     h1{

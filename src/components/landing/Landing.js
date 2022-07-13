@@ -7,20 +7,27 @@ import { ArrowText } from './style';
 import ArrowLeftIcon from '@mui/icons-material/ArrowLeft';
 import Simple from '../../tools/simple/Simple';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
+import { useSelector } from 'react-redux';
 
 const Landing = () => {
+  
+  const lang = useSelector(state => state.stateLang.lng)
+
+  const { t }= useTranslation();
+
   return (
     <BasicSection>
-      <MainDiv>
+      <MainDiv radiusImg={lang === "fa" ? true : false}>
         <div className='child text'>
           <div className='description'>
-            <h1>Sadatabad</h1>
-            <h2>Dental Group</h2>
+            <h1>{t("Sadatabad")}</h1>
+            <h2>{t("company")}</h2>
             <p>slogan slogan slogan slogan slogan slogan slogan slogan</p>
           </div> 
           <RowJustifyBetween align={"flex-start"}>
             <ButtonRound
-              text={"Make Appointment"}
+              text={t("Appointment")}
               width={"205px"}
             />
             <Link href='samples' replace>

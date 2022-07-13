@@ -5,6 +5,7 @@ export const DivContainer = styled.div`
     margin-top: 2rem;
     position: relative;
     color: var(--whitePen) !important;
+    direction: var(--dirRi);
     h1{
         width: fit-content;
         display: flex;
@@ -19,7 +20,7 @@ export const DivContainer = styled.div`
         }
     }
     h2{
-        font-size: 30pt;
+        font-size: var(--title-font);
     }
 `;
 

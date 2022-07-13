@@ -2,6 +2,7 @@ import styled from "styled-components";
 
 export const MainDiv = styled.div`
     /* width: 100%; */
+    direction: initial;
     display: flex;
     justify-content: center;
     align-items: center;

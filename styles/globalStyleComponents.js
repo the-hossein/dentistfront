@@ -26,6 +26,8 @@ export const HeaderBasic = styled.header`
   align-items: center;
   min-height: 15vh;
   background-color: var(--backWhite);
+  direction: var(--dirRi);
+  font-size: var(--md-font);
 `;
 
 export const Navbar = styled.nav`
@@ -36,7 +38,7 @@ export const Navbar = styled.nav`
 `;
 
 export const UlMenu = styled.ul`
-direction: var(--dirRi);
+  direction: var(--dirRi);
   width: 100%;
   list-style: none;
   display: flex;
@@ -76,6 +78,7 @@ export const BasicSection = styled.section`
 `;
 
 export const MainDiv = styled.div`
+direction: var(--dirRi);
   width: 100%;
   height: 100%;
   display: flex;
@@ -87,12 +90,10 @@ export const MainDiv = styled.div`
   }
   .banner {
     img {
-      float: right;
+      float: var(--floatRi);
       height: 70vh;
-      border-top-left-radius: 50%;
-      border-top-right-radius: 50%;
-      border-bottom-right-radius: 50%;
-      transition: all 0.4s linear;
+      border-radius:${props => props.radiusImg ? "50% 50% 0% 50%" : "50% 50% 50% 0"} ;
+      transition: all 0.3s linear;
       &:hover {
         border-radius: 0;
       }
@@ -109,10 +110,10 @@ export const MainDiv = styled.div`
     margin-bottom: 2rem;
     color: var(--whitePen);
     h1 {
-      font-size: 70pt;
+      font-size: 60pt;
     }
     h2 {
-      font-size: 60pt;
+      font-size: 50pt;
     }
   }
 `;

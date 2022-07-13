@@ -19,11 +19,11 @@ const Contact = () => {
         <SectionBasicContact>
             <DivContainer>
                 <div className='text'>
-                    <h1>Contact Us</h1>
-                    <p>Address 1</p>
-                    <p>Phone 1</p>
-                    <p>Phone 2</p>
-                    <span>type Message</span>
+                    <h1>{t("contact")}</h1>
+                    <p>{t("address")} 1</p>
+                    <p>{t("phone")} 1</p>
+                    <p>{t("phone")} 2</p>
+                    <span>{t("typeMessage")}</span>
                     <Input 
                         type="text"
                     />
