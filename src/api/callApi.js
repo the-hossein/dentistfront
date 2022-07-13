@@ -14,6 +14,8 @@ const callApi = async (BaseUrl, Body, Header, Method) => {
       redirect: "follow"
     };
   }
+
+  console.log(requestOptions)
   const response = await fetch(BaseUrl, requestOptions);
   const data = await response.json();
   const status = await response.status;

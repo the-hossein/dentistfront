@@ -1,6 +1,7 @@
 import Head from "next/head";
 import DetailSection from "../../src/components/detailSectionsSamples/DetailSection";
 import Header from "../../src/components/header/Header";
+import Footer from "../../src/components/footer/Footer";
 
 
 const SectionSamples = () => {
@@ -15,6 +16,9 @@ const SectionSamples = () => {
             <main>
                 <DetailSection />
             </main>
+            <footer>
+                <Footer />
+            </footer>
         </div>
     );
 };

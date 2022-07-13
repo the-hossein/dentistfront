@@ -116,3 +116,13 @@ export const MainDiv = styled.div`
     }
   }
 `;
+
+export const IconDiv = styled.div`
+  /* width: 10%; */
+  span{
+    width: 55px !important;
+    height: 55px !important;
+
+  }
+
+`;
