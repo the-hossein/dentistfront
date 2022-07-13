@@ -25,6 +25,7 @@ export const DropDownContainer = styled.div`
   width: 25%;
   cursor: pointer;
   .item {
+      overflow: hidden;
     width: ${(props) => (props.active ? "99%" : "90%")};
     background-color: var(--backWhite);
     height: ${(props) => (props.active ? "288px" : "50px")};

@@ -15,7 +15,7 @@
    --lg-font: 14pt;
    --xl-font: 16pt;
    --xxl-font: 18pt;
-
+   --dirRi: ltr;
  }
 
 
@@ -42,9 +42,9 @@
    transition: all 0.3s ease-in !important;
  }
 
- #datePicker {
+ /* #datePicker {
    display: none;
- }
+ } */
 
  .JDatePicker {
    width: 100% !important;

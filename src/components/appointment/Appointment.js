@@ -45,7 +45,7 @@ const Appointment = () => {
   };
   return (
     <AppointmentContainer>
-      <button onClick={test}>test</button>
+      {/* <button onClick={test}>test</button> */}
       <RowJustifyBetween align="normal">
         <DropDown
           text="Date"
