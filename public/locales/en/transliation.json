@@ -16,5 +16,18 @@
     "errName": "Enter your first and last name.",
     "errForm": "Enter the complete information.",
     "errToken": "First, log in to your account.",
-    "successAdvice": "Your request has been successfully registered."
+    "successAdvice": "Your request has been successfully registered.",
+    "Sadatabad": "Sadatabad",
+    "company": "Dental Group",
+    "Appointment" : "Make Appointment",
+    "WSamples": "Work Samples",
+    "back": "Back",
+    "section": "Section",
+    "address": "Address",
+    "typeMessage": "Type Message",
+    "phoneNumber": "Phone Number",
+    "plcNumberPhone": "Enter Phone Number",
+    "SendCode": "Send Code",
+    "enterCodeHere": "Enter Code Here",
+    "enter": "Enter"
 }

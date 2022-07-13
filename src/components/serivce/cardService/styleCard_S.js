@@ -1,8 +1,10 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
-    width: 13%;
-    height: 100%;
+    margin-right:${props => props.lang ==="fa" ? "" : "4rem"};
+    margin-left:${props => props.lang !=="fa" ? "" : "4rem"};
+    width: 33%;
+    height: 60vh;
     border-radius: var(--inputRadius);
     overflow: hidden;
     position: relative;
@@ -43,11 +45,38 @@ export const Card = styled.div`
     }
 
     &:hover{
-        width: 20%;
+        width: 55%;
         .name{
             transform: rotateZ(0) translateX(-50%);
             bottom: 3rem;
         }
     }
 
+    @media (max-width: 1103px) {
+        .name{
+            width: 130px;
+            font-size: var(--lg-font);
+        }
+        
+    }
+    @media (max-width: 960px) {
+        .name{
+            width: 100px;
+            font-size: var(--md-font);
+        }
+    }
+    @media (max-width: 868px) {
+        width: 100%;
+        height: 50vh;
+        margin-bottom: 2rem;
+        margin-right:${props => props.lang ==="fa" ? "" : "0"};
+        margin-left:${props => props.lang !=="fa" ? "" : "0"};
+        .name{
+            transform: rotateZ(0) translateX(-50%);
+            bottom: 3rem;
+        }
+        &:hover{
+            width: 100%;
+        }
+    }
 `;

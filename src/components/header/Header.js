@@ -1,7 +1,9 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import {
   HeaderBasic,
+  Humber,
   IconDiv,
+  MenuSider,
   Navbar,
   UlMenu
 } from "../../../styles/globalStyleComponents";
@@ -31,6 +33,8 @@ const Header = ({ path }) => {
   const router = useRouter();
   const state = useSelector((state) => state.stateRegister);
 
+  const [open, setOpen] = useState(false)
+
   const { t } = useTranslation();
 
   if (typeof window !== "undefined") {
@@ -39,9 +43,13 @@ const Header = ({ path }) => {
   }
   const rightDir = () => {
     root.style.setProperty("--dirRi", "rtl");
+    root.style.setProperty("--floatRi", "left");
+    root.style.setProperty("--floatLf", "right");
   };
   const leftDir = () => {
     root.style.setProperty("--dirRi", "ltr");
+    root.style.setProperty("--floatRi", "right");
+    root.style.setProperty("--floatLf", "left");
   };
 
   const changeLng = (lng) => {
@@ -69,8 +77,7 @@ const Header = ({ path }) => {
     } else {
       rightDir();
     }
-
-  }, [])
+  }, [lang])
 
 
 // const Header = ({ path }) => {
@@ -118,6 +125,40 @@ const Header = ({ path }) => {
       <IconDiv>
         <Image src={Logo} alt="logo" />
       </IconDiv>
+      <Humber open={open} onClick={()=> setOpen(prevOpen=> !prevOpen)}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </Humber>
+      <MenuSider lang={lang} open={open}>
+        <Link href="/">
+            <a><li className={path === "Home" && "active"} >
+              {t("home")}</li></a>
+          </Link>
+          <Link href="service">
+            <a><li className={path === "Service" && "active"}>{t("service")}</li></a>
+          </Link>
+          <Link href='/samples'>
+            <a><li className={path === "Samples" && "active"}>{t("samples")}</li></a>
+          </Link>
+          <Link href="/aboutus">
+            <a>
+              <li className={path === "About" && "active"}>{t("aboutus")}</li>
+            </a>
+          </Link>
+          <Link href="/contact">
+            <a>
+              <li className={path === "Contact" && "active"}>{t("contact")}</li>
+            </a>
+          </Link>
+          <li>
+            {
+              lang === "en" ? 
+              <span onClick={() => changeLng("fa")}>Fa</span> :
+              <span onClick={() => changeLng("en")}>En</span> 
+            }
+          </li>
+      </MenuSider>
       <Navbar>
         <UlMenu>
           <Link href="/">

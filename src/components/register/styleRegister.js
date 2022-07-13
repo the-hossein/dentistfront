@@ -1,5 +1,6 @@
 import styled from "styled-components";
 export const RegisterContainer = styled.div`
+  direction: var(--dirRi);
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -24,7 +25,7 @@ export const RegisterContainer = styled.div`
       font-weight: normal;
     }
     button {
-      margin: 0 0 0 1.5rem;
+      margin: ${props => props.lang === "fa" ? "0 1rem 0 0" : "0 0 0 1.5rem"};
     }
     .socialMedia {
       margin-top: 6rem;
@@ -34,6 +35,32 @@ export const RegisterContainer = styled.div`
         &:hover {
           color: var(--bluePen);
         }
+      }
+    }
+  }
+
+  @media (max-width: 798px) {
+    flex-direction: column-reverse;
+    .registerImg{
+      width: 100%;
+      span{
+        height: 50vh !important;
+        img{
+          object-fit: cover;
+        }
+      }
+    }
+    .registreForm {
+      margin-top: 2rem;
+      width: 90%;
+      .mb{
+        flex-direction: column;
+        button{
+          margin:1rem 0 !important;
+        }
+      }
+      .socialMedia {
+        text-align: var(--floatRi);
       }
     }
   }

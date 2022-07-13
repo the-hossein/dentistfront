@@ -7,9 +7,9 @@ import pic_3 from '../../../public/Assets/images/registrPic.png';
 
 
 
-const AlbumSection = ({ reverse }) => {
+const AlbumSection = ({ reverse, lang }) => {
     return (
-        <Container reverse={reverse}>
+        <Container reverse={reverse} lang={lang}>
             <div className='first'>
                 <img src={pic_1.src} alt="banner" />
             </div>

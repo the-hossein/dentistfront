@@ -10,12 +10,12 @@ export const Container = styled.div`
     .first{
         width: 40%;
         display: flex;
-        justify-content: ${props => props.reverse ? "right" : "left"};
+        justify-content: ${props => props.reverse ? "var(--floatRi)" : "var(--floatLf)" };
         img{
             width: 95% !important;
             height: 80vh !important;
-            border-top-right-radius:${props => props.reverse ? "50% 30%" : ""};
-            border-top-left-radius:${props => props.reverse ? "" : "50% 30%"};
+            border-top-right-radius:${props => props.lang !== "fa" && props.reverse ? "50% 30%" :props.lang === "fa" && !props.reverse ? "50% 30%" :"" };
+            border-top-left-radius:${props => props.lang === "fa" && !props.reverse ? "" :props.lang !== "fa" && props.reverse ? "" :"50% 30%" };
             object-fit: cover;
         }
     }
@@ -32,17 +32,27 @@ export const Container = styled.div`
                 float:${props => props.reverse ? "right" : "left"} ;
                 width: 70%;
                 height: 48%;
-                border-top-left-radius: ${props => props.reverse ? "50%" : "0"} ;
-                border-top-right-radius: ${props => props.reverse ? "0" : "50%"} ;
+                border-top-left-radius: ${props =>  props.lang !== "fa" && props.reverse ? "50%" : props.lang === "fa" && !props.reverse ? "50%" : ""} ;
+                border-top-right-radius: ${props =>  props.lang === "fa" && !props.reverse ? "0" : props.lang !== "fa" && props.reverse ? "" : "50%"} ;
                 object-fit: cover;
             }
             :nth-child(2){
                 width: 100%;
                 height: 48%;
-                border-top-left-radius:${props => props.reverse ? "30% 50%" : ""} ;
-                border-top-right-radius:${props => props.reverse ? "" : "30% 50%"} ;
+                border-top-left-radius:${props => props.lang !== "fa" && props.reverse ? "30% 50%" : props.lang === "fa" && !props.reverse ? "30% 50%" : "" } ;
+                border-top-right-radius:${props => props.lang === "fa" && !props.reverse ? "" : props.lang !== "fa" && props.reverse ? "" : "30% 50%"} ;
                 object-fit: cover;
             }
+        }
+    }
+    @media (max-width: 969px) {
+        .first{
+            img{
+                height: 50vh !important;
+            }
+        }
+        .second{
+            height: 50vh;
         }
     }
 `;

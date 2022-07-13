@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Card = styled.div`
     min-height: 60vh;
-    width: 23%;
+    min-width: 47%;
     position: relative;
     overflow: hidden;
     border-radius: var(--inputRadius);
@@ -17,6 +17,7 @@ export const Card = styled.div`
         z-index: 2 !important;
         img{
             z-index: 2 !important;
+            object-fit: cover;
         }
     }
     .showCase{
@@ -27,7 +28,7 @@ export const Card = styled.div`
         position: absolute;
         background-color: #fff;
         padding: 1rem 2rem;
-        font-size: 20pt;
+        font-size: var(--xxl-font);
         z-index: 5;
         bottom: 30px;
         left: 50%;
@@ -40,5 +41,25 @@ export const Card = styled.div`
         -webkit-backdrop-filter: blur(9.2px);
         cursor: pointer;
         font-weight: 700;
+    }
+    @media (max-width: 1210px) {
+        .showCase{
+            font-size: var(--lg-font);
+        }
+    }
+    @media (max-width: 995px){
+        .showCase{
+            font-size: var(--md-font);
+            padding: 1rem 1rem;
+        }
+    }
+    
+    @media (max-width: 761px){
+        min-width: 100%;
+        margin-bottom: 3rem;
+        height: 45vh;
+    }
+    @media (max-width: 461px){
+        height: 35vh;
     }
 `;
