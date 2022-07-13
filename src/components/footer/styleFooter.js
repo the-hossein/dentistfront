@@ -10,5 +10,6 @@ export const FooterContainer = styled.div`
   h6 {
     font-weight: normal;
     margin-bottom: 0.5rem;
+    font-size:var(--xs-font)
   }
 `;

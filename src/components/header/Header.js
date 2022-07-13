@@ -15,7 +15,8 @@ import { changeLang } from '../../redux/lang/langAction';
 import {
   getProfile,
   loginStatusFalse,
-  loginStatusTrue
+  loginStatusTrue,
+  logout
 } from "../../redux/register/registerActions";
 import { notify } from "../../tools/toast/toast";
 import { useRouter } from "next/router";
@@ -105,6 +106,7 @@ const Header = ({ path }) => {
   const logoutHandler = () => {
     localStorage.removeItem("userToken");
     dispatch(loginStatusFalse());
+    dispatch(logout());
     router.push({
       pathname: "/"
     });

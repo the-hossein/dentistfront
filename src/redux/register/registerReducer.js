@@ -46,6 +46,17 @@ const registerReducer = (state = initializeState, action) => {
         userDataLoader: false,
         userId: action.user.user.id
       };
+    case "LOGOUT":
+      return {
+        ...state,
+        phoneNumber: "",
+        code: "",
+        phoneLoading: false,
+        codeLoading: false,
+        loginStatus: false,
+        userDataLoader: false,
+        userId: ""
+      };
     default:
       return state;
   }
