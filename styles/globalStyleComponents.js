@@ -3,6 +3,7 @@ export const RowJustifyBetween = styled.div`
   width: ${(props) => (props.width ? props.width : "100%")};
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: ${(props) => (props.align ? props.align : "center")};
 `;
 
@@ -36,7 +37,7 @@ export const Navbar = styled.nav`
 `;
 
 export const UlMenu = styled.ul`
-direction: var(--dirRi);
+  direction: var(--dirRi);
   width: 100%;
   list-style: none;
   display: flex;
@@ -70,9 +71,8 @@ export const ButtonRoundBasic = styled.button`
 
 export const BasicSection = styled.section`
   padding: 2rem 3rem;
-  min-height: ${props=>props.footer===true?"65vh":"85vh"};
+  min-height: ${(props) => (props.footer === true ? "65vh" : "85vh")};
   background-color: var(--mainColor);
-
 `;
 
 export const MainDiv = styled.div`

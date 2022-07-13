@@ -8,6 +8,8 @@
    --primaryBtnRadius: 30px;
    --secondlyBtnRadius: 12px;
    --inputRadius: 12px;
+  
+
    --sm-font: 8pt;
 
    --xs-font: 10pt;
@@ -42,14 +44,36 @@
    transition: all 0.3s ease-in !important;
  }
 
- /* #datePicker {
-   display: none;
- } */
+ #datePicker {
+   opacity: 0;
+   display: flex !important;
+   align-items: center;
+   justify-content: center;
+   height: 50px;
+   width: 100%;
+   background-color: var(--backWhite);
+   border: none;
+ }
+
+
+ .item::-webkit-scrollbar {
+   width: 0px;
+ }
+
+ .item::-webkit-scrollbar-track {
+   background: #f1f1f1;
+ }
+
+ .item::-webkit-scrollbar-thumb {
+   background: rgb(188, 188, 188);
+   border-radius: 4px;
+ }
 
  .JDatePicker {
    width: 100% !important;
    background-color: var(--backWhite) !important;
    direction: rtl;
+   display: block !important;
  }
 
  .JDatePicker .JDheader .right,
