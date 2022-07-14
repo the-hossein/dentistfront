@@ -23,7 +23,7 @@ const Landing = () => {
 
   return (
     <BasicSection>
-      <MainDiv radiusImg={lang === "fa" ? true : false}>
+      <MainDiv radiusImg={lang === "fa" ? true : false} lang={lang}>
         <div className="child text">
           <div className="description">
             <h1>{t("Sadatabad")}</h1>
@@ -34,8 +34,7 @@ const Landing = () => {
             <div className="col">
               <Link href="/appointment" >
              <a>
-
-                  <ButtonRound text={t("Appointment")} width={"205px"} />
+                  <ButtonRound text={t("Appointment")} width={"175px"} />
              </a>
             
               </Link>

@@ -18,6 +18,7 @@ export const DivMain = styled.div`
         }
         p{
             margin-bottom: 2rem;
+            text-align: justify;
         }
     }
     

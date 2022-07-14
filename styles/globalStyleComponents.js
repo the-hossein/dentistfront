@@ -3,7 +3,7 @@ export const RowJustifyBetween = styled.div`
   width: ${(props) => (props.width ? props.width : "100%")};
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
+  flex-wrap: ${props => props.noWarp ? "nowrap" : "wrap"};
   align-items: ${(props) => (props.align ? props.align : "center")};
   .child-col {
     display: flex;
@@ -18,6 +18,7 @@ export const RowJustifyBetween = styled.div`
       margin-bottom: 2rem !important;
     }
   }
+
   @media (max-width: 698px) {
     .col {
       display: flex;
@@ -130,7 +131,8 @@ export const Humber = styled.div`
   cursor: pointer;
   position: ${(props) => (props.open ? "fixed" : "")};
   z-index: 100;
-  /* left: 30%; */
+  left: ${props=> props.lang ==="fa" ? "unset" : "5%" };
+  right: ${props=> props.lang !=="fa" ? "unset" : "5%" };
   div {
     border-radius: 10px;
     width: 27px;
@@ -183,8 +185,13 @@ export const Navbar = styled.nav`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  @media (max-width: 711px) {
-    width: 95%;
+  @media (max-width: 1013px) {
+    width: 85%;
+  }
+
+  @media (max-width: 778px) {
+    width: 100%;
+    justify-content:${props => props.open ? "flex-end" : "space-between"};
   }
 `;
 
@@ -254,12 +261,15 @@ export const MainDiv = styled.div`
     margin: 1rem 0;
   }
   .child {
-    width: 50%;
+    
   }
   .banner {
+    width: 40%;
+    /* height: 100%  */
     img {
       float: var(--floatRi);
-      width: 70%;
+      /* max-height: 75vh; */
+      max-width: 100%;
       object-fit: cover;
       border-radius: ${(props) =>
         props.radiusImg ? "50% 50% 0% 50%" : "50% 50% 50% 0"};
@@ -270,6 +280,7 @@ export const MainDiv = styled.div`
     }
   }
   .text {
+    width: 55%;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -280,20 +291,23 @@ export const MainDiv = styled.div`
     margin-bottom: 2rem;
     color: var(--whitePen);
     h1 {
-      font-size: 70pt;
+      font-size: ${props => props.lang === "fa" ? "50pt" : "70pt"};
     }
     h2 {
-      font-size: 60pt;
+      font-size: ${props => props.lang === "fa" ? "35pt" : "60pt"};
     }
   }
 
-  @media (max-width: 939px) {
+  @media (max-width: 1040px) {
     .description {
       h1 {
-        font-size: 40pt;
+        font-size:${props => props.lang === "fa" ? "35pt" : "45pt"} ;
       }
       h2 {
-        font-size: 30pt;
+        font-size: ${props => props.lang === "fa" ? "25pt" : "35pt"};
+      }
+      p{
+        font-size: var(--md-font);
       }
     }
   }
@@ -329,7 +343,7 @@ export const IconDiv = styled.div`
     height: 55px !important;
   }
 
-  @media (max-width: 711px) {
+  @media (max-width: 778px) {
     display: none;
   }
 `;
