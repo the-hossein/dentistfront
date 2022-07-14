@@ -130,7 +130,7 @@ export const Humber = styled.div`
     width: 27px;
     height: 3px;
     background-color :${props => props.open ? "var(--whitePen)" : "var(--darkPen)"};
-    transform-origin: 4.5px;
+    transform-origin: 5.5px;
     transition: all .3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
     :nth-child(1){
       transform: ${props => props.open ? "rotateZ(45deg)" : ""};
