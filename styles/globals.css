@@ -1,3 +1,22 @@
+@font-face {
+  font-family: "Roboto";
+  src: url('../public/Assets/fonts/Roboto/Roboto-Medium.ttf') ;
+  src: url("../public/Assets/fonts/Roboto/Roboto-Medium.ttf") format("truetype"),
+}
+
+@font-face {
+  font-family: 'Yekan-Bakh';
+  src: url('/public/Assets/fonts/font/YekanBakh-Bold.eot');
+  src: local('YekanBakh-Bold'),
+      url('/public/Assets/fonts/font/YekanBakh-Bold.eot') format('embedded-opentype'),
+      url('/public/Assets/fonts/font/YekanBakh-Bold.woff2') format('woff2'),
+      url('/public/Assets/fonts/font/YekanBakh-Bold.woff') format('woff'),
+      url('/public/Assets/fonts/font/YekanBakh-Bold.ttf') format('truetype');
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
  :root {
    --bluePen: #558D96;
    --mainColor: #8BA588;
@@ -21,6 +40,8 @@
    --dirRi: ltr;
    --floatRi: right;
    --floatLf: left;
+
+   --fontFamily: "Yekan-Bakh";
  }
 
 
@@ -38,6 +59,7 @@
  }
 
  * {
+   font-family: var(--fontFamily);
    box-sizing: border-box;
    margin: 0;
    padding: 0;

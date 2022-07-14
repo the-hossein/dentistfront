@@ -60,6 +60,10 @@ export const Card = styled.div`
         height: 45vh;
     }
     @media (max-width: 461px){
+        .showCase{
+            padding: .8rem 1rem;
+            font-size: var(--xs-font);
+        }
         height: 35vh;
     }
 `;
