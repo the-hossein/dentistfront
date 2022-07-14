@@ -124,11 +124,6 @@ const Header = ({ path }) => {
       <IconDiv>
         <Image src={Logo} alt="logo" />
       </IconDiv>
-      <Humber open={open} onClick={() => setOpen((prevOpen) => !prevOpen)}>
-        <div></div>
-        <div></div>
-        <div></div>
-      </Humber>
       <MenuSider lang={lang} open={open}>
         <Link href="/">
           <a>
@@ -163,7 +158,12 @@ const Header = ({ path }) => {
           )}
         </li>
       </MenuSider>
-      <Navbar>
+      <Navbar open={open}>
+      <Humber open={open} lang={lang} onClick={() => setOpen((prevOpen) => !prevOpen)}>
+        <div></div>
+        <div></div>
+        <div></div>
+      </Humber>
         <UlMenu>
           <Link href="/">
             <a>

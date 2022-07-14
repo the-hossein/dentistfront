@@ -17,7 +17,11 @@ export const RegisterContainer = styled.div`
     width: 450px;
     margin: auto;
     .mb {
-      /* margin: 1rem 0 2rem 0; */
+      margin: 1rem 0 2rem 0;
+      display: flex;
+      justify-content: space-between;
+      flex-direction: row;
+      align-items: center;
     }
     h5 {
       color: var(--whitePen);
@@ -54,7 +58,8 @@ export const RegisterContainer = styled.div`
       margin-top: 2rem;
       width: 90%;
       .mb{
-        /* flex-direction: column; */
+        flex-direction: column;
+        align-items: flex-start;
         button{
           margin:1rem 0 !important;
         }

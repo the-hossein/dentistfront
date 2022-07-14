@@ -19,5 +19,9 @@ export const ArrowText = styled.div`
         margin: 1rem 0;
     }
 
-    
+    @media (max-width:1019px) {
+        h2{
+            font-size: var(--lg-font);
+        }
+    }
 `;

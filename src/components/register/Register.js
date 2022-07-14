@@ -64,7 +64,7 @@ const Register = () => {
     <RegisterContainer lang={lang}>
       <div className="registreForm">
         <h5>{t("phoneNumber")}</h5>
-        <RowJustifyBetween align="normal" className="mb">
+        <RowJustifyBetween align="normal" className="mb" noWarp>
           {console.log(errors.number && focus.phoneNumber)}
           <Input
             placeHolder={t("plcNumberPhone")}
@@ -91,7 +91,7 @@ const Register = () => {
           />
         </RowJustifyBetween>
 
-        <RowJustifyBetween align="normal" className="mb">
+        <RowJustifyBetween align="normal" className="mb" noWarp>
           <Input
             placeHolder={t("enterCodeHere")}
             valiStatus={errorsCode.code && focus.code}
