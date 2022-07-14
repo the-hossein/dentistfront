@@ -123,7 +123,7 @@ const Header = ({ path }) => {
   };
   return (
     <HeaderBasic>
-      {state.userDataLoader && <FullScreenLoader />}
+     
       <IconDiv>
         <Image src={Logo} alt="logo" />
       </IconDiv>

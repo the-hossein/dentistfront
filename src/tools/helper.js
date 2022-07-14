@@ -90,3 +90,42 @@ export const validationName = (str) => {
   const newStr = str.trim();
   return newStr === "" ? true : false;
 };
+
+export const convertServise = (num) => {
+  var servicename = "";
+  switch (num) {
+    case 0:
+      servicename = "Implants";
+
+      break;
+    case 1:
+      servicename = "Orthodontics";
+
+      break;
+    case 2:
+      servicename = "Bridges";
+      break;
+    case 3:
+      servicename = "Endo";
+      break;
+    case 4:
+      servicename = "Veneers";
+      break;
+    case 5:
+      servicename = "Fillings";
+      break;
+    case 6:
+      servicename = "Dental cleanings";
+      break;
+    case 7:
+      servicename = "Dental Laminate";
+      break;
+    case 8:
+      servicename = "Composite";
+      break;
+    default:
+      servicename;
+      break;
+  }
+  return servicename;
+};

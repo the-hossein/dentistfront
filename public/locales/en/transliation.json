@@ -38,5 +38,17 @@
   "plcNumberPhone": "Enter Phone Number",
   "SendCode": "Send Code",
   "enterCodeHere": "Enter Code Here",
-  "enter": "Enter"
+  "enter": "Enter",
+  "problemInAppointment": "A problem occurred in appointment",
+  "notime": "The entered date is outside the scheduling range",
+  "selectService": "To view available times, please first select the desired date and service",
+  "Implants": "Implants",
+  "Orthodontics": "Orthodontics",
+  "Bridges": "Bridges",
+  "Endo": "Endo",
+  "Veneers": "Veneers",
+  "Fillings": "Fillings",
+  "Dental cleanings": "Dental cleanings",
+  "Dental Laminate": "Dental Laminate",
+  "Composite": "Composite"
 }

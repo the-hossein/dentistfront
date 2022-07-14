@@ -1,3 +1,4 @@
+import { t } from "i18next";
 import React, { useEffect, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
@@ -19,31 +20,38 @@ const Time = () => {
 
     console.log(userSelect === state.timeSelected.name);
   };
-  useEffect(() => {
-    if (state.date.date === "") {
-      var currentTime = new Date().toJSON().slice(0, 10).replace(/-/g, "/");
+  // useEffect(() => {
+  //   if (state.date.date === "") {
+  //     var currentTime = new Date().toJSON().slice(0, 10).replace(/-/g, "/");
 
-      dispatch(getTimeState(currentTime));
-    }
-  }, []);
+  //     dispatch(getTimeState(currentTime));
+  //   }
+  // }, []);
   return state.timeLoader ? (
     <Loader />
   ) : (
     <BoxStyle>
-      {state.time.map((item) => (
-        <>
-          <button
-            onClick={timePicker}
-            disabled={item.state === false && true}
-            name={item.time}
-            value={item.num}
-           
-          >
-            {item.time}
-          </button>
-       
-        </>
-      ))}
+      {state.noTime ? (
+        <p className="notify">{t("notime")}</p>
+      ) : (state.date.date === "" && state.selectedService.value === "" ||
+        state.date.date === "" ||
+        state.selectedService.value === "" )? (
+        <p className="notify">{t("selectService")}</p>
+      ) : (
+        state.time.map((item) => (
+          <>
+            <button
+              onClick={timePicker}
+              disabled={item.state === false && true}
+              name={item.time}
+              value={item.num}
+              // className={state.timeSelected.name===userSelect&&"activeItem"}
+            >
+              {item.time}
+            </button>
+          </>
+        ))
+      )}
     </BoxStyle>
   );
 };
