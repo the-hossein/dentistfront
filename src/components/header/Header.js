@@ -45,7 +45,7 @@ const Header = ({ path }) => {
     root.style.setProperty("--dirRi", "rtl");
     root.style.setProperty("--floatRi", "left");
     root.style.setProperty("--floatLf", "right");
-    root.style.setProperty("--fontFamily", "Yekan-Bakh");
+    root.style.setProperty("--fontFamily", "IRANSansWeb");
   };
   const leftDir = () => {
     root.style.setProperty("--dirRi", "ltr");

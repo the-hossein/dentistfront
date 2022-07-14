@@ -240,6 +240,9 @@ export const MainDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  .slogan{
+    margin: 1rem 0;
+  }
   .child {
     width: 50%;
   }
