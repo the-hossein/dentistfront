@@ -6,8 +6,8 @@
 
 @font-face {
   font-family: 'IRANSansWeb';
-  src: url('/Assets/Fonts/iranSans/eot/IRANSansWeb.eot');
-  src: url('/Assets/Fonts/iranSans/eot/IRANSansWeb.eot') format('embedded-opentype'), url('/Assets/Fonts/iranSans/woff/IRANSansWeb.woff') format('woff'), url('/Assets/Fonts/iranSans/ttf/IRANSansWeb.ttf') format('truetype');
+  src: url('../public/Assets/fonts/iranSans/eot/IRANSansWeb.eot');
+  src: url('../public/Assets/fonts/iranSans/eot/IRANSansWeb.eot') format('embedded-opentype'), url('../public/Assets/fonts/iranSans/woff/IRANSansWeb.woff') format('woff'), url('../public/Assets/fonts/iranSans/ttf/IRANSansWeb.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
