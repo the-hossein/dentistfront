@@ -198,16 +198,16 @@ const Header = ({ path }) => {
             )}
           </li>
         </UlMenu>
+        <Link href={state.loginStatus ? "/" : "/register"}>
+          <a>
+            <ButtonRound
+              text={state.loginStatus ? t("logout") : t("login")}
+              status={state.loginStatus ? "logout" : "Login"}
+              click={state.loginStatus ? logoutHandler : (e) => {}}
+            />
+          </a>
+        </Link>
       </Navbar>
-      <Link href={state.loginStatus ? "/" : "/register"}>
-        <a>
-          <ButtonRound
-            text={state.loginStatus ? t("logout") : t("login")}
-            status={state.loginStatus ? "logout" : "Login"}
-            click={state.loginStatus ? logoutHandler : (e) => {}}
-          />
-        </a>
-      </Link>
     </HeaderBasic>
   );
 };

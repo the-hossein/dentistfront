@@ -5,32 +5,32 @@ export const RowJustifyBetween = styled.div`
   justify-content: space-between;
   flex-wrap: wrap;
   align-items: ${(props) => (props.align ? props.align : "center")};
-  .child-col{
+  .child-col {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .col{
+  .col {
     /* display: flex;
     justify-content: center;
     align-items: center; */
-    button{
+    button {
       margin-bottom: 2rem !important;
     }
   }
   @media (max-width: 698px) {
-    .col{
+    .col {
       display: flex;
       justify-content: center;
       align-items: center;
     }
   }
-  
+
   @media (max-width: 534px) {
-    flex-direction: ${props=> props.footer ? "column" : ""};
-    align-items: ${props=> props.footer && "flex-start" };
-    div{
-      margin-bottom:${props=> props.footer && "1rem" }; ;
+    flex-direction: ${(props) => (props.footer ? "column" : "")};
+    align-items: ${(props) => props.footer && "flex-start"};
+    div {
+      margin-bottom: ${(props) => props.footer && "1rem"};
     }
   }
 `;
@@ -40,29 +40,29 @@ export const RowJustifyBetweenHome = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: ${(props) => (props.align ? props.align : "center")};
-  .child-col{
+  .child-col {
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-  .col{
+  .col {
     /* display: flex;
     justify-content: center;
     align-items: center; */
-    button{
+    button {
       margin-bottom: 2rem !important;
     }
   }
   @media (max-width: 698px) {
     flex-direction: column;
-    .col{
+    .col {
       width: 100%;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: flex-end;
     }
-    .col-text{
+    .col-text {
       justify-content: center;
       align-items: center;
     }
@@ -83,11 +83,11 @@ export const RowJustifyStart = styled.div`
 // `;
 
 export const MenuSider = styled.ul`
-/* display: none; */
+  /* display: none; */
   position: fixed;
   top: 0;
-  left: ${props => props.lang === "fa" ? "" : "0"};
-  right: ${props => props.lang === "fa" ? "0" : ""};
+  left: ${(props) => (props.lang === "fa" ? "" : "0")};
+  right: ${(props) => (props.lang === "fa" ? "0" : "")};
   width: 60%;
   height: 100vh;
   z-index: 50;
@@ -99,14 +99,19 @@ export const MenuSider = styled.ul`
   justify-content: center;
   align-items: flex-start;
   color: var(--whitePen);
-  opacity: .9;
-  transition: all .4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-  transform: ${props => !props.open && props.lang==="fa" ? "translateX(120%)" : !props.open && props.lang!=="fa" ? "translateX(-120%)" : ""};
-  li{
+  opacity: 0.9;
+  transition: all 0.4s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+  transform: ${(props) =>
+    !props.open && props.lang === "fa"
+      ? "translateX(120%)"
+      : !props.open && props.lang !== "fa"
+      ? "translateX(-120%)"
+      : ""};
+  li {
     margin-bottom: 2rem;
     font-size: var(--lg-font);
   }
-  .active{
+  .active {
     font-weight: 700;
   }
   @media (max-width: 525px) {
@@ -123,25 +128,26 @@ export const Humber = styled.div`
   justify-content: space-between;
   align-items: center;
   cursor: pointer;
-  position: ${props => props.open ? "fixed" : ""};
+  position: ${(props) => (props.open ? "fixed" : "")};
   z-index: 100;
   /* left: 30%; */
-  div{
+  div {
     border-radius: 10px;
     width: 27px;
     height: 3px;
-    background-color :${props => props.open ? "var(--whitePen)" : "var(--darkPen)"};
+    background-color: ${(props) =>
+      props.open ? "var(--whitePen)" : "var(--darkPen)"};
     transform-origin: 5.5px;
-    transition: all .3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
-    :nth-child(1){
-      transform: ${props => props.open ? "rotateZ(45deg)" : ""};
+    transition: all 0.3s cubic-bezier(0.6, -0.28, 0.735, 0.045);
+    :nth-child(1) {
+      transform: ${(props) => (props.open ? "rotateZ(45deg)" : "")};
     }
-    :nth-child(2){
-      transform: ${props => props.open ? "translateX(-200%)" : ""};
-      opacity: ${props => props.open ? "0" : "1"};
+    :nth-child(2) {
+      transform: ${(props) => (props.open ? "translateX(-200%)" : "")};
+      opacity: ${(props) => (props.open ? "0" : "1")};
     }
-    :nth-child(3){
-      transform: ${props => props.open ? "rotateZ(-45deg)" : ""};
+    :nth-child(3) {
+      transform: ${(props) => (props.open ? "rotateZ(-45deg)" : "")};
     }
   }
   @media (max-width: 525px) {
@@ -150,7 +156,7 @@ export const Humber = styled.div`
 `;
 
 export const HeaderBasic = styled.header`
-  padding: 1rem 3rem;
+  padding: 1rem 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -163,9 +169,9 @@ export const HeaderBasic = styled.header`
   }
 
   @media (max-width: 560px) {
-    padding: 0.5rem 1rem ;
+    padding: 0.5rem 1rem;
     min-height: 8vh;
-    button{
+    button {
       min-width: 100px;
       min-height: 45px;
     }
@@ -175,7 +181,7 @@ export const HeaderBasic = styled.header`
 export const Navbar = styled.nav`
   width: 60%;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
   @media (max-width: 711px) {
     width: 95%;
@@ -184,7 +190,7 @@ export const Navbar = styled.nav`
 
 export const UlMenu = styled.ul`
   direction: var(--dirRi);
-  width: 100%;
+  width: 70%;
   list-style: none;
   display: flex;
   justify-content: space-between;
@@ -195,6 +201,9 @@ export const UlMenu = styled.ul`
   }
   .active {
     font-weight: 700;
+  }
+  @media (max-width: 768px) {
+    width: 100%;
   }
   @media (max-width: 560px) {
     font-size: var(--sm-font);
@@ -222,14 +231,15 @@ export const ButtonRoundBasic = styled.button`
 `;
 
 export const BasicSection = styled.section`
-  padding: 2rem 3rem;
+  padding: 2rem 6rem;
   min-height: ${(props) => (props.footer === true ? "65vh" : "85vh")};
   background-color: var(--mainColor);
+
   @media (max-width: 720px) {
     padding: 1.5rem 2.5rem;
   }
   @media (max-width: 520px) {
-    padding: .8rem 1.5rem;
+    padding: 0.8rem 1.5rem;
   }
 `;
 
@@ -240,19 +250,19 @@ export const MainDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
-  .slogan{
+  .slogan {
     margin: 1rem 0;
   }
   .child {
     width: 50%;
   }
   .banner {
-    
     img {
       float: var(--floatRi);
       width: 70%;
       object-fit: cover;
-      border-radius:${props => props.radiusImg ? "50% 50% 0% 50%" : "50% 50% 50% 0"} ;
+      border-radius: ${(props) =>
+        props.radiusImg ? "50% 50% 0% 50%" : "50% 50% 50% 0"};
       transition: all 0.3s linear;
       &:hover {
         border-radius: 0;
@@ -270,21 +280,21 @@ export const MainDiv = styled.div`
     margin-bottom: 2rem;
     color: var(--whitePen);
     h1 {
-      font-size: 60pt;
+      font-size: 70pt;
     }
     h2 {
-      font-size: 50pt;
+      font-size: 60pt;
     }
   }
 
   @media (max-width: 939px) {
     .description {
       h1 {
-      font-size: 40pt;
-    }
-    h2 {
-      font-size: 30pt;
-    }
+        font-size: 40pt;
+      }
+      h2 {
+        font-size: 30pt;
+      }
     }
   }
 
@@ -306,17 +316,15 @@ export const MainDiv = styled.div`
       h2 {
         font-size: 32pt;
       }
-      p{
+      p {
         font-size: var(--xs-font);
       }
     }
-    
   }
-
 `;
 
 export const IconDiv = styled.div`
-  span{
+  span {
     width: 55px !important;
     height: 55px !important;
   }
@@ -324,5 +332,4 @@ export const IconDiv = styled.div`
   @media (max-width: 711px) {
     display: none;
   }
-
 `;
