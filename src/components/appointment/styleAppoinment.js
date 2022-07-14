@@ -1,6 +1,7 @@
 import styled from "styled-components";
 export const AppointmentContainer = styled.div`
-padding:2rem 0;
+  padding: 2rem 0;
+  direction: var(--dirRi);
   .active > div {
     border-top-right-radius: 12px 56px !important;
     border-top-left-radius: 12px 56px !important;
@@ -9,6 +10,8 @@ padding:2rem 0;
   }
   .submitBtn {
     width: 90%;
+    font-size: var(--md-font);
+
   }
   .result {
     display: flex;
@@ -18,6 +21,13 @@ padding:2rem 0;
   .saveGallery {
     background-color: var(--whitePen) !important;
     margin-top: 0.7rem;
+  }
+
+  .notify {
+    font-size: var(--xs-font);
+    padding: 0.5rem;
+    text-align: var(--floatLf);
+    margin-top: 2rem;
   }
   button,
   .saveGallery {
@@ -52,6 +62,7 @@ export const DropDownContainer = styled.div`
   cursor: pointer;
   margin-bottom: 1rem;
   .item {
+    font-size: var(--md-font);
     overflow-y: auto;
     overflow-x: hidden;
     width: ${(props) => (props.active ? "99%" : "90%")};
@@ -119,8 +130,9 @@ export const BoxStyle = styled.div`
       color: var(--whitePen);
     }
   }
-  .selectedItem {
-    background-color: var(--bluePen);
+
+  .activeItem {
+    background-color: var(--bluePen) !important;
     color: var(--whitePen);
   }
   .active {
@@ -129,8 +141,9 @@ export const BoxStyle = styled.div`
   }
   button:disabled {
     opacity: 50%;
-    :hover {
-      background-color: var(--backWhite);
+    cursor: no-drop;
+    &:hover {
+      background-color: var(--backWhite) !important;
       color: var(--darkPen);
     }
   }
@@ -152,7 +165,7 @@ export const ResultStyle = styled.div`
   min-height: 210px;
   width: 90%;
   margin-top: 2rem;
-
+  direction: var(--dirRi);
   border-radius: var(--inputRadius);
   p,
   h6 {

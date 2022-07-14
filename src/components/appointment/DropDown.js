@@ -7,6 +7,7 @@ import {
   getDate,
   getTimeState
 } from "../../redux/appoinment/appoinmentActions";
+import { convertISOS } from "../../tools/helper";
 
 const DropDown = ({ active, id, openHandler, text, childComponent }) => {
   const dispatch = useDispatch();
@@ -14,9 +15,17 @@ const DropDown = ({ active, id, openHandler, text, childComponent }) => {
 
   const chaneDateHandler = (timestamp, miladi) => {
     dispatch(getDate(miladi, timestamp));
-    dispatch(getTimeState(miladi));
   };
-
+  useEffect(() => {
+    if (state.selectedService.name !== "" && state.date.date) {
+      dispatch(
+        getTimeState(
+          convertISOS(state.date.timestamp).slice(0, 10),
+          state.selectedService.name
+        )
+      );
+    }
+  }, [state.selectedService, state.date]);
   var currentTime = new Date().toJSON().slice(0, 10).replace(/-/g, "/");
   return (
     <>

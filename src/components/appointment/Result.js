@@ -28,29 +28,28 @@ const Result = () => {
       <ResultStyle ref={ref}>
         <ul>
           <li>
-            {console.log(state.appointmentID)}
-            <span>{t("appoinment")}</span> <span>{state.appointmentID}</span>
-          </li>
-          <li>
-            <span>{t("Services")}:{state.selectedService.value}</span>
+            <span>{t("appoinment")}</span>
+            <span>{state.reservitionResult.id}</span>
           </li>
           <li>
             <span>
-              {t("date")}:
-              {lang === "fa"
-                ? toPersianNum(state.date.date)
-                : convertISOS(state.date.timestamp).slice(0, 10)}
+              {t("Services")}:{t(`${state.reservitionResult.services}`)}
             </span>
           </li>
           <li>
-            <span>{t("time")}: {state.timeSelected.name}</span>
+            <span>
+              {t("date")}:{state.reservitionResult.date}
+            </span>
+          </li>
+          <li>
+            <span>
+              {t("time")}: {state.reservitionResult.time}
+            </span>
           </li>
         </ul>
         <div>
           <h6>{t("Conditionandrules")}</h6>
-          <p>
-{t("ruleText")}
-          </p>
+          <p>{t("ruleText")}</p>
         </div>
       </ResultStyle>
       <button className="saveGallery submitBtn" onClick={downloadScreenshot}>

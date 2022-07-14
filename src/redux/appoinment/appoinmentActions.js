@@ -1,7 +1,7 @@
 import callApi from "../../api/callApi";
 import { BASE_URL, GET_TIME_STATE, SET_RESERVATION } from "../../api/urls";
 import { convertISOS } from "../../tools/helper";
-
+import { notify } from "../../tools/toast/toast";
 export const getTime = (times) => {
   return {
     type: "GET_TIME",
@@ -34,15 +34,22 @@ export const timeLoaderTrue = () => {
     type: "TIME_LOADER_TRUE"
   };
 };
-export const getTimeState = (date) => {
+export const noTime = () => {
+  return {
+    type: "NO_TIME"
+  };
+};
+export const getTimeState = (date, service) => {
   return (dispatch) => {
     dispatch(timeLoaderTrue());
     const getTimes = async () => {
       var myHeaders = new Headers();
       myHeaders.append("Content-Type", "application/json");
+      console.log(service);
+      console.log(date);
 
       const response = await callApi(
-        `${BASE_URL + GET_TIME_STATE}?Day=${date}`,
+        `${BASE_URL + GET_TIME_STATE}?Day=${date}&Service=${service}`,
         "{}",
         myHeaders,
         "GET"
@@ -50,15 +57,20 @@ export const getTimeState = (date) => {
       console.log(response[0]);
       if (response[0].code === 200) {
         dispatch(getTime(response[0].data));
+      } else if (response[0].code === 206) {
+        dispatch(noTime());
+      } else {
+        notify(t("problemInAppoinment"), "error");
       }
     };
     getTimes();
   };
 };
-export const setSuccessReservation = (id) => {
+export const setSuccessReservation = (data, lang) => {
   return {
     type: "SET_SUCCESS_RESERVATION",
-    id: id
+    data: data,
+    lang: lang
   };
 };
 export const loaderResesrvition = () => {
@@ -66,7 +78,7 @@ export const loaderResesrvition = () => {
     type: "LOADER_RESERVATION_TRUE"
   };
 };
-export const setReservation = (data, user, token) => {
+export const setReservation = (data, user, token, lang, setshowChild) => {
   return (dispatch) => {
     dispatch(loaderResesrvition());
     const getTimes = async () => {
@@ -86,9 +98,10 @@ export const setReservation = (data, user, token) => {
         myHeaders,
         "POST"
       );
-      console.log(response[0].data.id);
+      console.log(response[0].data);
       if (response[0].code === 200) {
-        dispatch(setSuccessReservation(response[0].data.id));
+        setshowChild(true);
+        dispatch(setSuccessReservation(response[0].data, lang));
       }
     };
     getTimes();

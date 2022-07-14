@@ -22,9 +22,10 @@ const Appointment = () => {
   }
   const { t } = useTranslation();
   const dispatch = useDispatch();
+  const lang = useSelector((state) => state.stateLang.lng);
   const state = useSelector((state) => state.stateAppoinment);
   const user = useSelector((state) => state.stateRegister);
-
+  const [showResult, setshowChild] = useState(false);
   const [open, setOpen] = useState({
     date: false,
     time: false,
@@ -42,12 +43,12 @@ const Appointment = () => {
 
         const token = userToken.token;
 
-        dispatch(setReservation(state, user, token));
+        dispatch(setReservation(state, user, token, lang, setshowChild));
       } else {
         notify(t("firstLogin"), "error");
       }
     } else {
-      notify(t("compliteData"), "error");
+      notify(t("completeData"), "error");
     }
   };
   console.log(open);
@@ -73,7 +74,7 @@ const Appointment = () => {
     <AppointmentContainer>
       <RowJustifyBetween align="normal">
         <DropDown
-          text="Date"
+          text={state.date.date === "" ? t("date") : state.date.date}
           id="date"
           active={open.date}
           openHandler={openHandler}
@@ -82,7 +83,11 @@ const Appointment = () => {
           open={open}
         />
         <DropDown
-          text="Services"
+          text={
+            state.selectedService.value === ""
+              ? t("Services")
+              : t(`${state.selectedService.value}`)
+          }
           id="service"
           active={open.service}
           openHandler={openHandler}
@@ -91,7 +96,7 @@ const Appointment = () => {
           open={open}
         />
         <DropDown
-          text="Time"
+          text={state.timeSelected.name===""?t("time"):state.timeSelected.name }
           id="time"
           active={open.time}
           openHandler={openHandler}
@@ -110,7 +115,7 @@ const Appointment = () => {
               t("done")
             )}
           </button>
-          {state.showResult && <Result />}
+          {showResult && <Result />}
         </div>
       </RowJustifyBetween>
     </AppointmentContainer>
@@ -118,3 +123,4 @@ const Appointment = () => {
 };
 
 export default Appointment;
+                   
