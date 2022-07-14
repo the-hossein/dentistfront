@@ -13,7 +13,7 @@ import { useTranslation } from "react-i18next";
 import { useSelector, useDispatch } from "react-redux";
 import Cookies from "js-cookie";
 import i18next from "i18next";
-import { changeLang } from '../../redux/lang/langAction';
+import { changeLang } from "../../redux/lang/langAction";
 import {
   getProfile,
   loginStatusFalse,
@@ -23,17 +23,16 @@ import {
 import { notify } from "../../tools/toast/toast";
 import { useRouter } from "next/router";
 import FullScreenLoader from "../../tools/loader/FullScreenLoader";
-import Image from 'next/image';
-import Logo from '../../../public/Assets/images/kremLogo.png';
-
+import Image from "next/image";
+import Logo from "../../../public/Assets/images/kremLogo.png";
 
 const Header = ({ path }) => {
-  const lang = useSelector(state => state.stateLang.lng);
+  const lang = useSelector((state) => state.stateLang.lng);
   const dispatch = useDispatch();
   const router = useRouter();
   const state = useSelector((state) => state.stateRegister);
 
-  const [open, setOpen] = useState(false)
+  const [open, setOpen] = useState(false);
 
   const { t } = useTranslation();
 
@@ -51,7 +50,7 @@ const Header = ({ path }) => {
     root.style.setProperty("--dirRi", "ltr");
     root.style.setProperty("--floatRi", "right");
     root.style.setProperty("--floatLf", "left");
-    root.style.setProperty("--fontFamily", "Roboto"); 
+    root.style.setProperty("--fontFamily", "Roboto");
   };
 
   const changeLng = (lng) => {
@@ -64,9 +63,9 @@ const Header = ({ path }) => {
     }
   };
 
-  useEffect(()=> {
+  useEffect(() => {
     dispatch(changeLang(Cookies.get("i18next")));
-    
+
     const lngCookie = Cookies.get("i18next");
 
     if (lngCookie === undefined) {
@@ -79,15 +78,14 @@ const Header = ({ path }) => {
     } else {
       rightDir();
     }
-  }, [lang])
+  }, [lang]);
 
+  // const Header = ({ path }) => {
 
-// const Header = ({ path }) => {
-  
   // const dispatch = useDispatch();
   // if (typeof window !== "undefined") {
   //   var root = document.documentElement;
-    
+
   // }
 
   useEffect(() => {
@@ -123,55 +121,64 @@ const Header = ({ path }) => {
   };
   return (
     <HeaderBasic>
-     
       <IconDiv>
         <Image src={Logo} alt="logo" />
       </IconDiv>
-      <Humber open={open} onClick={()=> setOpen(prevOpen=> !prevOpen)}>
+      <Humber open={open} onClick={() => setOpen((prevOpen) => !prevOpen)}>
         <div></div>
         <div></div>
         <div></div>
       </Humber>
       <MenuSider lang={lang} open={open}>
         <Link href="/">
-            <a><li className={path === "Home" && "active"} >
-              {t("home")}</li></a>
-          </Link>
-          <Link href="service">
-            <a><li className={path === "Service" && "active"}>{t("service")}</li></a>
-          </Link>
-          <Link href='/samples'>
-            <a><li className={path === "Samples" && "active"}>{t("samples")}</li></a>
-          </Link>
-          <Link href="/aboutus">
-            <a>
-              <li className={path === "About" && "active"}>{t("aboutus")}</li>
-            </a>
-          </Link>
-          <Link href="/contact">
-            <a>
-              <li className={path === "Contact" && "active"}>{t("contact")}</li>
-            </a>
-          </Link>
-          <li>
-            {
-              lang === "en" ? 
-              <span onClick={() => changeLng("fa")}>Fa</span> :
-              <span onClick={() => changeLng("en")}>En</span> 
-            }
-          </li>
+          <a>
+            <li className={path === "Home" && "active"}>{t("home")}</li>
+          </a>
+        </Link>
+        <Link href="service">
+          <a>
+            <li className={path === "Service" && "active"}>{t("service")}</li>
+          </a>
+        </Link>
+        <Link href="/samples">
+          <a>
+            <li className={path === "Samples" && "active"}>{t("samples")}</li>
+          </a>
+        </Link>
+        <Link href="/aboutus">
+          <a>
+            <li className={path === "About" && "active"}>{t("aboutus")}</li>
+          </a>
+        </Link>
+        <Link href="/contact">
+          <a>
+            <li className={path === "Contact" && "active"}>{t("contact")}</li>
+          </a>
+        </Link>
+        <li>
+          {lang === "en" ? (
+            <span onClick={() => changeLng("fa")}>Fa</span>
+          ) : (
+            <span onClick={() => changeLng("en")}>En</span>
+          )}
+        </li>
       </MenuSider>
       <Navbar>
         <UlMenu>
           <Link href="/">
-            <a><li className={path === "Home" && "active"} >
-              {t("home")}</li></a>
+            <a>
+              <li className={path === "Home" && "active"}>{t("home")}</li>
+            </a>
           </Link>
           <Link href="service">
-            <a><li className={path === "Service" && "active"}>{t("service")}</li></a>
+            <a>
+              <li className={path === "Service" && "active"}>{t("service")}</li>
+            </a>
           </Link>
-          <Link href='/samples'>
-            <a><li className={path === "Samples" && "active"}>{t("samples")}</li></a>
+          <Link href="/samples">
+            <a>
+              <li className={path === "Samples" && "active"}>{t("samples")}</li>
+            </a>
           </Link>
           <Link href="/aboutus">
             <a>
@@ -184,11 +191,11 @@ const Header = ({ path }) => {
             </a>
           </Link>
           <li>
-            {
-              lang === "en" ? 
-              <span onClick={() => changeLng("fa")}>Fa</span> :
-              <span onClick={() => changeLng("en")}>En</span> 
-            }
+            {lang === "en" ? (
+              <span onClick={() => changeLng("fa")}>Fa</span>
+            ) : (
+              <span onClick={() => changeLng("en")}>En</span>
+            )}
           </li>
         </UlMenu>
       </Navbar>

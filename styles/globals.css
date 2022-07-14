@@ -12,18 +12,7 @@
   font-style: normal;
 }
 
-@font-face {
-  font-family: 'Yekan-Bakh';
-  src: url('/public/Assets/fonts/font/YekanBakh-Bold.eot');
-  src: local('YekanBakh-Bold'),
-    url('/public/Assets/fonts/font/YekanBakh-Bold.eot') format('embedded-opentype'),
-    url('/public/Assets/fonts/font/YekanBakh-Bold.woff2') format('woff2'),
-    url('/public/Assets/fonts/font/YekanBakh-Bold.woff') format('woff'),
-    url('/public/Assets/fonts/font/YekanBakh-Bold.ttf') format('truetype');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
-}
+
 
 :root {
   --bluePen: #558D96;
