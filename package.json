@@ -30,7 +30,8 @@
     "redux": "^4.2.0",
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.1",
-    "styled-components": "^5.3.5"
+    "styled-components": "^5.3.5",
+    "use-react-screenshot": "^3.0.0"
   },
   "devDependencies": {
     "eslint": "8.19.0",

@@ -8,6 +8,7 @@ import "react-toastify/dist/ReactToastify.css";
 
 import { store } from "../src/redux/store";
 import "../styles/globals.css";
+import { useEffect, useState } from "react";
 
 //set lang
 i18n
@@ -28,15 +29,19 @@ i18n
     }
   });
 
-
 function MyApp({ Component, pageProps }) {
+  const [showChild, setshowChild] = useState(false);
+  useEffect(() => {
+    setshowChild(true);
+  }, []);
+  if (!showChild) {
+    return null;
+  }
   return (
     <Provider store={store}>
       <Component {...pageProps} />
       <ToastContainer />
-    
     </Provider>
-    
   );
 }
 
