@@ -28,7 +28,7 @@ const Landing = () => {
           <div className="description">
             <h1>{t("Sadatabad")}</h1>
             <h2>{t("company")}</h2>
-            <p>slogan slogan slogan slogan slogan slogan slogan slogan</p>
+            <p className="slogan" >slogan slogan slogan slogan slogan slogan slogan slogan</p>
           </div>
           <RowJustifyBetweenHome align={"flex-start"}>
             <div className="col">
