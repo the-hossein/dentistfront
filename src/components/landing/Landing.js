@@ -32,12 +32,18 @@ const Landing = () => {
           </div>
           <RowJustifyBetweenHome align={"flex-start"}>
             <div className="col">
-              <ButtonRound text={t("Appointment")} width={"205px"} />
+              <Link href="/appointment" >
+             <a>
+
+                  <ButtonRound text={t("Appointment")} width={"205px"} />
+             </a>
+            
+              </Link>
               <Simple />
             </div>
             <div className="col col-text">
               <div className="child-col">
-                <Link href="samples" replace>
+                <Link href="/samples" replace>
                   <ArrowText>
                     <h2>Work Sample</h2>
                     <ArrowLeftIcon fontSize="large" />

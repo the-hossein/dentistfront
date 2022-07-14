@@ -1,5 +1,6 @@
 import styled from "styled-components";
 export const AppointmentContainer = styled.div`
+padding:2rem 0;
   .active > div {
     border-top-right-radius: 12px 56px !important;
     border-top-left-radius: 12px 56px !important;
@@ -33,6 +34,7 @@ export const AppointmentContainer = styled.div`
     }
   }
   @media (max-width: 992px) {
+    padding: 3rem 0.5rem;
     .result {
       width: 50%;
     }
@@ -149,7 +151,7 @@ export const ResultStyle = styled.div`
   padding: 1rem;
   min-height: 210px;
   width: 90%;
-  margin-top: 2.3rem;
+  margin-top: 2rem;
 
   border-radius: var(--inputRadius);
   p,
