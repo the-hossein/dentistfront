@@ -3,6 +3,7 @@ export const RowJustifyBetween = styled.div`
   width: ${(props) => (props.width ? props.width : "100%")};
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
   align-items: ${(props) => (props.align ? props.align : "center")};
   .child-col{
     display: flex;
@@ -219,7 +220,7 @@ export const ButtonRoundBasic = styled.button`
 
 export const BasicSection = styled.section`
   padding: 2rem 3rem;
-  min-height: ${props=>props.footer===true?"65vh":"85vh"};
+  min-height: ${(props) => (props.footer === true ? "65vh" : "85vh")};
   background-color: var(--mainColor);
   @media (max-width: 720px) {
     padding: 1.5rem 2.5rem;

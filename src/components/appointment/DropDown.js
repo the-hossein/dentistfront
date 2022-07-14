@@ -1,9 +1,23 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { DropDownContainer } from "./styleAppoinment";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { DatePicker } from "react-advance-jalaali-datepicker";
+import { useDispatch, useSelector } from "react-redux";
+import {
+  getDate,
+  getTimeState
+} from "../../redux/appoinment/appoinmentActions";
 
-const DropDown = ({ active, id, openHandler, text,childComponent }) => {
+const DropDown = ({ active, id, openHandler, text, childComponent }) => {
+  const dispatch = useDispatch();
+  const state = useSelector((state) => state.stateAppoinment);
+
+  const chaneDateHandler = (timestamp, miladi) => {
+    dispatch(getDate(miladi, timestamp));
+    dispatch(getTimeState(miladi));
+  };
+
+  var currentTime = new Date().toJSON().slice(0, 10).replace(/-/g, "/");
   return (
     <>
       <DropDownContainer
@@ -12,18 +26,28 @@ const DropDown = ({ active, id, openHandler, text,childComponent }) => {
         onClick={openHandler}
       >
         <div className="item">
-          <div className="title" id={id}>
-            <ArrowDropDownIcon sx={{ fontSize: "30pt" }} id={id} />
-            <span id={id}> {text}</span>
-          </div>
-          {id === "date" && (
-            <DatePicker
-              format="jYYYY/jMM/jDD"
-              id="datePicker"
-              preSelected={""}
-              name="date"
-            />
+          {id === "date" ? (
+            <>
+              <DatePicker
+                format="jYYYY/jMM/jDD"
+                id={"datePicker"}
+                preSelected={currentTime}
+                onChange={chaneDateHandler}
+                name="date"
+                placeholder={"Date"}
+              />
+              <div className="dateDropDown" id={id}>
+                <ArrowDropDownIcon sx={{ fontSize: "30pt" }} id={id} />
+                <span id={id}>{text}</span>
+              </div>
+            </>
+          ) : (
+            <div className="title" id={id}>
+              <ArrowDropDownIcon sx={{ fontSize: "30pt" }} id={id} />
+              <span id={id}> {text}</span>
+            </div>
           )}
+
           {active && <div>{childComponent}</div>}
         </div>
       </DropDownContainer>
