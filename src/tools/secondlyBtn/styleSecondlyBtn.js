@@ -3,7 +3,7 @@ export const SecondlyButtonStyle = styled.button`
   background-color: var(--whitePen);
   border: none;
   border-radius: var(--secondlyBtnRadius);
-  width: 210px;
+  width: ${(props) => (props.size === "small" ? "140px" : "210px")};
   height: 50px;
   color: var(--darkPen);
   cursor: pointer;
@@ -11,12 +11,14 @@ export const SecondlyButtonStyle = styled.button`
     background-color: var(--bluePen);
     color: var(--whitePen);
   }
-  &:disabled{
-      opacity: 50%;
+  &:disabled {
+    opacity: 50%;
   }
   &:disabled:hover {
     background-color: var(--whitePen);
-  color: var(--darkPen);
-   
+    color: var(--darkPen);
+  }
+  @media (max-width: 572px) {
+    width: 150px;
   }
 `;

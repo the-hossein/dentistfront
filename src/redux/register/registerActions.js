@@ -1,6 +1,7 @@
 import callApi from "../../api/callApi";
 import { BASE_URL, CHECK_OTP, GET_PROFILE, LOGIN_SIGNUP } from "../../api/urls";
 import { notify } from "../../tools/toast/toast";
+
 if (typeof window !== "undefined") {
   var ls = localStorage.getItem("userToken");
 }
@@ -13,6 +14,16 @@ export const fillInputRegistr = (e) => {
 export const loginStatusTrue = () => {
   return {
     type: "LOGIN_STATUS_TRUE"
+  };
+};
+export const openPopup = () => {
+  return {
+    type: "OPEN_POPUP"
+  };
+};
+export const closePopup = () => {
+  return {
+    type: "CLOSE_POPUP"
   };
 };
 export const loginStatusFalse = () => {
@@ -32,7 +43,7 @@ export const pausepreloadRegister = (name) => {
     name: name
   };
 };
-export const registerRequest = (state, setActiveCode) => {
+export const registerRequest = (state, setActiveCode, lang) => {
   return (dispatch) => {
     dispatch(preloadRegister("phoneLoading"));
     const sendCode = async () => {
@@ -53,16 +64,26 @@ export const registerRequest = (state, setActiveCode) => {
       );
       console.log(response);
       if (response[0].code === 200 || response[0].code === 201) {
-        notify("کد با موفقیت ارسال شد", "success");
+        let text = "";
+        if (lang === "fa") {
+          text = "کد با موفقیت ارسال شد";
+        } else {
+          text = "Code sent successfully";
+        }
+
+        notify(text, "success");
         setActiveCode(true);
         dispatch(pausepreloadRegister("phoneLoading"));
       } else {
         dispatch(pausepreloadRegister("phoneLoading"));
-
-        notify(
-          "قبلا درخواست کد داده اید لطفا 1 دقیقه دیگر تلاش بفرمایید",
-          "error"
-        );
+        let text = "";
+        if (lang === "fa") {
+          text = "قبلا درخواست کد داده اید لطفا 1 دقیقه دیگر تلاش بفرمایید";
+        } else {
+          text =
+            "You have already requested a code, please try again in 1 minute";
+        }
+        notify(text, "error");
       }
     };
     sendCode();
@@ -103,9 +124,11 @@ export const checkOtp = (state, router) => {
         };
 
         localStorage.setItem("userToken", JSON.stringify(data));
-        router.push({
-          pathname: "/"
-        });
+        if (router.pathname !== "/appointment") {
+          router.push({
+            pathname: "/"
+          });
+        }
         dispatch(pausepreloadRegister("codeLoading"));
       } else if (response[0].code === 200) {
         dispatch(loginStatusTrue());
@@ -117,9 +140,11 @@ export const checkOtp = (state, router) => {
         };
 
         localStorage.setItem("userToken", JSON.stringify(data));
-        router.push({
-          pathname: "/"
-        });
+        if (router.pathname !== "/appointment") {
+          router.push({
+            pathname: "/"
+          });
+        }
         dispatch(pausepreloadRegister("codeLoading"));
       } else {
         dispatch(pausepreloadRegister("codeLoading"));

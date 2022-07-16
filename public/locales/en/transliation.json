@@ -50,5 +50,11 @@
   "Fillings": "Fillings",
   "Dental cleanings": "Dental cleanings",
   "Dental Laminate": "Dental Laminate",
-  "Composite": "Composite"
+  "Composite": "Composite",
+  "validEnterPhone": "Please enter your phone number",
+  "validIncorrectPhone": "The entered number is not valid",
+  "validLength11": "Mobile number must be 11 digits",
+  "validEnterCode": "Please enter a 6-digit code",
+  "validLengthCode6": "Code must be 6 digits",
+  "firstReservation": "As Soon As possible"
 }

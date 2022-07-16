@@ -7,6 +7,8 @@ export const InputStyle = styled.input`
   width: 100%;
   outline: rgb(0, 0, 0);
   padding: 0 1rem;
+  text-align: var(--floatLf);
+
   &:disabled {
     opacity: 50%;
   }
@@ -18,5 +20,6 @@ export const InputContainer = styled.div`
     font-size: var(--sm-font);
     display: inline-block;
     margin-top: 0.3rem;
+    float: var(--floatLf);
   }
 `;

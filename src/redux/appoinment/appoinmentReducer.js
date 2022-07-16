@@ -234,7 +234,7 @@ const appointmentReducer = (state = initializeState, action) => {
         showResult: true,
         reservitionResult: {
           id: action.data.id,
-          date: convertDate(action.data.date),
+          date: action.data.date,
           time: timeReservtion,
           services: convertServise(action.data.services)
         }
@@ -246,6 +246,7 @@ const appointmentReducer = (state = initializeState, action) => {
         noTime: true,
         timeLoader: false
       };
+
     default:
       return state;
   }

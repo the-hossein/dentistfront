@@ -3,17 +3,22 @@ import { DropDownContainer } from "./styleAppoinment";
 import ArrowDropDownIcon from "@mui/icons-material/ArrowDropDown";
 import { DatePicker } from "react-advance-jalaali-datepicker";
 import { useDispatch, useSelector } from "react-redux";
+import Checkbox from "@mui/material/Checkbox";
+import FormControlLabel from "@mui/material/FormControlLabel";
 import {
   getDate,
   getTimeState
 } from "../../redux/appoinment/appoinmentActions";
 import { convertISOS } from "../../tools/helper";
+import { useTranslation } from "react-i18next";
 
 const DropDown = ({ active, id, openHandler, text, childComponent }) => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state.stateAppoinment);
-
+  const [firstTime, setFirstTime] = useState(false);
+  const { t } = useTranslation();
   const chaneDateHandler = (timestamp, miladi) => {
+    
     dispatch(getDate(miladi, timestamp));
   };
   useEffect(() => {
@@ -26,6 +31,10 @@ const DropDown = ({ active, id, openHandler, text, childComponent }) => {
       );
     }
   }, [state.selectedService, state.date]);
+  useEffect(() => {
+    if (firstTime && state.selectedService.name !== "") {
+    }
+  }, [firstTime, state.selectedService]);
   var currentTime = new Date().toJSON().slice(0, 10).replace(/-/g, "/");
   return (
     <>
@@ -37,6 +46,15 @@ const DropDown = ({ active, id, openHandler, text, childComponent }) => {
         <div className="item">
           {id === "date" ? (
             <>
+          
+              <FormControlLabel
+                value={firstTime}
+                control={<Checkbox />}
+                label={t("firstReservation")}
+                labelPlacement={t("firstReservation")}
+                onChange={() => setFirstTime(!firstTime)}
+                
+              />
               <DatePicker
                 format="jYYYY/jMM/jDD"
                 id={"datePicker"}

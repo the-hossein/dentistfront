@@ -3,7 +3,7 @@ export const RowJustifyBetween = styled.div`
   width: ${(props) => (props.width ? props.width : "100%")};
   display: flex;
   justify-content: space-between;
-  flex-wrap: ${props => props.noWarp ? "nowrap" : "wrap"};
+  flex-wrap: ${(props) => (props.noWarp ? "nowrap" : "wrap")};
   align-items: ${(props) => (props.align ? props.align : "center")};
   .child-col {
     display: flex;
@@ -131,8 +131,8 @@ export const Humber = styled.div`
   cursor: pointer;
   position: ${(props) => (props.open ? "fixed" : "")};
   z-index: 100;
-  left: ${props=> props.lang ==="fa" ? "unset" : "5%" };
-  right: ${props=> props.lang !=="fa" ? "unset" : "5%" };
+  left: ${(props) => (props.lang === "fa" ? "unset" : "5%")};
+  right: ${(props) => (props.lang !== "fa" ? "unset" : "5%")};
   div {
     border-radius: 10px;
     width: 27px;
@@ -191,7 +191,7 @@ export const Navbar = styled.nav`
 
   @media (max-width: 778px) {
     width: 100%;
-    justify-content:${props => props.open ? "flex-end" : "space-between"};
+    justify-content: ${(props) => (props.open ? "flex-end" : "space-between")};
   }
 `;
 
@@ -261,7 +261,6 @@ export const MainDiv = styled.div`
     margin: 1rem 0;
   }
   .child {
-    
   }
   .banner {
     width: 40%;
@@ -291,22 +290,22 @@ export const MainDiv = styled.div`
     margin-bottom: 2rem;
     color: var(--whitePen);
     h1 {
-      font-size: ${props => props.lang === "fa" ? "50pt" : "70pt"};
+      font-size: ${(props) => (props.lang === "fa" ? "50pt" : "70pt")};
     }
     h2 {
-      font-size: ${props => props.lang === "fa" ? "35pt" : "60pt"};
+      font-size: ${(props) => (props.lang === "fa" ? "35pt" : "60pt")};
     }
   }
 
   @media (max-width: 1040px) {
     .description {
       h1 {
-        font-size:${props => props.lang === "fa" ? "35pt" : "45pt"} ;
+        font-size: ${(props) => (props.lang === "fa" ? "35pt" : "45pt")};
       }
       h2 {
-        font-size: ${props => props.lang === "fa" ? "25pt" : "35pt"};
+        font-size: ${(props) => (props.lang === "fa" ? "25pt" : "35pt")};
       }
-      p{
+      p {
         font-size: var(--md-font);
       }
     }
