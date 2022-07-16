@@ -78,6 +78,7 @@ export const loaderResesrvition = () => {
     type: "LOADER_RESERVATION_TRUE"
   };
 };
+
 export const setReservation = (data, user, token, lang, setshowChild) => {
   return (dispatch) => {
     dispatch(loaderResesrvition());

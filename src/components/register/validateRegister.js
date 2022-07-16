@@ -3,14 +3,14 @@ import { validationPhone } from "../../tools/helper";
 const validateRegister = (value) => {
   const errorText = {};
   if (!value.phoneNumber) {
-    errorText.number = "لطفا شماره خود را وارد کنید";
+    errorText.number = "validEnterPhone";
   } else if (
     validationPhone(value.phoneNumber) === false &&
     value.phoneNumber.length === 11
   ) {
-    errorText.number = "شماره وارد شده صحیح نمی باشد";
+    errorText.number = "validIncorrectPhone";
   } else if (value.phoneNumber.length < 11) {
-    errorText.number = "شماره همراه باید 11 رقمی باشد";
+    errorText.number = "validLength11";
   } else delete errorText.number;
   //   if (!value.code) {
   //     errorText.code = "لطفا کد 6 رقمی را وارد کنید";
@@ -26,9 +26,9 @@ const validateCode = (value) => {
   const errorCode = {};
 
   if (!value.code) {
-    errorCode.code = "لطفا کد 6 رقمی را و<ارد کنید";
+    errorCode.code = "validEnterCode";
   } else if (value.code.length < 6) {
-    errorCode.code = "کد باید 6 رقمی باشد";
+    errorCode.code = "validLengthCode6";
   } else delete errorCode.code;
   return errorCode;
 };

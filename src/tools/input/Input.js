@@ -1,5 +1,6 @@
 import React from "react";
 import { InputContainer, InputStyle } from "./styleInput";
+import { useTranslation } from "react-i18next";
 
 const Input = ({
   placeHolder,
@@ -14,6 +15,7 @@ const Input = ({
   onFocus,
   disabled
 }) => {
+  const { t } = useTranslation();
   return (
     <InputContainer>
       <InputStyle
@@ -27,7 +29,7 @@ const Input = ({
         onFocus={onFocus}
         disabled={disabled}
       />
-      {valiStatus && <span>{textError}</span>}
+      {valiStatus && <span>{t(`${textError}`)}</span>}
     </InputContainer>
   );
 };

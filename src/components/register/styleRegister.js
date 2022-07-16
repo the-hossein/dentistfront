@@ -18,10 +18,6 @@ export const RegisterContainer = styled.div`
     margin: auto;
     .mb {
       margin: 1rem 0 2rem 0;
-      display: flex;
-      justify-content: space-between;
-      flex-direction: row;
-      align-items: center;
     }
     h5 {
       color: var(--whitePen);
@@ -29,7 +25,8 @@ export const RegisterContainer = styled.div`
       font-weight: normal;
     }
     button {
-      margin: ${props => props.lang === "fa" ? "0 1rem 0 0" : "0 0 0 1.5rem"};
+      margin: ${(props) =>
+        props.lang === "fa" ? "0 1rem 0 0" : "0 0 0 1.5rem"};
     }
     .socialMedia {
       margin-top: 6rem;
@@ -45,11 +42,11 @@ export const RegisterContainer = styled.div`
 
   @media (max-width: 798px) {
     flex-direction: column-reverse;
-    .registerImg{
+    .registerImg {
       width: 100%;
-      span{
+      span {
         height: 50vh !important;
-        img{
+        img {
           object-fit: cover;
         }
       }
@@ -57,11 +54,10 @@ export const RegisterContainer = styled.div`
     .registreForm {
       margin-top: 2rem;
       width: 90%;
-      .mb{
+      .mb {
         flex-direction: column;
-        align-items: flex-start;
-        button{
-          margin:1rem 0 !important;
+        button {
+          margin: 1rem 0 !important;
         }
       }
       .socialMedia {

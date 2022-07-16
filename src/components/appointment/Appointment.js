@@ -14,6 +14,9 @@ import { notify } from "../../tools/toast/toast";
 import Result from "./Result";
 import CircularProgress from "@mui/material/CircularProgress";
 import { useTranslation } from "react-i18next";
+import { openPopup } from "../../redux/register/registerActions";
+import { useRouter } from "next/router";
+import { toPersianNum } from "../../tools/helper";
 
 const Appointment = () => {
   if (typeof window !== "undefined") {
@@ -33,22 +36,21 @@ const Appointment = () => {
   });
 
   const submitHandler = () => {
-    if (
-      state.date.date !== "" &&
-      state.timeSelected.name !== "" &&
-      state.selectedService !== ""
-    ) {
-      if (ls !== null) {
-        const userToken = JSON.parse(ls);
-
-        const token = userToken.token;
-
+    if (ls !== null) {
+      const userToken = JSON.parse(ls);
+      const token = userToken.token;
+      if (
+        state.date.date !== "" &&
+        state.timeSelected.name !== "" &&
+        state.selectedService !== ""
+      ) {
         dispatch(setReservation(state, user, token, lang, setshowChild));
       } else {
-        notify(t("firstLogin"), "error");
+        notify(t("completeData"), "error");
       }
     } else {
-      notify(t("completeData"), "error");
+      dispatch(openPopup());
+      notify(t("firstLogin"), "error");
     }
   };
   console.log(open);
@@ -69,19 +71,18 @@ const Appointment = () => {
   useEffect(() => {
     setOpen({ ...open, date: false });
   }, [state.date]);
-  console.log(open);
+  useEffect(() => {
+    setOpen({ ...open, time: false });
+  }, [state.timeSelected]);
+  useEffect(() => {
+    setOpen({ ...open, service: false });
+  }, [state.selectedService]);
+  const router = useRouter();
+  console.log(router);
+
   return (
     <AppointmentContainer>
       <RowJustifyBetween align="normal">
-        <DropDown
-          text={state.date.date === "" ? t("date") : state.date.date}
-          id="date"
-          active={open.date}
-          openHandler={openHandler}
-          dateDrop={() => setOpen({ ...open, date: false })}
-          setOpen={setOpen}
-          open={open}
-        />
         <DropDown
           text={
             state.selectedService.value === ""
@@ -96,11 +97,32 @@ const Appointment = () => {
           open={open}
         />
         <DropDown
-          text={state.timeSelected.name===""?t("time"):state.timeSelected.name }
+          text={
+            state.date.date === ""
+              ? t("date")
+              : lang === "fa"
+              ? toPersianNum(state.date.date)
+              : state.date.date
+          }
+          id="date"
+          active={open.date}
+          openHandler={openHandler}
+          dateDrop={() => setOpen({ ...open, date: false })}
+          setOpen={setOpen}
+          open={open}
+        />
+        <DropDown
+          text={
+            state.timeSelected.name === ""
+              ? t("time")
+              : lang === "fa"
+              ? toPersianNum(state.timeSelected.name)
+              : state.timeSelected.name
+          }
           id="time"
           active={open.time}
           openHandler={openHandler}
-          childComponent={<Time />}
+          childComponent={<Time setOpen={setOpen} open={open} />}
           setOpen={setOpen}
           open={open}
         />
@@ -123,4 +145,3 @@ const Appointment = () => {
 };
 
 export default Appointment;
-                   

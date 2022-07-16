@@ -68,7 +68,7 @@ button {
 
 #datePicker {
   opacity: 0;
-  display: flex !important;
+  display: none !important;
   align-items: center;
   justify-content: center;
   height: 50px;
@@ -80,6 +80,7 @@ button {
 
 .item::-webkit-scrollbar {
   width: 0px;
+  scrollbar-width: none;
 }
 
 .item::-webkit-scrollbar-track {

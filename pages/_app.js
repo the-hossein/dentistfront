@@ -5,10 +5,12 @@ import HttpApi from "i18next-http-backend";
 import { Provider } from "react-redux";
 import { ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
+import NextProgress from "next-progress";
 
 import { store } from "../src/redux/store";
 import "../styles/globals.css";
 import { useEffect, useState } from "react";
+import RegisterPopUp from "../src/tools/popup/RegisterPopUp";
 
 //set lang
 i18n
@@ -39,8 +41,14 @@ function MyApp({ Component, pageProps }) {
   }
   return (
     <Provider store={store}>
+      <NextProgress
+        height={8}
+        options={{ showSpinner: false }}
+        color="var(--mainColor)"
+      />
       <Component {...pageProps} />
       <ToastContainer />
+      <RegisterPopUp />
     </Provider>
   );
 }

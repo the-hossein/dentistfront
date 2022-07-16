@@ -1,7 +1,7 @@
 import React, { createRef, useState } from "react";
 
 import { useSelector } from "react-redux";
-import toPersianNum, { convertDate, convertISOS } from "../../tools/helper";
+import { toPersianNum, convertDate, convertISOS } from "../../tools/helper";
 import { ResultStyle } from "./styleAppoinment";
 
 import { useScreenshot, createFileName } from "use-react-screenshot";
@@ -29,21 +29,31 @@ const Result = () => {
         <ul>
           <li>
             <span>{t("appoinment")}</span>
-            <span>{state.reservitionResult.id}</span>
-          </li>
-          <li>
             <span>
-              {t("Services")}:{t(`${state.reservitionResult.services}`)}
+              {lang === "fa"
+                ? toPersianNum(state.reservitionResult.id)
+                : state.reservitionResult.id}
             </span>
           </li>
           <li>
             <span>
-              {t("date")}:{state.reservitionResult.date}
+              {t("Services")}: {t(`${state.reservitionResult.services}`)}
             </span>
           </li>
           <li>
             <span>
-              {t("time")}: {state.reservitionResult.time}
+              {t("date")}:
+              {lang === "fa"
+                ? convertDate(state.reservitionResult.date)
+                : state.reservitionResult.date.slice(0, 10)}
+            </span>
+          </li>
+          <li>
+            <span>
+              {t("time")}:
+              {lang === "fa"
+                ? toPersianNum(state.reservitionResult.time)
+                : state.reservitionResult.time}
             </span>
           </li>
         </ul>

@@ -1,3 +1,5 @@
+import { TypepersianNumber } from "../../tools/helper";
+
 const initializeState = {
   phoneNumber: "",
   code: "",
@@ -5,7 +7,8 @@ const initializeState = {
   codeLoading: false,
   loginStatus: false,
   userDataLoader: false,
-  userId: ""
+  userId: "",
+  popup: false
 };
 
 const registerReducer = (state = initializeState, action) => {
@@ -13,7 +16,7 @@ const registerReducer = (state = initializeState, action) => {
     case "FILL_INPUT_REGISTER":
       return {
         ...state,
-        [action.e.target.name]: action.e.target.value
+        [action.e.target.name]: TypepersianNumber(action.e.target.value)
       };
     case "PRELOAD_REGISTER":
       return {
@@ -28,7 +31,8 @@ const registerReducer = (state = initializeState, action) => {
     case "LOGIN_STATUS_TRUE":
       return {
         ...state,
-        loginStatus: true
+        loginStatus: true,
+        popup: false
       };
     case "LOGIN_STATUS_FALSE":
       return {
@@ -55,7 +59,19 @@ const registerReducer = (state = initializeState, action) => {
         codeLoading: false,
         loginStatus: false,
         userDataLoader: false,
-        userId: ""
+        userId: "",
+        popup: false
+      };
+
+    case "CLOSE_POPUP":
+      return {
+        ...state,
+        popup: false
+      };
+    case "OPEN_POPUP":
+      return {
+        ...state,
+        popup: true
       };
     default:
       return state;

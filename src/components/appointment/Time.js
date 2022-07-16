@@ -6,12 +6,15 @@ import {
   getTime,
   getTimeState
 } from "../../redux/appoinment/appoinmentActions";
+import { toPersianNum } from "../../tools/helper";
 import Loader from "../../tools/loader/Loader";
 import { BoxStyle } from "./styleAppoinment";
 
 const Time = () => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state.stateAppoinment);
+  const lang = useSelector((state) => state.stateLang.lng);
+
   const [userSelect, setUserSelect] = useState(null);
   console.log(state);
   const timePicker = (e) => {
@@ -31,11 +34,12 @@ const Time = () => {
     <Loader />
   ) : (
     <BoxStyle>
+      <h2>{console.log(toPersianNum("2020-20202"))}</h2>
       {state.noTime ? (
         <p className="notify">{t("notime")}</p>
-      ) : (state.date.date === "" && state.selectedService.value === "" ||
+      ) : (state.date.date === "" && state.selectedService.value === "") ||
         state.date.date === "" ||
-        state.selectedService.value === "" )? (
+        state.selectedService.value === "" ? (
         <p className="notify">{t("selectService")}</p>
       ) : (
         state.time.map((item) => (
@@ -47,7 +51,7 @@ const Time = () => {
               value={item.num}
               // className={state.timeSelected.name===userSelect&&"activeItem"}
             >
-              {item.time}
+              {lang === "fa" ? toPersianNum(item.time) : item.time}
             </button>
           </>
         ))

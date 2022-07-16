@@ -11,7 +11,6 @@ export const AppointmentContainer = styled.div`
   .submitBtn {
     width: 90%;
     font-size: var(--md-font);
-
   }
   .result {
     display: flex;
@@ -68,7 +67,7 @@ export const DropDownContainer = styled.div`
     width: ${(props) => (props.active ? "99%" : "90%")};
     background-color: var(--backWhite);
     height: ${(props) => (props.active ? "288px" : "50px")};
-    max-height: ${(props) => (props.active ? "288px" : "50px")};
+    /* max-height: ${(props) => (props.active ? "288px" : "50px")}; */
 
     border-radius: var(--inputRadius);
     position: relative;
@@ -79,6 +78,23 @@ export const DropDownContainer = styled.div`
       left: 0;
       right: 0;
       background-color: var(--backWhite);
+    }
+    label {
+      width: 100%;
+      margin-top: 3rem;
+      display: block;
+      span {
+        font-size: var(--xs-font);
+        margin: 0.5rem;
+        font-family: var(--fontFamily) !important;
+      }
+      svg {
+        background-color: var(--whitePen);
+        color: white;
+        border-radius: 4px;
+        width: 20px;
+        height: 20px;
+      }
     }
     .title,
     .dateDropDown {
@@ -110,7 +126,7 @@ export const BoxStyle = styled.div`
   > button {
     border: 1px solid var(--bluePen);
     padding: 0.5rem;
-    min-width: ${(props) => (props.size === "big" ? "43%" : "90px")};
+    min-width: ${(props) => (props.size === "big" ? "122px" : "90px")};
     max-width: ${(props) => (props.size === "big" ? "100%" : "100%")};
 
     text-align: center;

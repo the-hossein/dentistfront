@@ -45,14 +45,14 @@ const Register = () => {
     if (!Object.keys(errors).length) {
       dispatch(registerRequest(state, setActiveCode));
     } else {
-      notify("لطفا اطلاعات را  کامل وارد کنید", "error");
+      notify(t("completeData"), "error");
     }
   };
   const codeHandler = () => {
     if (Object.keys(errorsCode).length) {
-      notify("لطفا کد را به درستی وارد کنید", "error");
+      notify(t("enterCorrectCode"), "error");
     } else if (Object.keys(errors).length) {
-      notify("لطفا ابتدا شماره همراه خود را وارد کنید", "error");
+      notify(t("firstEnterPhone"), "error");
     } else if (!Object.keys(errorsCode).length && !Object.keys(errors).length) {
       dispatch(checkOtp(state, router));
     }
