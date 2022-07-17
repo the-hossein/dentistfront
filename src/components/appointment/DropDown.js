@@ -5,12 +5,16 @@ import { DatePicker } from "react-advance-jalaali-datepicker";
 import { useDispatch, useSelector } from "react-redux";
 import Checkbox from "@mui/material/Checkbox";
 import FormControlLabel from "@mui/material/FormControlLabel";
+import SquareIcon from '@mui/icons-material/Square';
 import {
   getDate,
   getTimeState
 } from "../../redux/appoinment/appoinmentActions";
 import { convertISOS } from "../../tools/helper";
 import { useTranslation } from "react-i18next";
+import { CheckBoxOutlineBlankOutlined } from "@mui/icons-material";
+import callApi from "../../api/callApi";
+import { BASE_URL, GET_FIRST_TIME } from "../../api/urls";
 
 const DropDown = ({ active, id, openHandler, text, childComponent }) => {
   const dispatch = useDispatch();
@@ -33,9 +37,20 @@ const DropDown = ({ active, id, openHandler, text, childComponent }) => {
   }, [state.selectedService, state.date]);
   useEffect(() => {
     if (firstTime && state.selectedService.name !== "") {
+
+      const getFirstTimeReservation=async()=>{
+        var myHeaders = new Headers();
+        myHeaders.append("Content-Type", "application/json");
+const response=await callApi(`${BASE_URL+GET_FIRST_TIME}?Service=${state.selectedService.name}`,"{}",myHeaders,"GET")
+console.log(response)
+      }
+      getFirstTimeReservation()
     }
   }, [firstTime, state.selectedService]);
   var currentTime = new Date().toJSON().slice(0, 10).replace(/-/g, "/");
+  const handleChange = (event) => {
+    setFirstTime(event.target.checked);
+  };
   return (
     <>
       <DropDownContainer
@@ -44,15 +59,16 @@ const DropDown = ({ active, id, openHandler, text, childComponent }) => {
         onClick={openHandler}
       >
         <div className="item">
-          {id === "date" ? (
+       {id === "date" ? (
             <>
           
               <FormControlLabel
-                value={firstTime}
-                control={<Checkbox />}
+              
+                
+                control={<Checkbox checked={firstTime} onChange={handleChange} icon={<SquareIcon sx={{color:"var(--whitePen)",borderRadius:"6px"}}/>	}/>}
                 label={t("firstReservation")}
                 labelPlacement={t("firstReservation")}
-                onChange={() => setFirstTime(!firstTime)}
+              
                 
               />
               <DatePicker
@@ -74,7 +90,6 @@ const DropDown = ({ active, id, openHandler, text, childComponent }) => {
               <span id={id}> {text}</span>
             </div>
           )}
-
           {active && <div>{childComponent}</div>}
         </div>
       </DropDownContainer>

@@ -51,10 +51,11 @@ const Result = () => {
           <li>
             <span>
               {t("time")}:
-              {lang === "fa"
-                ? toPersianNum(state.reservitionResult.time)
-                : state.reservitionResult.time}
+            
             </span>
+            <span>  {lang === "fa"
+                ? toPersianNum(state.reservitionResult.time)
+                : state.reservitionResult.time}</span>
           </li>
         </ul>
         <div>

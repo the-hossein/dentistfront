@@ -17,6 +17,7 @@ import { useTranslation } from "react-i18next";
 import { openPopup } from "../../redux/register/registerActions";
 import { useRouter } from "next/router";
 import { toPersianNum } from "../../tools/helper";
+import DatePickerAppoinment from "./DatePickerAppoinment";
 
 const Appointment = () => {
   if (typeof window !== "undefined") {
@@ -44,6 +45,7 @@ const Appointment = () => {
         state.timeSelected.name !== "" &&
         state.selectedService !== ""
       ) {
+       
         dispatch(setReservation(state, user, token, lang, setshowChild));
       } else {
         notify(t("completeData"), "error");
@@ -62,23 +64,23 @@ const Appointment = () => {
     //   }
     // }
     if (name === "date") {
-      setOpen({ ...open, date: !open.date });
+
       console.log(document.getElementById("datePicker"));
       document.getElementById("datePicker").click();
     }
     setOpen({ ...open, [e.target.id]: !open[name] });
   };
+
   useEffect(() => {
-    setOpen({ ...open, date: false });
-  }, [state.date]);
-  useEffect(() => {
-    setOpen({ ...open, time: false, date: false });
-  }, [state.timeSelected]);
+    setOpen({ ...open, time: false });
+  }, [state.timeSelected.name]);
   useEffect(() => {
     setOpen({ ...open, service: false });
-  }, [state.selectedService]);
-  const router = useRouter();
-  console.log(router);
+  }, [state.selectedService.name]);
+  useEffect(() => {
+    console.log("hi")
+    setOpen({ ...open, date: false });
+  }, [state.date.date]);
 
   return (
     <AppointmentContainer>
@@ -110,6 +112,7 @@ const Appointment = () => {
           dateDrop={() => setOpen({ ...open, date: false })}
           setOpen={setOpen}
           open={open}
+       
         />
         <DropDown
           text={

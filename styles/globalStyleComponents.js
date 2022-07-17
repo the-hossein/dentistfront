@@ -158,14 +158,14 @@ export const Humber = styled.div`
 `;
 
 export const HeaderBasic = styled.header`
-  padding: 1rem 6rem;
+  padding: 0.5rem 6rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  min-height: 15vh;
+  min-height: 14vh;
   background-color: var(--backWhite);
   direction: var(--dirRi);
-  font-size: var(--md-font);
+  font-size: var(--xs-font);
   @media (max-width: 711px) {
     padding: 1rem 2rem;
   }
