@@ -19,6 +19,7 @@ const Footer = () => {
           <h6>Instagram1:@instagram</h6>
         </div>
       </RowJustifyBetween>
+      <h3>.تمام حقوق برای <a target="_blank" href="https://karmaagy.com/" className="karma">کارما</a> محفوظ است و استفاده از مطالب <a target="_blank" href="https://karmaagy.com/" className="karma">کارما</a> تنها با ذکر نام <a target="_blank" href="https://karmaagy.com/" className="karma">کارما</a> و درج لینک مستقیم مجاز است </h3>
     </FooterContainer>
   );
 };

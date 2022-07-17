@@ -1,5 +1,5 @@
 import { t } from "i18next";
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import {
   addTime,
@@ -14,13 +14,13 @@ const Time = () => {
   const dispatch = useDispatch();
   const state = useSelector((state) => state.stateAppoinment);
   const lang = useSelector((state) => state.stateLang.lng);
-
-  const [userSelect, setUserSelect] = useState(null);
+  const refTime=useRef()
+  const [userSelect, setUserSelect] = useState(state.timeSelected.name);
   console.log(state);
   const timePicker = (e) => {
     dispatch(addTime(e.target.name, e.target.value));
     setUserSelect(e.target.name);
-
+    console.log(refTime.current.name)
     console.log(userSelect === state.timeSelected.name);
   };
   // useEffect(() => {
@@ -49,7 +49,8 @@ const Time = () => {
               disabled={item.state === false && true}
               name={item.time}
               value={item.num}
-              // className={state.timeSelected.name===userSelect&&"activeItem"}
+              ref={refTime}
+              className={userSelect === item.time&&"activeItem"}
             >
               {lang === "fa" ? toPersianNum(item.time) : item.time}
             </button>

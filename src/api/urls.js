@@ -5,3 +5,4 @@ export const GET_PROFILE = "api/v1/User/GetProfile";
 export const SET_RESERVATION = "api/v1/User/SetReservation";
 export const SET_DENTAL_ADVICE = "api/v1/User/SetCounseling";
 export const GET_TIME_STATE = "api/v1/User/LoadTime";
+export const GET_FIRST_TIME="api/v1/User/FindFirstTime"

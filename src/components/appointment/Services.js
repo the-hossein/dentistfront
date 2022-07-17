@@ -3,10 +3,14 @@ import { useTranslation } from "react-i18next";
 import { useDispatch } from "react-redux";
 import { addService } from "../../redux/appoinment/appoinmentActions";
 import { BoxStyle } from "./styleAppoinment";
+import { useSelector } from "react-redux";
 
 const Services = () => {
   const dispatch = useDispatch();
   const { t } = useTranslation();
+  const state = useSelector((state) => state.stateAppoinment);
+
+  const [userSelect, setUserSelect] = useState(state.selectedService.value);
   const allServices = [
     { type: "Implants", name: 0 },
     { type: "Orthodontics", name: 1 },
@@ -19,13 +23,14 @@ const Services = () => {
     { type: "Composite", name: 8 }
   ];
   const selectHandler = (e) => {
+    setUserSelect(e.target.name);
     dispatch(addService(e.target.value, e.target.name));
   };
   return (
     <BoxStyle size="big">
       {allServices.map((item) => (
         <>
-          <button onClick={selectHandler} name={item.name} value={item.type}>
+          <button onClick={selectHandler} name={item.name} value={item.type}  className={userSelect === item.type&&"activeItem"}>
             {t(`${item.type}`)}
           </button>
         </>

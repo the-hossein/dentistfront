@@ -85,16 +85,12 @@ export const DropDownContainer = styled.div`
       display: block;
       span {
         font-size: var(--xs-font);
-        margin: 0.5rem;
         font-family: var(--fontFamily) !important;
+        width: 20px !important;
+        height: 20px !important;
       }
-      svg {
-        background-color: var(--whitePen);
-        color: white;
-        border-radius: 4px;
-        width: 20px;
-        height: 20px;
-      }
+ 
+  
     }
     .title,
     .dateDropDown {
@@ -141,10 +137,7 @@ export const BoxStyle = styled.div`
       color: var(--whitePen);
     }
 
-    &:focus {
-      background-color: var(--bluePen);
-      color: var(--whitePen);
-    }
+
   }
 
   .activeItem {
@@ -196,10 +189,10 @@ export const ResultStyle = styled.div`
     li {
       font-size: var(--md-font);
       display: flex;
-      justify-content: space-between;
       margin-bottom: 0.6rem;
       :first-child {
         font-weight: bold;
+        justify-content: space-between;
       }
     }
   }
