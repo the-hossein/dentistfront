@@ -14,7 +14,7 @@ export const DivContainer = styled.div`
     .row {
         margin-top: 2rem;
         width: 100%;
-        min-height: 60vh !important;
+        min-height: 55vh !important;
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -22,7 +22,7 @@ export const DivContainer = styled.div`
             display: flex;
             justify-content: flex-start;
             align-items: center;
-            height: 60vh;
+            height: 55vh;
             :nth-child(1){
                 width: 60%;
             }

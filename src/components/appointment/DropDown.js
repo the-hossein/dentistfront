@@ -62,15 +62,16 @@ console.log(response)
        {id === "date" ? (
             <>
           
-              <FormControlLabel
+            {
+              active&&   <FormControlLabel
               
                 
-                control={<Checkbox checked={firstTime} onChange={handleChange} icon={<SquareIcon sx={{color:"var(--whitePen)",borderRadius:"6px"}}/>	}/>}
-                label={t("firstReservation")}
-                labelPlacement={t("firstReservation")}
-              
-                
-              />
+              control={<Checkbox checked={firstTime} onChange={handleChange} icon={<SquareIcon sx={{color:"var(--whitePen)",borderRadius:"6px"}}/>	}/>}
+              label={t("firstReservation")}
+              labelPlacement={t("firstReservation")}
+            
+            />
+            }
               <DatePicker
                 format="jYYYY/jMM/jDD"
                 id={"datePicker"}

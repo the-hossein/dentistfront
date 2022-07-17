@@ -16,7 +16,7 @@ export const FooterContainer = styled.div`
   h3{
     margin-top: 0.5rem;
     font-weight: normal;
-    font-size: var(--sm-font);
+    font-size: var(--xs-font);
     a{
       text-decoration: underline;
       &:hover{

@@ -2,6 +2,7 @@ import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
 import { BasicSection } from '../../../styles/globalStyleComponents';
+import KarmaPn from '../../tools/pn/KarmaPn';
 import CardService from './cardService/CardService';
 import { DivContainer } from './serviceStyle';
 
@@ -27,6 +28,7 @@ const Service = () => {
                     </div>
                     
                 </div>
+                <KarmaPn/>
             </DivContainer>
         </BasicSection>
     );

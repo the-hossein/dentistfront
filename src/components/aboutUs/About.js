@@ -8,6 +8,7 @@ import TelegramIcon from '@mui/icons-material/Telegram';
 import PinterestIcon from '@mui/icons-material/Pinterest';
 import { useTranslation } from 'react-i18next';
 import { useSelector } from 'react-redux';
+import KarmaPn from '../../tools/pn/KarmaPn';
 
 const About = () => {
 
@@ -42,6 +43,7 @@ const About = () => {
                     <img src={aboutPic.src} alt="Banner" />
                 </div>
             </DivMain>
+            <KarmaPn/>
         </BasicSection>
     );
 };
