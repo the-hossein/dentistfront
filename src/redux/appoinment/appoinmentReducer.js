@@ -148,7 +148,8 @@ const appointmentReducer = (state = initializeState, action) => {
       return {
         ...state,
         date: { timestamp: action.timestamp, date: action.date },
-        timeLoader: false
+        timeLoader: false,
+        timeSelected: { name: "", value: "" }
       };
     case "ADD_TIME":
       return {
