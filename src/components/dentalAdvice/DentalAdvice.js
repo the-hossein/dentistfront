@@ -11,7 +11,7 @@ import { CircularProgress } from '@mui/material';
 import callApi from '../../api/callApi';
 import { BASE_URL, SET_DENTAL_ADVICE } from '../../api/urls';
 import { useSelector } from 'react-redux';
-
+import KarmaPn from '../../tools/pn/KarmaPn'
 
 const DentalAdvice = () => {
 
@@ -122,6 +122,8 @@ const DentalAdvice = () => {
                              onClick={fetchinData}
                         />
                     </div>
+
+                    <KarmaPn/>
                 </TextContainer>
                 <div className='image'>
                     <Image src={banner} alt="banner" />

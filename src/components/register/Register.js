@@ -24,6 +24,7 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import WhatsAppIcon from "@mui/icons-material/WhatsApp";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import { useTranslation } from "react-i18next";
+import KarmaPn from "../../tools/pn/KarmaPn";
 const Register = () => {
   const { t } = useTranslation();
   const router = useRouter();
@@ -61,6 +62,7 @@ const Register = () => {
     setFocus({ ...focus, [e.target.name]: true });
   };
   return (
+  <>
     <RegisterContainer lang={lang}>
       <div className="registreForm">
         <h5>{t("phoneNumber")}</h5>
@@ -124,11 +126,16 @@ const Register = () => {
           <WhatsAppIcon sx={{ margin: " 0 1rem" }} />
           <LinkedInIcon />
         </div>
+      <KarmaPn/>
       </div>
       <div className="registerImg">
         <Image src={registrPic} alt="register image" />
       </div>
+
+
     </RegisterContainer>
+     
+  </>
   );
 };
 

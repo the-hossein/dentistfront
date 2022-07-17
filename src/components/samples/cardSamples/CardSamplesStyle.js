@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
-    min-height: 60vh;
+    min-height: 55vh;
     min-width: 47%;
     position: relative;
     overflow: hidden;

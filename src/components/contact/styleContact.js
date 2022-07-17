@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const SectionBasicContact = styled.section`
 direction: var(--dirRi);
-    min-height: 85vh;
+    min-height: 86vh;
     background-color: var(--mainColor);
 `;
 

@@ -7,9 +7,10 @@ export const RegisterContainer = styled.div`
   background-color: var(--mainColor);
   .registerImg {
     width: 40%;
+    height: 86vh;overflow: hidden;
     span {
       width: 100%;
-      height: 85vh !important;
+      height: 100% !important;
     }
   }
 

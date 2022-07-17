@@ -9,6 +9,7 @@ import Input from "../../tools/input/Input";
 import SecondlyBtn from '../../tools/secondlyBtn/SecondlyBtn';
 import { t } from 'i18next';
 import { useTranslation } from 'react-i18next';
+import KarmaPn from '../../tools/pn/KarmaPn';
 
 
 const Contact = () => {
@@ -38,10 +39,12 @@ const Contact = () => {
                         <TelegramIcon />
                         <PinterestIcon />
                     </div>
+                    <KarmaPn/>
                 </div>
                 <div className='banner'>
                     <img src={picBanner.src} alt='banner' />
                 </div>
+         
             </DivContainer>
         </SectionBasicContact>
     );

@@ -65,7 +65,10 @@ a {
 button {
   transition: all 0.3s ease-in !important;
 }
-
+.sectionVideo{
+  height: 100vh;
+  overflow: hidden;
+}
 #datePicker {
   opacity: 0;
   display: none !important;

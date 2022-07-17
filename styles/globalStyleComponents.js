@@ -239,7 +239,7 @@ export const ButtonRoundBasic = styled.button`
 
 export const BasicSection = styled.section`
   padding: 2rem 6rem;
-  min-height: ${(props) => (props.footer === true ? "65vh" : "85vh")};
+  min-height: ${(props) => (props.footer === true ? "65vh" : "86vh")};
   background-color: var(--mainColor);
 
   @media (max-width: 720px) {
@@ -346,3 +346,26 @@ export const IconDiv = styled.div`
     display: none;
   }
 `;
+
+export const VideoStyle=styled.section`
+
+width: 100%;
+height:100vh;
+overflow: hidden;
+object-fit: cover;
+video{
+  width: 100%;
+}
+button{
+  cursor: pointer;
+  position: absolute;
+  background-color: #ffffffad;
+    width: 130px;
+    height: 50px;
+    border-radius: var(--inputRadius);
+    border: none;
+    bottom: 3rem;
+    right: 3rem;
+    font-size: var(--md-font);
+}
+`
