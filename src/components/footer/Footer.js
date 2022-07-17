@@ -1,3 +1,4 @@
+import Link from "next/link";
 import React from "react";
 import { RowJustifyBetween } from "../../../styles/globalStyleComponents";
 import { FooterContainer } from "./styleFooter";
@@ -19,7 +20,13 @@ const Footer = () => {
           <h6>Instagram1:@instagram</h6>
         </div>
       </RowJustifyBetween>
-      <h3>.تمام حقوق برای <a target="_blank" href="https://karmaagy.com/" className="karma">کارما</a> محفوظ است و استفاده از مطالب <a target="_blank" href="https://karmaagy.com/" className="karma">کارما</a> تنها با ذکر نام <a target="_blank" href="https://karmaagy.com/" className="karma">کارما</a> و درج لینک مستقیم مجاز است </h3>
+      <h3>.تمام حقوق برای <Link href="https://karmaagy.com/">
+      <a target="_blank"  className="karma">کارما</a>
+      </Link> محفوظ است و استفاده از مطالب <Link href="https://karmaagy.com/">
+      <a target="_blank"  className="karma">کارما</a>
+      </Link> تنها با ذکر نام <Link href="https://karmaagy.com/">
+      <a target="_blank"  className="karma">کارما</a>
+      </Link> و درج لینک مستقیم مجاز است </h3>
     </FooterContainer>
   );
 };
