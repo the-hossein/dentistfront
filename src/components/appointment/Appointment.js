@@ -72,7 +72,7 @@ const Appointment = () => {
     setOpen({ ...open, date: false });
   }, [state.date]);
   useEffect(() => {
-    setOpen({ ...open, time: false });
+    setOpen({ ...open, time: false, date: false });
   }, [state.timeSelected]);
   useEffect(() => {
     setOpen({ ...open, service: false });
