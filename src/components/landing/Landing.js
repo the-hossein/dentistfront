@@ -15,6 +15,7 @@ import Simple from "../../tools/simple/Simple";
 import Link from "next/link";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
+import KarmaPn from "../../tools/pn/KarmaPn";
 
 const Landing = () => {
   const lang = useSelector((state) => state.stateLang.lng);
@@ -64,6 +65,7 @@ const Landing = () => {
           <img src={picLanding.src} alt="dentist" />
         </div>
       </MainDiv>
+      <KarmaPn/>
     </BasicSection>
   );
 };

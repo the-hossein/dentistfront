@@ -56,5 +56,6 @@
   "validLength11": "Mobile number must be 11 digits",
   "validEnterCode": "Please enter a 6-digit code",
   "validLengthCode6": "Code must be 6 digits",
-  "firstReservation": "As Soon As possible"
+  "firstReservation": "As Soon As possible",
+  "skip":"Skip"
 }

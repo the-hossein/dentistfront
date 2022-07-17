@@ -58,5 +58,6 @@
   "validLengthCode6": "کد باید 6 رقمی باشد",
   "enterCorrectCode": "لطفا کد را به درستی وارد کنید",
   "firstEnterPhone": "لطفا ابتدا شماره همراه خود را وارد کنید",
-  "firstReservation": "در اسرع وقت"
+  "firstReservation": "در اسرع وقت",
+  "skip":"رد کردن"
 }

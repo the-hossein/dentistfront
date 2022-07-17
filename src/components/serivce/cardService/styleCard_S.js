@@ -4,7 +4,7 @@ export const Card = styled.div`
     margin-right:${props => props.lang ==="fa" ? "" : "4rem"};
     margin-left:${props => props.lang !=="fa" ? "" : "4rem"};
     width: 33%;
-    height: 60vh;
+    height: 55vh;
     border-radius: var(--inputRadius);
     overflow: hidden;
     position: relative;

@@ -1,6 +1,7 @@
 import React from 'react';
 import { useTranslation } from 'react-i18next';
 import { BasicSection } from '../../../styles/globalStyleComponents';
+import KarmaPn from '../../tools/pn/KarmaPn';
 import CardSample from './cardSamples/CardSample';
 import { DivContainer } from './styleSamples';
 
@@ -22,6 +23,7 @@ const Samples = () => {
                         <CardSample id={"4"} />
                     </div>
                 </div>
+                <KarmaPn/>
             </DivContainer>            
         </BasicSection>
     );
