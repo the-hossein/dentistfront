@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card } from './CardSamplesStyle';
 import Image from 'next/image';
-import drSamples from '../../../../public/Assets/images/s-1.png';
+import drSamples from '../../../../public/Assets/images/s-1.jpg';
 import Link from 'next/link';
 
 const CardSample = ({ id }) => {

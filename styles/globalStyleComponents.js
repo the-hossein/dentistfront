@@ -39,12 +39,16 @@ export const RowJustifyBetween = styled.div`
 export const RowJustifyBetweenHome = styled.div`
   width: ${(props) => (props.width ? props.width : "100%")};
   display: flex;
-  justify-content: space-between;
+  justify-content:${(props) => (props.justify ? props.justify : "space-between")} ;
   align-items: ${(props) => (props.align ? props.align : "center")};
   .child-col {
     display: flex;
     justify-content: space-between;
     align-items: center;
+  }
+  .col-text {
+    width: 50%;
+    padding: 0 4rem;
   }
   .col {
     /* display: flex;
@@ -54,7 +58,22 @@ export const RowJustifyBetweenHome = styled.div`
       margin-bottom: 2rem !important;
     }
   }
-  @media (max-width: 698px) {
+  @media (max-width: 1156px) {
+    .col-text {
+      width: 40%;
+      padding: 0 2rem;
+      font-size: var(--xs-font);
+    }
+  }
+  @media (max-width: 1006px) {
+    .col-text {
+      width: 40%;
+      padding: 0;
+      font-size: var(--xs-font);
+    }
+  }
+  
+  @media (max-width: 796px) {
     flex-direction: column;
     .col {
       width: 100%;
@@ -267,7 +286,7 @@ export const MainDiv = styled.div`
     /* height: 100%  */
     img {
       float: var(--floatRi);
-      /* max-height: 75vh; */
+      min-height: 75vh !important;
       max-width: 100%;
       object-fit: cover;
       border-radius: ${(props) =>
