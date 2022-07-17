@@ -7,7 +7,7 @@ import {
   RowJustifyBetweenHome
 } from "../../../styles/globalStyleComponents";
 import Image from "next/image";
-import picLanding from "../../../public/Assets/images/L-1.png";
+import picLanding from "../../../public/Assets/images/L-1.jpg";
 import ButtonRound from "../../tools/buttonRound/ButtonRound";
 import { ArrowText } from "./style";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
@@ -31,7 +31,7 @@ const Landing = () => {
             <h2>{t("company")}</h2>
             <p className="slogan" >slogan slogan slogan slogan slogan slogan slogan slogan</p>
           </div>
-          <RowJustifyBetweenHome align={"flex-start"}>
+          <RowJustifyBetweenHome align={"flex-start"} >
             <div className="col">
               <Link href="/appointment" >
              <a>

@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { MainDiv } from './style';
 import simple from '../../../public/Assets/images/simple.png';
 import { useSelector } from 'react-redux';
+import Link from 'next/link';
 
 const Simple = () => {
 
@@ -11,8 +12,9 @@ const Simple = () => {
     return (
         <MainDiv lang={lang}>
             <div>
-                <p>lorem lorem lorem lorem</p>
-                <span>About About About</span>
+                <Link href="/ourteam">
+                    <a><h1>Our Team</h1></a>
+                </Link>
             </div>
             <Image src={simple} alt="pic simple" />
         </MainDiv>
