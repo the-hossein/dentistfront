@@ -1,7 +1,6 @@
 import styled from "styled-components";
 
 export const MainDiv = styled.div`
-    /* width: 100%; */
     direction: initial;
     display: flex;
     flex-direction: ${props => props.lang==="fa" ? "row-reverse" : "row"};
@@ -14,18 +13,20 @@ export const MainDiv = styled.div`
         align-items: center;
         margin: 0 1rem;
     }
-    span{
+    .karmaLogo{
         background-color: var(--whitePen) !important;
-        width: 90px !important;
-        /* border-radius: 50% 50% 0 0; */
-        border-top-left-radius: 50% 50%;
-        border-top-right-radius: 50% 50%;
-        padding: 1rem !important;
-        height: 115px !important ;
+        width: 80px !important;
+        height: 115px !important;
+        border-top-left-radius: 50% 40%;
+        border-top-right-radius: 50% 40%;
+        display: grid;
+        place-items: center;
+        span{
+            width: 60% !important;
+            height: 60% !important ;
+        }
         img{
-            height: 105px !important ;
             object-fit: cover;
         }
     }
-    
 `;
