@@ -103,6 +103,14 @@ export const setReservation = (data, user, token, lang, setshowChild) => {
       if (response[0].code === 200) {
         setshowChild(true);
         dispatch(setSuccessReservation(response[0].data, lang));
+      } else {
+        var textNotify = "";
+        if (lang === "fa") {
+          textNotify = "این نوبت قبلا رزرو شده است";
+        } else {
+          textNotify = "This appointment is already booked";
+        }
+        notify(textNotify, "error");
       }
     };
     getTimes();

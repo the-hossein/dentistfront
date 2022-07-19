@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import { DivContainer, MainSection, TextContainer } from './styleAdvice';
 import Image from 'next/image';
-import banner from '../../../public/Assets/images/about.png';
+import banner from '../../../public/Assets/images/pic1.jpg';
 import { useTranslation } from 'react-i18next';
 import Input from '../../tools/input/Input';
 import SecondlyBtn from '../../tools/secondlyBtn/SecondlyBtn';
