@@ -104,7 +104,6 @@ button {
 
 .JDatePicker .JDheader .right,
 .JDatePicker .JDheader .left {
-
   width: 100% !important;
 }
 
@@ -120,7 +119,7 @@ button {
 .swiper {
   width: 100%;
   height: 100%;
-  direction: ltr !important;
+  direction: var(--dirRi) !important;
 }
 
 .swiper-slide {
