@@ -50,7 +50,7 @@ export const DivMain = styled.div`
       border-top-right-radius: ${(props) =>
         props.lang === "fa" ? "50% 30%" : ""};
       transition: all 0.3s linear;
-
+      object-fit: cover;
       &:hover {
         border-radius: unset;
       }
