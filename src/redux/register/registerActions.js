@@ -90,7 +90,7 @@ export const registerRequest = (state, setActiveCode, lang) => {
   };
 };
 
-export const checkOtp = (state, router) => {
+export const checkOtp = (state, router, lang) => {
   return (dispatch) => {
     dispatch(preloadRegister("codeLoading"));
 
@@ -116,7 +116,13 @@ export const checkOtp = (state, router) => {
       console.log(response);
       if (response[0].code === 201) {
         dispatch(loginStatusTrue());
-        notify("شما با موفقیت ثبت نام شدید", "success");
+        var text = "";
+        if (lang === "fa") {
+          text = "شما با موفقیت ثبت نام شدید";
+        } else {
+          text = "You have successfully registered";
+        }
+        notify(text, "success");
         const data = {
           token: response[0].data.token,
           exp: response[0].data.expiration,
@@ -132,7 +138,13 @@ export const checkOtp = (state, router) => {
         dispatch(pausepreloadRegister("codeLoading"));
       } else if (response[0].code === 200) {
         dispatch(loginStatusTrue());
-        notify("شما با موفقیت وارد حساب خود شدید", "success");
+        var textMess = "";
+        if (lang === "fa") {
+          textMess = "شما با موفقیت وارد حساب خود شدید";
+        } else {
+          textMess = "You have successfully logged into your account";
+        }
+        notify(textMess, "success");
         const data = {
           token: response[0].data.token,
           exp: response[0].data.expiration,
@@ -148,7 +160,13 @@ export const checkOtp = (state, router) => {
         dispatch(pausepreloadRegister("codeLoading"));
       } else {
         dispatch(pausepreloadRegister("codeLoading"));
-        notify("کد وارد شد اشتباه است ", "error");
+        var Mess = "";
+        if (lang === "fa") {
+          Mess = "کد وارد شده اشتباه است";
+        } else {
+          Mess = "The entered code is incorrect";
+        }
+        notify(Mess, "error");
       }
     };
     registerUser();
