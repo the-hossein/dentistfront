@@ -59,16 +59,19 @@ a {
   font-family: var(--fontFamily);
   box-sizing: border-box;
   margin: 0;
-  padding: 0;user-select: none;
+  padding: 0;
+  user-select: none;
 }
 
 button {
   transition: all 0.3s ease-in !important;
 }
-.sectionVideo{
+
+.sectionVideo {
   height: 100vh;
   overflow: hidden;
 }
+
 #datePicker {
   opacity: 0;
   display: none !important;
@@ -120,7 +123,7 @@ button {
 .swiper {
   width: 100%;
   height: 100%;
-  direction: ltr !important;
+  /* direction: ltr !important; */
 }
 
 .swiper-slide {
@@ -149,10 +152,11 @@ button {
   height: 100%;
   object-fit: cover;
 }
-.swiperKarma{
+
+.swiperKarma {
   object-fit: cover;
   position: sticky !important;
   bottom: 15vh !important;
-  width: 100% ;
+  width: 100%;
   height: 100vh;
 }
