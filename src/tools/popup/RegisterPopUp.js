@@ -52,7 +52,7 @@ const RegisterPopUp = () => {
     } else if (Object.keys(errors).length) {
       notify(t("firstEnterPhone"), "error");
     } else if (!Object.keys(errorsCode).length && !Object.keys(errors).length) {
-      dispatch(checkOtp(state, router));
+      dispatch(checkOtp(state, router, lang));
     }
   };
   const focusHandler = (e) => {
