@@ -11,6 +11,11 @@ import { store } from "../src/redux/store";
 import "../styles/globals.css";
 import { useEffect, useState } from "react";
 import RegisterPopUp from "../src/tools/popup/RegisterPopUp";
+import "swiper/css";
+import "swiper/css/scrollbar";
+
+import "swiper/css/effect-fade";
+import "swiper/css/pagination";
 
 //set lang
 i18n

@@ -1,14 +1,17 @@
 import styled from "styled-components";
 
 export const Card = styled.div`
-  margin-right: ${(props) => (props.lang === "fa" ? "" : "4rem")};
-  margin-left: ${(props) => (props.lang !== "fa" ? "" : "4rem")};
-  width: 33%;
+  /* margin-right: ${(props) => (props.lang === "fa" ? "" : "4rem")};
+  margin-left: ${(props) => (props.lang !== "fa" ? "" : "4rem")}; */
+  margin: ${(props) =>
+    props.lang === "fa" ? "0 0 0 auto" : "0 auto 0 0 "} !important;
+  width: 70%;
   height: 55vh;
   border-radius: var(--inputRadius);
   overflow: hidden;
   position: relative;
   transition: all 0.3s linear;
+
   span {
     width: 100% !important;
     height: 100% !important;
@@ -47,7 +50,7 @@ export const Card = styled.div`
   }
 
   &:hover {
-    width: 55%;
+    width: 93%;
     .name {
       transform: rotateZ(0) translateX(-50%);
       bottom: 3rem;
@@ -69,8 +72,8 @@ export const Card = styled.div`
     width: 100%;
     height: 50vh;
     margin-bottom: 2rem;
-    margin-right: ${(props) => (props.lang === "fa" ? "" : "0")};
-    margin-left: ${(props) => (props.lang !== "fa" ? "" : "0")};
+    /* margin-right: ${(props) => (props.lang === "fa" ? "" : "0")};
+    margin-left: ${(props) => (props.lang !== "fa" ? "" : "0")}; */
     .name {
       transform: rotateZ(0) translateX(-50%);
       bottom: 3rem;
