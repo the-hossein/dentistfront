@@ -30,9 +30,7 @@ import faezeh from '../../../public/Assets/images/Faezeh.jpg';
 
 //slider
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/pagination";
+
 import { Pagination, Scrollbar, Mousewheel, Autoplay, EffectFade } from "swiper";
 
 
