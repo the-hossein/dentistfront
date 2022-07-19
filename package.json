@@ -31,6 +31,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.4.1",
     "styled-components": "^5.3.5",
+    "swiper": "^8.3.1",
     "use-react-screenshot": "^3.0.0"
   },
   "devDependencies": {
