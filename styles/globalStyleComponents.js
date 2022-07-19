@@ -39,7 +39,8 @@ export const RowJustifyBetween = styled.div`
 export const RowJustifyBetweenHome = styled.div`
   width: ${(props) => (props.width ? props.width : "100%")};
   display: flex;
-  justify-content:${(props) => (props.justify ? props.justify : "space-between")} ;
+  justify-content: ${(props) =>
+    props.justify ? props.justify : "space-between"};
   align-items: ${(props) => (props.align ? props.align : "center")};
   .child-col {
     display: flex;
@@ -72,7 +73,7 @@ export const RowJustifyBetweenHome = styled.div`
       font-size: var(--xs-font);
     }
   }
-  
+
   @media (max-width: 796px) {
     flex-direction: column;
     .col {
@@ -366,19 +367,20 @@ export const IconDiv = styled.div`
   }
 `;
 
-export const VideoStyle=styled.section`
-
-width: 100%;
-height:100vh;
-overflow: hidden;
-object-fit: cover;
-video{
+export const VideoStyle = styled.section`
   width: 100%;
-}
-button{
-  cursor: pointer;
-  position: absolute;
-  background-color: #ffffffad;
+  height: 100vh;
+  overflow: hidden;
+  object-fit: cover;
+  video {
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+  }
+  button {
+    cursor: pointer;
+    position: absolute;
+    background-color: #ffffffad;
     width: 130px;
     height: 50px;
     border-radius: var(--inputRadius);
@@ -386,5 +388,5 @@ button{
     bottom: 3rem;
     right: 3rem;
     font-size: var(--md-font);
-}
-`
+  }
+`;

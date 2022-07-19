@@ -81,16 +81,15 @@ export const DropDownContainer = styled.div`
     }
     label {
       width: 100%;
-      margin-top: 3rem;
+      margin: 3rem 1rem;
       display: block;
       span {
         font-size: var(--xs-font);
         font-family: var(--fontFamily) !important;
         width: 20px !important;
         height: 20px !important;
+        margin: 0 0.3rem;
       }
- 
-  
     }
     .title,
     .dateDropDown {
@@ -136,8 +135,6 @@ export const BoxStyle = styled.div`
       background-color: var(--bluePen);
       color: var(--whitePen);
     }
-
-
   }
 
   .activeItem {

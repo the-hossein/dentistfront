@@ -188,14 +188,20 @@ export const getProfile = () => {
         phonenumber: `${phone}`
       });
 
-      const user = await callApi(
-        BASE_URL + GET_PROFILE,
-        raw,
-        myHeaders,
-        "POST"
-      );
-      if (user[0].code === 200 && user[0].data !== null) {
-        dispatch(userData(user[0].data));
+      try {
+        const user = await callApi(
+          BASE_URL + GET_PROFILE,
+          raw,
+          myHeaders,
+          "POST"
+        );
+        if (user[0].code === 200 && user[0].data !== null) {
+          dispatch(userData(user[0].data));
+        } else {
+          dispatch(loginStatusFalse());
+        }
+      } catch {
+        dispatch(loginStatusFalse());
       }
     };
     profile();
