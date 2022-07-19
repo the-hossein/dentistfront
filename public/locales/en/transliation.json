@@ -68,5 +68,18 @@
   "Orthodontic": "Orthodontic",
   "gumsurgery": "Gum Surgery",
   "Oralsurgery": "Oral Surgery",
-  "Frenectomysurgery": "Frenectomy Surgery"
+  "Frenectomysurgery": "Frenectomy Surgery",
+  "karmaTeam": "Karma Team",
+  "manager": "Management Unit",
+  "managerDes": "This unit designs a road map based on the needs of the customer and budgets for the entire project with its help. Along the way, it coordinates the advertising and accompanies its team and the project all along the way. and manages until it is completed. This unit supervises all units. It also examines and organizes the duties and tasks related to each one.",
+  "itTeam": "Technology Unit",
+  "itTeamDes": "Karma's technology unit is responsible for creating the site and producing software, implementing the user interface design and user experience, implementing the support panel, managing users and the content of the site. The technology team ensures the security of the servers and hard It manages the software and servers of the Karma system. Front-end programmers also work in this unit. Also, the support of the company's network and servers is the responsibility of this unit.",
+  "uiTeam": "Graphic Design Unit",
+  "uiTeamDes": "All images, motion graphics, logo design, Instagram posts, user interface design, user experience design and brand product packaging are done by the Karma graphic design unit. The designers of this unit, using their creativity And with a new look that is rooted in their artistic spirit, they try to create the best pictures and designs in the least amount of time.",
+  "cwTeam": "Content Production Unit",
+  "cwTeamDes": "This unit writes and produces appropriate content for a better and proper introduction of brands, so that a brand can share its goals with its audience and establish a close relationship with them. With the help of content production Appropriately, brands can find their audience and connect with it.",
+  "diTeam": "Industrial Design Unit",
+  "diTeamDes": "Industrial design department is responsible for designing products of brands. Designers of this department design different products according to the nature of brands with the help of their art and ability. Industrial designers provide services and design products mixed with art. In addition to beauty, they also pay attention to quality. The industrial design unit, in cooperation with each other, put together the design and roles and are designing the best product until the production stage.",
+  "pgTeam": "Photography Studio Unit",
+  "pgTeamDes": "lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum lorem ipsum "
 }
