@@ -22,13 +22,61 @@ const Service = () => {
         <h1>{t("service")}</h1>
         <div className="row">
           <div className="child-row">
-            <CardService id={"1"} lang={lang} img={ServicePic1} />
-            <CardService id={"2"} lang={lang} img={ServicePic2} />
-            <CardService id={"3"} lang={lang} img={ServicePic3} />
+            <CardService
+              title={t("Pediatricdentistry")}
+              lang={lang}
+              img={ServicePic1}
+            />
+            <CardService
+              title={t("Dentallaminate")}
+              lang={lang}
+              img={ServicePic2}
+            />
+            <CardService title={t("composite")} lang={lang} img={ServicePic3} />
           </div>
           <div className="child-row">
-            <CardService id={"4"} lang={lang} img={ServicePic4} />
-            <CardService id={"5"} lang={lang} img={ServicePic5} />
+            <CardService
+              title={t("Teethbleaching")}
+              lang={lang}
+              img={ServicePic4}
+            />
+            <CardService title={t("implant")} lang={lang} img={ServicePic5} />
+          </div>
+        </div>
+        <div className="row">
+          <div className="child-row">
+            <CardService title={t("rootcanal")} lang={lang} img={ServicePic1} />
+            <CardService
+              title={t("Prosthesisandcover")}
+              lang={lang}
+              img={ServicePic2}
+            />
+            <CardService
+              title={t("Orthodontic")}
+              lang={lang}
+              img={ServicePic3}
+            />
+          </div>
+          <div className="child-row">
+            <CardService
+              title={t("gumsurgery")}
+              lang={lang}
+              img={ServicePic4}
+            />
+            <CardService
+              title={t("Oralsurgery")}
+              lang={lang}
+              img={ServicePic5}
+            />
+          </div>
+        </div>
+        <div className="row">
+          <div className="child-row">
+            <CardService
+              title={t("Frenectomysurgery")}
+              lang={lang}
+              img={ServicePic5}
+            />
           </div>
         </div>
         <KarmaPn />

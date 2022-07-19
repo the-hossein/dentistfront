@@ -59,5 +59,16 @@
   "enterCorrectCode": "لطفا کد را به درستی وارد کنید",
   "firstEnterPhone": "لطفا ابتدا شماره همراه خود را وارد کنید",
   "firstReservation": "در اسرع وقت",
-  "skip":"رد کردن"
+  "skip":"رد کردن",
+  "Pediatricdentistry": "دندان پزشکی اطفال",
+  "Dentallaminate": "لمینت دندان",
+  "composite": "کامپوزیت",
+  "Teethbleaching": "بلیچینگ دندان",
+  "implant": "ایمپلنت",
+  "rootcanal": "عصب کشی دندان",
+  "Prosthesisandcover": "پروتز و روکش دندان",
+  "Orthodontic": "ارتودنسی",
+  "gumsurgery": "جراحی لثه",
+  "Oralsurgery": "جراحی دهان و دندان",
+  "Frenectomysurgery": "جراحی فرنکتومی"
 }

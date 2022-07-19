@@ -28,13 +28,15 @@ export const Card = styled.div`
     bottom: 0;
     left: 50%;
     z-index: 5;
-    width: 150px;
-    font-size: var(--xl-font);
+    min-width: 150px;
+    width: fit-content;
+    padding: 1rem 0.5rem;
+    font-size: var(--lg-font);
     border-radius: var(--inputRadius);
     transform-origin: 2px;
     transform: rotateZ(-90deg);
     text-align: center;
-    padding: 1rem 0;
+
     background: rgba(255, 255, 255, 0.46);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(9.2px);
@@ -55,13 +57,12 @@ export const Card = styled.div`
   @media (max-width: 1103px) {
     .name {
       width: 130px;
-      font-size: var(--lg-font);
+      font-size: var(--md-font);
     }
   }
   @media (max-width: 960px) {
     .name {
       width: 100px;
-      font-size: var(--md-font);
     }
   }
   @media (max-width: 868px) {

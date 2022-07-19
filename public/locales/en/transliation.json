@@ -57,5 +57,16 @@
   "validEnterCode": "Please enter a 6-digit code",
   "validLengthCode6": "Code must be 6 digits",
   "firstReservation": "As Soon As possible",
-  "skip":"Skip"
+  "skip": "Skip",
+  "Pediatricdentistry": "Pediatric Dentistry",
+  "Dentallaminate": "Dental Laminate",
+  "composite": "Composite",
+  "Teethbleaching": "Teeth Bleaching",
+  "implant": "Implant",
+  "rootcanal": "Root Canal",
+  "Prosthesisandcover": "Prosthesis and Cover",
+  "Orthodontic": "Orthodontic",
+  "gumsurgery": "Gum Surgery",
+  "Oralsurgery": "Oral Surgery",
+  "Frenectomysurgery": "Frenectomy Surgery"
 }
