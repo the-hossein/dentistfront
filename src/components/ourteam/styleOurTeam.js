@@ -31,7 +31,9 @@ export const Album = styled.div`
         height: 100%;
         object-fit: cover;
     }
-
+    @media (max-width: 1002px){
+        display: none;
+    }
 `;
 
 export const DivText = styled.div`
@@ -48,4 +50,12 @@ export const DivText = styled.div`
     p{
         font-size: var(--md-font);
     }
+    @media (max-width: 1002px){
+        width: 100% !important;
+        padding: 3rem 6rem 3rem 6rem;
+    }
+    @media (max-width: 711px){
+        padding: 3rem 2rem;
+    }
+
 `;

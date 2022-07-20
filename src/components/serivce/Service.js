@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { BasicSection } from "../../../styles/globalStyleComponents";
@@ -24,6 +24,10 @@ const Service = () => {
 
   const { t } = useTranslation();
 
+  useEffect(()=> {
+
+  }, [])
+
   return (
     <BasicSection>
       <DivContainer>
@@ -42,6 +46,7 @@ const Service = () => {
               title={t("Pediatricdentistry")}
               lang={lang}
               img={ServicePic1}
+              id={1}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -49,11 +54,12 @@ const Service = () => {
               title={t("Dentallaminate")}
               lang={lang}
               img={ServicePic2}
+              id={2}
             />
           </SwiperSlide>
 
           <SwiperSlide>
-            <CardService title={t("composite")} lang={lang} img={ServicePic3} />
+            <CardService title={t("composite")} lang={lang} img={ServicePic3} id={3} />
           </SwiperSlide>
 
           <SwiperSlide>
@@ -61,21 +67,23 @@ const Service = () => {
               title={t("Teethbleaching")}
               lang={lang}
               img={ServicePic4}
+              id={4}
             />
           </SwiperSlide>
 
           <SwiperSlide>
-            <CardService title={t("implant")} lang={lang} img={ServicePic5} />
+            <CardService title={t("implant")} lang={lang} img={ServicePic5} id={5} />
           </SwiperSlide>
 
           <SwiperSlide>
-            <CardService title={t("rootcanal")} lang={lang} img={ServicePic1} />
+            <CardService title={t("rootcanal")} lang={lang} img={ServicePic1} id={6} />
           </SwiperSlide>
           <SwiperSlide>
             <CardService
               title={t("Prosthesisandcover")}
               lang={lang}
               img={ServicePic2}
+              id={7}
             />
           </SwiperSlide>
 
@@ -84,6 +92,7 @@ const Service = () => {
               title={t("Orthodontic")}
               lang={lang}
               img={ServicePic3}
+              id={8}
             />
           </SwiperSlide>
 
@@ -92,6 +101,7 @@ const Service = () => {
               title={t("gumsurgery")}
               lang={lang}
               img={ServicePic4}
+              id={9}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -99,6 +109,7 @@ const Service = () => {
               title={t("Oralsurgery")}
               lang={lang}
               img={ServicePic5}
+              id={10}
             />
           </SwiperSlide>
           <SwiperSlide>
@@ -106,6 +117,7 @@ const Service = () => {
               title={t("Frenectomysurgery")}
               lang={lang}
               img={ServicePic5}
+              id={11}
             />
           </SwiperSlide>
           {/* <SwiperSlide>

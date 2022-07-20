@@ -130,7 +130,7 @@ const Header = ({ path }) => {
             <li className={path === "Home" && "active"}>{t("home")}</li>
           </a>
         </Link>
-        <Link href="service">
+        <Link href="/service">
           <a>
             <li className={path === "Service" && "active"}>{t("service")}</li>
           </a>

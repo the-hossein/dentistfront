@@ -50,6 +50,7 @@ export const RowJustifyBetweenHome = styled.div`
   .col-text {
     width: 50%;
     padding: 0 4rem;
+    
   }
   .col {
     /* display: flex;
@@ -84,6 +85,7 @@ export const RowJustifyBetweenHome = styled.div`
       align-items: flex-end;
     }
     .col-text {
+      margin-top: 3rem;
       justify-content: center;
       align-items: center;
     }
@@ -287,8 +289,8 @@ export const MainDiv = styled.div`
     /* height: 100%  */
     img {
       float: var(--floatRi);
-      min-height: 75vh !important;
-      max-width: 100%;
+      min-height: 72vh !important;
+      max-width: 100% !important;
       object-fit: cover;
       border-radius: ${(props) =>
         props.radiusImg ? "50% 50% 0% 50%" : "50% 50% 50% 0"};
@@ -329,6 +331,12 @@ export const MainDiv = styled.div`
         font-size: var(--md-font);
       }
     }
+    .banner {
+      img {
+        min-height: 60vh !important;
+        width: 100%;
+      }
+    }
   }
 
   @media (max-width: 698px) {
@@ -338,6 +346,7 @@ export const MainDiv = styled.div`
     }
     .banner {
       img {
+        min-height: 47vh !important;
         width: 100%;
       }
     }

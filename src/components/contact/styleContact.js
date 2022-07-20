@@ -73,6 +73,10 @@ export const DivContainer = styled.div`
     flex-direction: column-reverse;
     .banner {
       width: 100%;
+      height: 70vh;
+      img {
+        height: 70vh !important;
+      }
     }
     .text {
       width: 100%;
