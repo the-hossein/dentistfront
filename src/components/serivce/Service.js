@@ -35,7 +35,7 @@ const Service = () => {
           grabCursor={true}
           mousewheel={true}
           autoplay
-          
+          loop
         >
           <SwiperSlide>
             <CardService

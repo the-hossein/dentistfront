@@ -95,7 +95,7 @@ export const convertServise = (num) => {
   var servicename = "";
   switch (num) {
     case 0:
-      servicename = "Implants";
+      servicename = "Pediatricdentistry";
 
       break;
     case 1:
@@ -103,26 +103,33 @@ export const convertServise = (num) => {
 
       break;
     case 2:
-      servicename = "Bridges";
+      servicename = "Teethbleaching";
       break;
     case 3:
-      servicename = "Endo";
+      servicename = "Rootcanal";
       break;
     case 4:
-      servicename = "Veneers";
+      servicename = "Prosthesisandcover";
       break;
     case 5:
-      servicename = "Fillings";
+      servicename = "Implant";
       break;
     case 6:
-      servicename = "Dental cleanings";
+      servicename = "Gumsurgery";
       break;
     case 7:
-      servicename = "Dental Laminate";
+      servicename = "Oralsurgery";
       break;
     case 8:
+      servicename = "Frenectomysurgery";
+      break;
+    case 9:
+      servicename = "Dentallaminate";
+      break;
+    case 10:
       servicename = "Composite";
       break;
+
     default:
       servicename;
       break;
