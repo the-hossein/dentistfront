@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useLayoutEffect, useState } from "react";
 import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { BasicSection } from "../../../styles/globalStyleComponents";
@@ -22,11 +22,19 @@ import {
 const Service = () => {
   const lang = useSelector((state) => state.stateLang.lng);
 
+  const [size, setSize] = useState(0);
   const { t } = useTranslation();
 
-  useEffect(()=> {
-
-  }, [])
+  useLayoutEffect(() => {
+    const updateSize = () => {
+      setSize([window.innerWidth]);
+    };
+    window.addEventListener("resize", updateSize);
+    updateSize();
+    return () => {
+      window.removeEventListener("resize", updateSize);
+    };
+  }, []);
 
   return (
     <BasicSection>
@@ -35,7 +43,8 @@ const Service = () => {
         <Swiper
           modules={[Scrollbar, Mousewheel, Autoplay]}
           className="mySwiper"
-          slidesPerView={5}
+          slidesPerView={size <= 868 ? 2 : size >= 1200 ? 5 : 3}
+          spaceBetween={size <= 868 ? 40 : 0}
           grabCursor={true}
           mousewheel={true}
           autoplay
@@ -72,11 +81,11 @@ const Service = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <CardService title={t("implant")} lang={lang} img={ServicePic5} id={5} />
+            <CardService title={t("Implant")} lang={lang} img={ServicePic5} id={5} />
           </SwiperSlide>
 
           <SwiperSlide>
-            <CardService title={t("rootcanal")} lang={lang} img={ServicePic1} id={6} />
+            <CardService title={t("Rootcanal")} lang={lang} img={ServicePic1} id={6} />
           </SwiperSlide>
           <SwiperSlide>
             <CardService
@@ -98,7 +107,7 @@ const Service = () => {
 
           <SwiperSlide>
             <CardService
-              title={t("gumsurgery")}
+              title={t("Gumsurgery")}
               lang={lang}
               img={ServicePic4}
               id={9}
