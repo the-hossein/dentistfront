@@ -92,7 +92,9 @@ const Header = ({ path }) => {
     if (ls !== null) {
       dispatch(loginStatusTrue());
       const getApi = async () => {
-        dispatch(await getProfile());
+        if (state.userId === "") {
+          dispatch(await getProfile());
+        }
       };
       getApi();
       const userToken = JSON.parse(ls);
@@ -159,11 +161,15 @@ const Header = ({ path }) => {
         </li>
       </MenuSider>
       <Navbar open={open}>
-      <Humber open={open} lang={lang} onClick={() => setOpen((prevOpen) => !prevOpen)}>
-        <div></div>
-        <div></div>
-        <div></div>
-      </Humber>
+        <Humber
+          open={open}
+          lang={lang}
+          onClick={() => setOpen((prevOpen) => !prevOpen)}
+        >
+          <div></div>
+          <div></div>
+          <div></div>
+        </Humber>
         <UlMenu>
           <Link href="/">
             <a>

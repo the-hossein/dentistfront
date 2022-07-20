@@ -121,7 +121,7 @@ export const BoxStyle = styled.div`
   > button {
     border: 1px solid var(--bluePen);
     padding: 0.5rem;
-    min-width: ${(props) => (props.size === "big" ? "122px" : "90px")};
+   width: ${(props) => (props.size === "big" ? "43%" : "90px")};
     max-width: ${(props) => (props.size === "big" ? "100%" : "100%")};
 
     text-align: center;
