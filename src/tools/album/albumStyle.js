@@ -11,12 +11,14 @@ export const Container = styled.div`
         width: 40%;
         display: flex;
         justify-content: ${props => props.reverse ? "var(--floatRi)" : "var(--floatLf)" };
-        img{
-            width: 95% !important;
+        span{
+            width: 93% !important;
             height: 80vh !important;
             border-top-right-radius:${props => props.lang !== "fa" && props.reverse ? "50% 30%" :props.lang === "fa" && !props.reverse ? "50% 30%" :"" };
             border-top-left-radius:${props => props.lang === "fa" && !props.reverse ? "" :props.lang !== "fa" && props.reverse ? "" :"50% 30%" };
-            object-fit: cover;
+            img{
+                object-fit: cover;
+            }
         }
     }
     .second{
@@ -27,32 +29,36 @@ export const Container = styled.div`
         overflow: hidden;
         width: 60%;
         height: 80vh;
-        img{
+        span{
             :nth-child(1){
                 float:${props => props.reverse ? "right" : "left"} ;
-                width: 70%;
-                height: 48%;
+                width: 70% !important;
+                height: 48% !important;
                 border-top-left-radius: ${props =>  props.lang !== "fa" && props.reverse ? "50%" : props.lang === "fa" && !props.reverse ? "50%" : ""} ;
                 border-top-right-radius: ${props =>  props.lang === "fa" && !props.reverse ? "0" : props.lang !== "fa" && props.reverse ? "" : "50%"} ;
-                object-fit: cover;
+                img{
+                    object-fit: cover;
+                }
             }
             :nth-child(2){
-                width: 100%;
-                height: 48%;
+                width: 100% !important;
+                height: 48% !important;
                 border-top-left-radius:${props => props.lang !== "fa" && props.reverse ? "30% 50%" : props.lang === "fa" && !props.reverse ? "30% 50%" : "" } ;
                 border-top-right-radius:${props => props.lang === "fa" && !props.reverse ? "" : props.lang !== "fa" && props.reverse ? "" : "30% 50%"} ;
-                object-fit: cover;
+                img{
+                    object-fit: cover;
+                }
             }
         }
     }
     @media (max-width: 969px) {
         .first{
-            img{
+            span{
                 height: 50vh !important;
             }
         }
         .second{
-            height: 50vh;
+            height: 50vh !important;
         }
     }
 `;

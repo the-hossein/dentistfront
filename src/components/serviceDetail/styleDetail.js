@@ -24,6 +24,9 @@ export const MainDiv = styled.div`
             transform: scale(3, 1.8 );
         }
     }
+    @media (max-width: 720px){
+        flex-direction: column-reverse;
+    }
 `;
 
 export const TextContainer = styled.div`
@@ -48,6 +51,10 @@ export const TextContainer = styled.div`
     }
     button{
         float: var(--floatRi);
+    }
+    @media (max-width: 720px){
+        width: 100%;
+        padding: 0;
     }
 `;
 
@@ -89,5 +96,9 @@ export const Album = styled.div`
                 object-fit: cover;
             }
         }
+    }
+    @media (max-width: 720px){
+        width: 100%;
+        height: 52vh;
     }
 `;
