@@ -57,7 +57,7 @@ const OurTeam = () => {
         {
             unit: t("uiTeam"),
             description: t("uiTeamDes"),
-            images: [ardalen, parmida, yasi, jhina]
+            images: [ardalen, parmida, faezeh]
         }
     ];
     const teamCW = [
@@ -100,12 +100,12 @@ const OurTeam = () => {
                 <Unit 
                     data={teamCW}
                 />
-                <Unit 
+                {/* <Unit 
                     data={teamDi}
-                />
-                <Unit 
+                /> */}
+                {/* <Unit 
                     data={teamPg}
-                />
+                /> */}
             </DivText>
             <Album>
                 <Link href="https://karmaagy.com/">

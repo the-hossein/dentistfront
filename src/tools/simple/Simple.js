@@ -16,7 +16,9 @@ const Simple = () => {
                     <a><h1>Our Team</h1></a>
                 </Link>
             </div>
-            <Image src={simple} alt="pic simple" />
+            <div className='karmaLogo'>
+                <Image src={simple} alt="pic simple" />
+            </div>
         </MainDiv>
     );
 };

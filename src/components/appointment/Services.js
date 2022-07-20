@@ -12,15 +12,17 @@ const Services = () => {
 
   const [userSelect, setUserSelect] = useState(state.selectedService.value);
   const allServices = [
-    { type: "Implants", name: 0 },
+    { type: "Pediatricdentistry", name: 0 },
     { type: "Orthodontics", name: 1 },
-    { type: "Bridges", name: 2 },
-    { type: "Endo", name: 3 },
-    { type: "Veneers", name: 4 },
-    { type: "Fillings", name: 5 },
-    { type: "Dental cleanings", name: 6 },
-    { type: "Dental Laminate", name: 7 },
-    { type: "Composite", name: 8 }
+    { type: "Teethbleaching", name: 2 },
+    { type: "Rootcanal", name: 3 },
+    { type: "Prosthesisandcover", name: 4 },
+    { type: "Implant", name: 5 },
+    { type: "Gumsurgery", name: 6 },
+    { type: "Oralsurgery", name: 7 },
+    { type: "Frenectomysurgery", name: 8 },
+    { type: "Dentallaminate", name: 9 },
+    { type: "Composite", name: 10 }
   ];
   const selectHandler = (e) => {
     setUserSelect(e.target.name);
@@ -30,7 +32,12 @@ const Services = () => {
     <BoxStyle size="big">
       {allServices.map((item) => (
         <>
-          <button onClick={selectHandler} name={item.name} value={item.type}  className={userSelect === item.type&&"activeItem"}>
+          <button
+            onClick={selectHandler}
+            name={item.name}
+            value={item.type}
+            className={userSelect === item.type && "activeItem"}
+          >
             {t(`${item.type}`)}
           </button>
         </>

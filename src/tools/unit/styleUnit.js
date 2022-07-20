@@ -39,7 +39,7 @@ export const BoxImage = styled.div`
     height: 150px !important;
     border-top-left-radius: ${props=> props.id === 0 || props.id=== 8 ? "60% 30%" : ""} ;
     border-top-right-radius: ${props=> props.id === 2 ? "60% 30%" :""} ;
-    border-bottom-right-radius: ${props=> props.id === 1 || props.id === 4 || props.id === 12 ? "60% 30%" : ""} ;
+    border-bottom-right-radius: ${props=> props.id === 1 || props.id === 4 || props.id === 12 || props.id === 20 ? "60% 30%" : ""} ;
     border-bottom-left-radius: ${props=> props.id === 3 ? "60% 30%" : ""} ;
     overflow: hidden;
     span{

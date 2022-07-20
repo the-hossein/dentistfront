@@ -20,7 +20,7 @@ const Unit = ({ data }) => {
                     <ContainerImage lang={lang}>
                         {
                             item.images.map((img, index) => (
-                                <BoxImage key={img} id={item.images.length === 4 ? index * 4 : index}>
+                                <BoxImage key={img} id={item.images.length === 4 ? index * 4 :item.images.length === 3 ? index * 10 :index}>
                                     <Image src={img} alt="peple"/> 
                                 </BoxImage>
                             ))  
