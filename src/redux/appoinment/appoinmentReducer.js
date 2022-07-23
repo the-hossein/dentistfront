@@ -30,7 +30,7 @@ const appointmentReducer = (state = initializeState, action) => {
         switch (action.times[i].time) {
           case 0:
             converTimes.push({
-              time: "08-10",
+              time: "09-10",
               state: action.times[i].state,
               num: action.times[i].time
             });
@@ -38,7 +38,7 @@ const appointmentReducer = (state = initializeState, action) => {
 
           case 1:
             converTimes.push({
-              time: "10-12",
+              time: "10-11",
               state: action.times[i].state,
               num: action.times[i].time
             });
@@ -46,21 +46,21 @@ const appointmentReducer = (state = initializeState, action) => {
 
           case 2:
             converTimes.push({
-              time: "13-18",
+              time: "11-12",
               state: action.times[i].state,
               num: action.times[i].time
             });
             break;
           case 3:
             converTimes.push({
-              time: "18-19",
+              time: "12-13",
               state: action.times[i].state,
               num: action.times[i].time
             });
             break;
           case 4:
             converTimes.push({
-              time: "19-20",
+              time: "13-14",
               state: action.times[i].state,
               num: action.times[i].time
             });
@@ -68,7 +68,7 @@ const appointmentReducer = (state = initializeState, action) => {
             break;
           case 5:
             converTimes.push({
-              time: "20-21",
+              time: "14-15",
               state: action.times[i].state,
               num: action.times[i].time
             });
@@ -76,7 +76,7 @@ const appointmentReducer = (state = initializeState, action) => {
 
           case 6:
             converTimes.push({
-              time: "20-21",
+              time: "15-16",
               state: action.times[i].state,
               num: action.times[i].time
             });
@@ -84,7 +84,7 @@ const appointmentReducer = (state = initializeState, action) => {
 
           case 7:
             converTimes.push({
-              time: "20-21",
+              time: "16-17",
               state: action.times[i].state,
               num: action.times[i].time
             });
@@ -92,7 +92,7 @@ const appointmentReducer = (state = initializeState, action) => {
 
           case 8:
             converTimes.push({
-              time: "20-21",
+              time: "17-18",
               state: action.times[i].state,
               num: action.times[i].time
             });
@@ -100,7 +100,7 @@ const appointmentReducer = (state = initializeState, action) => {
 
           case 9:
             converTimes.push({
-              time: "20-21",
+              time: "18-19",
               state: action.times[i].state,
               num: action.times[i].time
             });
@@ -108,21 +108,21 @@ const appointmentReducer = (state = initializeState, action) => {
 
           case 10:
             converTimes.push({
-              time: "20-21",
+              time: "19-20",
               state: action.times[i].state,
               num: action.times[i].time
             });
             break;
           case 11:
             converTimes.push({
-              time: "21-22",
+              time: "20-21",
               state: action.times[i].state,
               num: action.times[i].time
             });
             break;
           case 12:
             converTimes.push({
-              time: "22-23",
+              time: "21-22",
               state: action.times[i].state,
               num: action.times[i].time
             });
@@ -177,53 +177,52 @@ const appointmentReducer = (state = initializeState, action) => {
 
       switch (action.data.time) {
         case 0:
-          timeReservtion = "08-10";
+          timeReservtion = "09-10";
 
           break;
 
         case 1:
-          timeReservtion = "10-12";
+          timeReservtion = "10-11";
           break;
 
         case 2:
-          timeReservtion = "13-18";
+          timeReservtion = "11-12";
           break;
         case 3:
-          timeReservtion = "18-19";
+          timeReservtion = "12-13";
           break;
         case 4:
-          timeReservtion = "19-20";
+          timeReservtion = "13-14";
 
           break;
         case 5:
-          timeReservtion = "20-21";
+          timeReservtion = "14-15";
           break;
 
         case 6:
-          timeReservtion = "20-21";
+          timeReservtion = "15-16";
           break;
 
         case 7:
-          timeReservtion = "20-21";
+          timeReservtion = "16-17";
           break;
 
         case 8:
-          timeReservtion = "20-21";
+          timeReservtion = "17-18";
           break;
-
         case 9:
-          timeReservtion = "20-21";
+          timeReservtion = "18-19";
           break;
-
         case 10:
-          timeReservtion = "20-21";
+          timeReservtion = "19-20";
           break;
         case 11:
-          timeReservtion = "21-22";
+          timeReservtion = "20-21";
           break;
         case 12:
-          timeReservtion = "22-23";
+          timeReservtion = "21-22";
           break;
+
         default:
           timeReservtion;
           break;
