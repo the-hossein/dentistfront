@@ -44,7 +44,7 @@ const Landing = () => {
             <div className="col col-text">
               <div className="child-col">
                 <Link href="/samples" replace>
-                  <ArrowText>
+                  <ArrowText first>
                     <h2>Work Sample</h2>
                     <ArrowLeftIcon fontSize="large" />
                   </ArrowText>

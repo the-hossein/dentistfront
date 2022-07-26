@@ -23,6 +23,13 @@ export const UnitDiv = styled.div`
             text-align: justify;
         }
     }
+    @media (max-width: 711px){
+        flex-direction: column;
+        .text{
+            width: 100% !important;
+            margin-bottom: 2rem;
+        }
+    }
 `; 
 
 export const ContainerImage = styled.div`
@@ -31,6 +38,11 @@ export const ContainerImage = styled.div`
     display: flex;
     justify-content: ${props => props.lang === "fa" ? "flex-start" : "flex-end"};
     align-items: center;
+    @media (max-width: 711px){
+        width: 100%;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
 `;
 
 export const BoxImage = styled.div`

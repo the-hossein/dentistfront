@@ -12,27 +12,30 @@ export const DivContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  position: relative !important;
   .text {
-    width: 50%;
+    width: 52%;
     /* height: 84vh;     */
-    padding: 3rem 7rem 0rem 5rem;
+    padding: 2rem 7rem 1rem 5rem;
     color: var(--whitePen);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     h1 {
-      font-size: 30pt;
-      margin-bottom: 1rem;
+      font-size: var(--title-font);
+      margin-bottom: 2rem;
     }
     p {
+      font-size: var(--ms-font);
       border-radius: var(--secondlyBtnRadius);
       background-color: var(--whitePen);
       color: var(--darkPen);
       padding: 1rem 2rem;
-      width: 60%;
-      margin-bottom: 1rem;
+      width: 65%;
+      margin-bottom: 1.5rem;
     }
     span {
+      margin-top: 1rem;
       margin-bottom: 0.5rem;
       padding: 0 0 0 1rem;
     }
@@ -41,7 +44,12 @@ export const DivContainer = styled.div`
       margin-bottom: 1rem;
     }
     button {
+      width: 30%;
       float: var(--floatRi) !important;
+    }
+
+    .icons {
+      margin-top: 2rem;
     }
 
     svg {
@@ -52,13 +60,25 @@ export const DivContainer = styled.div`
   }
   .banner {
     width: 40%;
-    height: 86vh;
-    overflow: hidden;
-
-    img {
-      width: 100% !important;
-      height: 100vh !important;
+    height: 100vh;
+    /* overflow: hidden; */
+    position: sticky !important;
+    top: 10px !important;
+    /* display: grid;
+    place-items: center; */
+    span {
       object-fit: cover;
+      position: sticky !important;
+      /* top: 0 !important; */
+      width: 100% !important;
+      height: 100% !important;
+      img {
+        width: 100% !important;
+        height: 100% !important;
+        /* position: sticky !important;
+        top: 0 !important; */
+        object-fit: cover;
+      }
     }
   }
 
@@ -73,6 +93,10 @@ export const DivContainer = styled.div`
     flex-direction: column-reverse;
     .banner {
       width: 100%;
+      height: 70vh;
+      img {
+        height: 70vh !important;
+      }
     }
     .text {
       width: 100%;

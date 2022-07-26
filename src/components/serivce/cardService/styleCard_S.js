@@ -28,13 +28,14 @@ export const Card = styled.div`
     background-color: #fff;
     color: var(--darkPen);
     position: absolute;
-    bottom: 0;
+    bottom: 0%;
     left: 50%;
     z-index: 5;
-    min-width: 150px;
-    width: fit-content;
-    padding: 1rem 0.5rem;
-    font-size: var(--lg-font);
+    width: 150px;
+    height: 65px;
+    /* width: fit-content; */
+    padding: 0 .5rem;
+    font-size: var(--md-font);
     border-radius: var(--inputRadius);
     transform-origin: 2px;
     transform: rotateZ(-90deg);
@@ -47,6 +48,8 @@ export const Card = styled.div`
     cursor: pointer;
     font-weight: 700;
     transition: all 0.3s linear;
+    display: grid;
+    place-items: center;
   }
 
   &:hover {

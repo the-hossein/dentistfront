@@ -1,11 +1,5 @@
-export default function services(req, res){
-    return res.status(200).json([
-        {
-            id: 1,
-            title: "دندان پزشکی اطفال",
-            titleEn: "Pediatric Dentistry",
-            description: "",
-            descriptionEn: "",
-        }
-    ])
+import services from "../../../src/tools/dataApi/services"
+
+export default function handler(req, res){
+    return res.status(200).json({services: services})
 }

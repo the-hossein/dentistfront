@@ -52,9 +52,6 @@ export const RowJustifyBetweenHome = styled.div`
     padding: 0 4rem;
   }
   .col {
-    /* display: flex;
-    justify-content: center;
-    align-items: center; */
     button {
       margin-bottom: 2rem !important;
     }
@@ -84,6 +81,7 @@ export const RowJustifyBetweenHome = styled.div`
       align-items: flex-end;
     }
     .col-text {
+      margin-top: 3rem;
       justify-content: center;
       align-items: center;
     }
@@ -185,7 +183,6 @@ export const HeaderBasic = styled.header`
   min-height: 14vh;
   background-color: var(--backWhite);
   direction: var(--dirRi);
-  font-size: var(--xs-font);
   @media (max-width: 711px) {
     padding: 1rem 2rem;
   }
@@ -201,10 +198,15 @@ export const HeaderBasic = styled.header`
 `;
 
 export const Navbar = styled.nav`
-  width: 60%;
+  width: 65%;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  button{
+    font-size: var(--md-font);
+    min-width: 120px;
+    min-height: 45px;
+  }
   @media (max-width: 1013px) {
     width: 85%;
   }
@@ -225,6 +227,7 @@ export const UlMenu = styled.ul`
   color: var(--darkPen);
   li {
     cursor: pointer;
+    font-size: var(--ms-font);
   }
   .active {
     font-weight: 700;
@@ -277,6 +280,7 @@ export const MainDiv = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+  padding-top: 1.5rem;
   .slogan {
     margin: 1rem 0;
   }
@@ -287,8 +291,8 @@ export const MainDiv = styled.div`
     /* height: 100%  */
     img {
       float: var(--floatRi);
-      min-height: 75vh !important;
-      max-width: 100%;
+      min-height: 69vh !important;
+      max-width: 100% !important;
       object-fit: cover;
       border-radius: ${(props) =>
         props.radiusImg ? "50% 50% 0% 50%" : "50% 50% 50% 0"};
@@ -329,6 +333,12 @@ export const MainDiv = styled.div`
         font-size: var(--md-font);
       }
     }
+    .banner {
+      img {
+        min-height: 60vh !important;
+        width: 100%;
+      }
+    }
   }
 
   @media (max-width: 698px) {
@@ -338,6 +348,7 @@ export const MainDiv = styled.div`
     }
     .banner {
       img {
+        min-height: 47vh !important;
         width: 100%;
       }
     }
