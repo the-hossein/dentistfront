@@ -176,7 +176,7 @@ const Header = ({ path }) => {
               <li className={path === "Home" && "active"}>{t("home")}</li>
             </a>
           </Link>
-          <Link href="service">
+          <Link href="/service">
             <a>
               <li className={path === "Service" && "active"}>{t("service")}</li>
             </a>
@@ -210,6 +210,7 @@ const Header = ({ path }) => {
               text={state.loginStatus ? t("logout") : t("login")}
               status={state.loginStatus ? "logout" : "Login"}
               click={state.loginStatus ? logoutHandler : (e) => {}}
+              reverse={true}
             />
           </a>
         </Link>

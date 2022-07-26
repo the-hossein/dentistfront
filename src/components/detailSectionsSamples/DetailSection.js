@@ -15,7 +15,7 @@ const DetailSection = () => {
 
     return (
         <BasicSection>
-            <DivContainer>
+            <DivContainer lang={lang}>
                 <h1 onClick={()=> window.history.back()}> <ArrowLeftIcon fontSize='large' /> {t("back")}</h1>
                 <h2>{t("WSamples")}</h2>
                 <DivRow border_button >

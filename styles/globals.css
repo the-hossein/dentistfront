@@ -1,7 +1,7 @@
 @font-face {
   font-family: "Roboto";
-  src: url('../public/Assets/fonts/Roboto/Roboto-Medium.ttf');
-  src: url("../public/Assets/fonts/Roboto/Roboto-Medium.ttf") format("truetype"),
+  src: url('../public/Assets/fonts/Roboto/Roboto-Light.ttf');
+  src: url("../public/Assets/fonts/Roboto/Roboto-Light.ttf") format("truetype"),
 }
 
 @font-face {
@@ -29,6 +29,7 @@
   --sm-font: 8pt;
 
   --xs-font: 10pt;
+  --ms-font: 11pt;
   --md-font: 12pt;
   --lg-font: 14pt;
   --xl-font: 16pt;
