@@ -12,8 +12,9 @@ export const DivContainer = styled.div`
         justify-content: start;
         align-items: flex-start;
         position: absolute;
-        top: -3rem;
-        left: 0rem !important;
+        top: -5rem;
+        left: ${props => props.lang !== "fa" ? "0 !important" : ""};
+        right: ${props => props.lang === "fa" ? "0 !important" : ""};
         cursor: pointer;
         svg{
             transform: scale(3, 1.4);
@@ -21,6 +22,9 @@ export const DivContainer = styled.div`
     }
     h2{
         font-size: var(--title-font);
+        /* margin: 2rem 0; */
+        margin-top: 5rem;
+        margin-bottom: .2rem;
     }
     @media (max-width: 969px) {
         margin-top: 3rem;

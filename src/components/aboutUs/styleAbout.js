@@ -1,6 +1,7 @@
 import styled from "styled-components";
 
 export const DivMain = styled.div`
+padding-top: 1rem;
   direction: var(--dirRi);
   width: 100%;
   height: 100%;
@@ -13,11 +14,12 @@ export const DivMain = styled.div`
   .text {
     color: var(--whitePen);
     h1 {
-      font-size: 30pt;
-      margin-bottom: 1rem;
+      font-size: var(--title-font);
+      margin-bottom: 2rem;
     }
     p {
-      margin-bottom: 2rem;
+      font-size: var(--md-font);
+      margin-bottom: 3rem;
       text-align: justify;
     }
   }

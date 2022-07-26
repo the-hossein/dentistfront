@@ -36,7 +36,7 @@ export const TextContainer = styled.div`
     justify-content: space-between;
     align-items: flex-start;
     color: var(--whitePen);
-    margin-top: 1rem;
+    margin-top: 2rem;
     padding: ${props => props.lang === "fa" ? "0 0 0 5rem" : "0 5rem 0 0" } ;
     h1{
         margin: 2rem 0;
