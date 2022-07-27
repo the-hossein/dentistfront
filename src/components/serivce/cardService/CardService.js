@@ -7,11 +7,11 @@ const CardService = ({ title, lang, img, id }) => {
   return (
     <Card lang={lang}>
       <Image src={img} alt="service" />
-      <div className="name">
-        <Link href={`/service/${id}`}>
-          <a>{title}</a>
-        </Link>
-      </div>
+      <Link href={`/service/${id}`}>
+        <a>
+          <div className="name">{title}</div>
+        </a>
+      </Link>
     </Card>
   );
 };
