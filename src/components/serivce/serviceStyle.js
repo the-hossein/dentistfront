@@ -33,18 +33,21 @@ export const DivContainer = styled.div`
   }
   .swiper {
     margin-top: 2rem;
+    padding-bottom: 3rem;
   }
-  /* .swiper-slide {
-    :nth-child(odd) {
-      margin-top: 2rem;
-    }
-  } */
+  .swiper-pagination-bullet-active {
+    background-color: var(--whitePen) !important;
+  }
+  .swiper-slide {
+    padding: 0 2px ;
+  }
   @media (max-width: 868px) {
     .swiper-slide {
       :nth-child(odd) {
         margin-top: 5rem;
       }
     }
+
     .row {
       min-height: fit-content;
       .child-row {
