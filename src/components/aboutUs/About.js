@@ -22,7 +22,7 @@ const About = () => {
                 <div className='child text'>
                     <h1>{t("aboutus")}</h1>
                     <p>
-                        {t("lorem40")}
+                        {t("aboutUsText")}
                     </p>
                     <div className='parent-col'>
                         <div className='col'>
