@@ -29,7 +29,7 @@ const Landing = () => {
           <div className="description">
             <h1>{t("Sadatabad")}</h1>
             <h2>{t("company")}</h2>
-            <p className="slogan" >slogan slogan slogan slogan slogan slogan slogan slogan</p>
+            <p className="slogan" >{t("slogan")}</p>
           </div>
           <RowJustifyBetweenHome align={"flex-start"} >
             <div className="col">
@@ -45,7 +45,7 @@ const Landing = () => {
               <div className="child-col">
                 <Link href="/samples" replace>
                   <ArrowText first>
-                    <h2>Work Sample</h2>
+                    <h2>{t("WSamples")}</h2>
                     <ArrowLeftIcon fontSize="large" />
                   </ArrowText>
                 </Link>
@@ -53,7 +53,7 @@ const Landing = () => {
               <div className="child-col">
                 <Link href="/dentaladvince" replace>
                   <ArrowText reverse>
-                    <h2>Dental Advice</h2>
+                    <h2>{t("dentalAdvice")}</h2>
                     <ArrowLeftIcon fontSize="large" />
                   </ArrowText>
                 </Link>
