@@ -29,6 +29,9 @@ export const RegisterContainer = styled.div`
       margin: ${(props) =>
         props.lang === "fa" ? "0 1rem 0 0" : "0 0 0 1.5rem"};
     }
+    span, input, button, h5{
+      font-family: var(--fontFamily-light);
+    }
     .socialMedia {
       margin-top: 6rem;
       svg {

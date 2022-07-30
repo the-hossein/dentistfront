@@ -54,6 +54,7 @@ export const RowJustifyBetweenHome = styled.div`
   .col {
     button {
       margin-bottom: 2rem !important;
+      font-size: var(--ms-font);
     }
   }
   @media (max-width: 1156px) {
@@ -129,9 +130,14 @@ export const MenuSider = styled.ul`
   li {
     margin-bottom: 2rem;
     font-size: var(--lg-font);
+    font-family: var(--fontFamily-light);
+    span{
+      font-family: inherit;
+    }
   }
   .active {
-    font-weight: 700;
+    /* font-weight: 700; */
+    font-family: var(--fontFamily);
   }
   @media (max-width: 525px) {
     display: flex;
@@ -225,12 +231,16 @@ export const UlMenu = styled.ul`
   justify-content: space-between;
   align-items: center;
   color: var(--darkPen);
+  font-size: var(--ms-font);
   li {
+    font-family: var(--fontFamily-light);
+    span{
+      font-family: inherit;
+    }
     cursor: pointer;
-    font-size: var(--ms-font);
   }
   .active {
-    font-weight: 700;
+    font-family: var(--fontFamily);
   }
   @media (max-width: 768px) {
     width: 100%;
@@ -283,6 +293,7 @@ export const MainDiv = styled.div`
   padding-top: 1.5rem;
   .slogan {
     margin: 1rem 0;
+    font-weight: 700;
   }
   .child {
   }

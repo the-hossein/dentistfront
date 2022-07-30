@@ -47,7 +47,11 @@ export const DivText = styled.div`
         font-size: var(--title-font);
         margin: 0 0 2rem 0;
     }
+    h2{
+        font-family: var(--fontFamily-light);
+    }
     p{
+        font-family: var(--fontFamily-light);
         font-size: var(--md-font);
     }
     @media (max-width: 1002px){
