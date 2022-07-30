@@ -22,7 +22,7 @@ const DropDown = ({ active, id, openHandler, text, childComponent }) => {
   const [firstTime, setFirstTime] = useState(false);
   const { t } = useTranslation();
   const chaneDateHandler = (timestamp, miladi) => {
-    
+
     dispatch(getDate(miladi, timestamp));
   };
   useEffect(() => {
@@ -61,17 +61,18 @@ console.log(response)
         <div className="item">
        {id === "date" ? (
             <>
-          
-            {
-              active&&   <FormControlLabel
-              
-                
+
+            {/* {
+              active&&   
+              <FormControlLabel
+
+
               control={<Checkbox checked={firstTime} onChange={handleChange} icon={<SquareIcon sx={{color:"var(--whitePen)",borderRadius:"6px"}}/>	}/>}
               label={t("firstReservation")}
               labelPlacement={t("firstReservation")}
-            
+
             />
-            }
+            } */}
               <DatePicker
                 format="jYYYY/jMM/jDD"
                 id={"datePicker"}
