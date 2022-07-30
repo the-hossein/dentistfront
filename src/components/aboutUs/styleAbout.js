@@ -20,7 +20,7 @@ padding-top: 1rem;
     p {
       font-family: var(--fontFamily-light);
       font-size: var(--md-font);
-      margin-bottom: 3rem;
+      margin-bottom: 1.5rem;
       text-align: justify;
     }
   }
