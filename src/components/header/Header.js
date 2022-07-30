@@ -45,12 +45,14 @@ const Header = ({ path }) => {
     root.style.setProperty("--floatRi", "left");
     root.style.setProperty("--floatLf", "right");
     root.style.setProperty("--fontFamily", "IRANSansWeb");
+    root.style.setProperty("--fontFamily-light", "IRANSansWeb");
   };
   const leftDir = () => {
     root.style.setProperty("--dirRi", "ltr");
     root.style.setProperty("--floatRi", "right");
     root.style.setProperty("--floatLf", "left");
     root.style.setProperty("--fontFamily", "Roboto");
+    root.style.setProperty("--fontFamily-light", "RobotoLight");
   };
 
   const changeLng = (lng) => {

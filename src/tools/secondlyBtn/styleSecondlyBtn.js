@@ -7,6 +7,7 @@ export const SecondlyButtonStyle = styled.button`
   height: 50px;
   color: var(--darkPen);
   cursor: pointer;
+  font-family: ${props => props.fontFamily === "light" ? "var(--fontFamily-light)" : "var(--fontFamily)" };
   &:hover {
     background-color: var(--bluePen);
     color: var(--whitePen);

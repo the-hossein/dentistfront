@@ -68,14 +68,18 @@ export const TextContainer = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
+    
     label {
+      font-family: var(--fontFamily-light);
       width: 25%;
     }
     input {
+      font-family: var(--fontFamily-light);
       color: var(--darkPen);
     }
 
     select {
+      font-family: var(--fontFamily-light);
       background-color: var(--whitePen);
       border: none;
       border-radius: var(--inputRadius);
@@ -89,6 +93,7 @@ export const TextContainer = styled.div`
         display: none !important;
       }
       option{
+        font-family: var(--fontFamily-light);
         font-size: var(--md-font);
       }
     }
@@ -100,6 +105,7 @@ export const TextContainer = styled.div`
     button{
         width: 35%;
         font-size: var(--lg-font);
+        font-family: var(--fontFamily-light);
     }
   }
   @media (max-width: 1020px) {

@@ -1,7 +1,7 @@
 import styled from "styled-components";
 export const ButtonRoundBasic = styled.button`
   min-width: ${(props) => (props.width ? props.width : "135px")};
-  min-height: 55px;
+  min-height: ${props => props.height ? props.height : "55px"};
   background-color: ${props => props.reverse ? "var(--mainColor)" : "var(--whitePen)"};
   color: ${(props) => !props.reverse ? "var(--darkPen)" : "var(--whitePen)"};
   border-radius: var(--primaryBtnRadius);

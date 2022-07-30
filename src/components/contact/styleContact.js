@@ -26,6 +26,7 @@ export const DivContainer = styled.div`
       margin-bottom: 2rem;
     }
     p {
+      font-family: var(--fontFamily-light) !important;
       font-size: var(--ms-font);
       border-radius: var(--secondlyBtnRadius);
       background-color: var(--whitePen);
@@ -35,11 +36,13 @@ export const DivContainer = styled.div`
       margin-bottom: 1.5rem;
     }
     span {
+      font-family: var(--fontFamily-light) !important;
       margin-top: 1rem;
       margin-bottom: 0.5rem;
       padding: 0 0 0 1rem;
     }
     input {
+      font-family: var(--fontFamily-light) !important;
       color: var(--darkPen);
       margin-bottom: 1rem;
     }
@@ -63,7 +66,7 @@ export const DivContainer = styled.div`
     height: 100vh;
     /* overflow: hidden; */
     position: sticky !important;
-    top: 10px !important;
+    top: 0 !important;
     /* display: grid;
     place-items: center; */
     span {
@@ -94,6 +97,7 @@ export const DivContainer = styled.div`
     .banner {
       width: 100%;
       height: 70vh;
+      position: unset !important;
       img {
         height: 70vh !important;
       }

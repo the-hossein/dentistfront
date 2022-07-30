@@ -35,7 +35,7 @@ const Landing = () => {
             <div className="col">
               <Link href="/appointment" >
              <a>
-                  <ButtonRound text={t("Appointment")} width={"175px"} />
+                  <ButtonRound text={t("Appointment")} width={"205px"} height={"50px"} />
              </a>
             
               </Link>
