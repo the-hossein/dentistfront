@@ -4,16 +4,19 @@ import { MainDiv } from './style';
 import simple from '../../../public/Assets/images/simple.png';
 import { useSelector } from 'react-redux';
 import Link from 'next/link';
+import { useTranslation } from 'react-i18next';
 
 const Simple = () => {
 
+    const { t } = useTranslation();
+    
     const lang = useSelector(state => state.stateLang.lng);
 
     return (
         <MainDiv lang={lang}>
             <div>
                 <Link href="/ourteam">
-                    <a><h1>Our Team</h1></a>
+                    <a><h1>{t("ourTeam")}</h1></a>
                 </Link>
             </div>
             <div className='karmaLogo'>

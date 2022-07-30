@@ -1,7 +1,14 @@
 @font-face {
-  font-family: "Roboto";
+  font-family: "RobotoLight";
   src: url('../public/Assets/fonts/Roboto/Roboto-Light.ttf');
-  src: url("../public/Assets/fonts/Roboto/Roboto-Light.ttf") format("truetype"),
+  src: url("../public/Assets/fonts/Roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url('../public/Assets/fonts/Roboto/Roboto-Bold.ttf');
+  src: url("../public/Assets/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
 }
 
 @font-face {
@@ -34,12 +41,14 @@
   --lg-font: 14pt;
   --xl-font: 16pt;
   --xxl-font: 18pt;
+  --titleSecondly: 22pt;
   --title-font: 30pt;
   --dirRi: ltr;
   --floatRi: right;
   --floatLf: left;
 
   --fontFamily: "IRANSansWeb";
+  --fontFamily-light: "IRANSansWeb";
 }
 
 

@@ -26,7 +26,7 @@ const Contact = () => {
           <span>{t("typeMessage")}</span>
           <Input type="text" />
           <div>
-            <SecondlyBtn text={t("done")} />
+            <SecondlyBtn text={t("done")} fontFamily={"light"} />
           </div>
           <div className="icons">
             <InstagramIcon />

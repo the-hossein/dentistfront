@@ -16,8 +16,11 @@ import {
   Scrollbar,
   Mousewheel,
   Autoplay,
-  EffectFade
+  EffectFade,
+  Navigation
 } from "swiper";
+import "swiper/css/pagination";
+
 
 const Service = () => {
   const lang = useSelector((state) => state.stateLang.lng);
@@ -41,11 +44,14 @@ const Service = () => {
       <DivContainer>
         <h1>{t("service")}</h1>
         <Swiper
-          modules={[Scrollbar, Mousewheel, Autoplay]}
+          modules={[Scrollbar, Mousewheel, Autoplay, Pagination]}
           className="mySwiper"
           slidesPerView={size <= 868 ? 2 : size >= 1200 ? 5 : 3}
           spaceBetween={size <= 868 ? 40 : 0}
           grabCursor={true}
+          pagination={{
+            dynamicBullets: true,
+          }}
           mousewheel={true}
           autoplay
           loop

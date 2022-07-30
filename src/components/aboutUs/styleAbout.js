@@ -18,6 +18,7 @@ padding-top: 1rem;
       margin-bottom: 2rem;
     }
     p {
+      font-family: var(--fontFamily-light);
       font-size: var(--md-font);
       margin-bottom: 1.5rem;
       text-align: justify;

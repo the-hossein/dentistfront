@@ -6,6 +6,9 @@ export const MainDiv = styled.div`
     flex-direction: ${props => props.lang==="fa" ? "row-reverse" : "row"};
     justify-content: center;
     align-items: center;
+    h1{
+        font-size: var(--titleSecondly);
+    }
     div{
         color: var(--whitePen);
         display: flex;
