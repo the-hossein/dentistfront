@@ -13,7 +13,8 @@ export const DivContainer = styled.div`
         width: 100%;
         min-height: 55vh;
         display: flex;
-        justify-content: space-between;
+        flex-wrap: wrap;
+        justify-content: flex-start;
         align-items: flex-start;
         .col{
             width: 48.5%;
@@ -26,6 +27,7 @@ export const DivContainer = styled.div`
 
     @media (max-width: 761px) {
         .row{
+            justify-content: space-between;
             .col{
                 width: 45.5%;
                 min-height: 55vh;

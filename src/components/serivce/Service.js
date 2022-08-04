@@ -17,10 +17,29 @@ import {
   Mousewheel,
   Autoplay,
   EffectFade,
-  Navigation
+  Navigation,
 } from "swiper";
 import "swiper/css/pagination";
+import services from "../../tools/dataApi/services";
 
+const setPic = () => {
+  const num = Math.round(Math.random() * 4);
+  console.log(num);
+  switch (num) {
+    case 0:
+      return ServicePic1;
+    case 1:
+      return ServicePic2;
+    case 2:
+      return ServicePic3;
+    case 3:
+      return ServicePic4;
+    case 4:
+      return ServicePic5;
+    default:
+      break;
+  }
+};
 
 const Service = () => {
   const lang = useSelector((state) => state.stateLang.lng);
@@ -42,7 +61,7 @@ const Service = () => {
   return (
     <BasicSection>
       <DivContainer>
-        <h1>{t("service")}</h1>
+        <h1 onClick={() => console.log(setPic())}>{t("service")}</h1>
         <Swiper
           modules={[Scrollbar, Mousewheel, Autoplay, Pagination]}
           className="mySwiper"
@@ -56,7 +75,17 @@ const Service = () => {
           autoplay
           loop
         >
-          <SwiperSlide>
+          {services.map((item, index) => (
+            <SwiperSlide key={item.id}>
+              <CardService
+                title={lang === "fa" ? item.title : item.titleEn}
+                lang={lang}
+                img={setPic()}
+                id={item.id}
+              />
+            </SwiperSlide>
+          ))}
+          {/* <SwiperSlide>
             <CardService
               title={t("Pediatricdentistry")}
               lang={lang}
@@ -74,7 +103,12 @@ const Service = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <CardService title={t("composite")} lang={lang} img={ServicePic3} id={3} />
+            <CardService
+              title={t("composite")}
+              lang={lang}
+              img={ServicePic3}
+              id={3}
+            />
           </SwiperSlide>
 
           <SwiperSlide>
@@ -87,11 +121,21 @@ const Service = () => {
           </SwiperSlide>
 
           <SwiperSlide>
-            <CardService title={t("Implant")} lang={lang} img={ServicePic5} id={5} />
+            <CardService
+              title={t("Implant")}
+              lang={lang}
+              img={ServicePic5}
+              id={5}
+            />
           </SwiperSlide>
 
           <SwiperSlide>
-            <CardService title={t("Rootcanal")} lang={lang} img={ServicePic1} id={6} />
+            <CardService
+              title={t("Rootcanal")}
+              lang={lang}
+              img={ServicePic1}
+              id={6}
+            />
           </SwiperSlide>
           <SwiperSlide>
             <CardService
@@ -134,50 +178,6 @@ const Service = () => {
               img={ServicePic5}
               id={11}
             />
-          </SwiperSlide>
-          {/* <SwiperSlide>
-            <div className="row">
-              <div className="child-row">
-                <CardService
-                  title={t("rootcanal")}
-                  lang={lang}
-                  img={ServicePic1}
-                />
-                <CardService
-                  title={t("Prosthesisandcover")}
-                  lang={lang}
-                  img={ServicePic2}
-                />
-                <CardService
-                  title={t("Orthodontic")}
-                  lang={lang}
-                  img={ServicePic3}
-                />
-              </div>
-              <div className="child-row">
-                <CardService
-                  title={t("gumsurgery")}
-                  lang={lang}
-                  img={ServicePic4}
-                />
-                <CardService
-                  title={t("Oralsurgery")}
-                  lang={lang}
-                  img={ServicePic5}
-                />
-              </div>
-            </div>
-          </SwiperSlide>
-          <SwiperSlide>
-            <div className="row">
-              <div className="child-row">
-                <CardService
-                  title={t("Frenectomysurgery")}
-                  lang={lang}
-                  img={ServicePic5}
-                />
-              </div>
-            </div>
           </SwiperSlide> */}
         </Swiper>
 
@@ -188,3 +188,4 @@ const Service = () => {
 };
 
 export default Service;
+

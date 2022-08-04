@@ -1,16 +1,19 @@
 import React from 'react';
 import { Card } from './CardSamplesStyle';
 import Image from 'next/image';
-
+import { useSelector } from 'react-redux';
 import Link from 'next/link';
 
-const CardSample = ({ id,img }) => {
+const CardSample = ({ id,img, name, nameEn }) => {
+
+    const lang = useSelector(state => state.stateLang.lng);
+
     return (
-        <Card>
+        <Card lang={lang} >
             <Image src={img} alt="samples" />
-            <div className='showCase' >
-                <Link href={`/samples/${id}`}><a>Section {id}</a></Link>
-            </div>
+            <Link href={`/samples/${id}`}><a><div className='showCase' >
+                {lang === "fa" ? name : nameEn}
+            </div></a></Link>
         </Card>
     );
 };

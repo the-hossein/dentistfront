@@ -1,4 +1,4 @@
-import services from "../../../src/tools/dataApi/services"
+import samples from "../../../src/tools/dataApi/samples"
 
 export default async function handler(req, res){
     const { method, query } = req;
@@ -8,9 +8,9 @@ export default async function handler(req, res){
     }
 }
 
-export async function getOneService(query){
-    if(parseInt(query.serviceId) <= 14){
-        const target = services.filter(item => item.id === parseInt(query.serviceId));
+export async function getOneSample(query){
+    if(parseInt(query.sampleId) <= 6){
+        const target = samples.filter(item => item.id === parseInt(query.sampleId));
         return target;
     }else{
         return "Not Found !";

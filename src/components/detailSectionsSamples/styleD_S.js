@@ -9,6 +9,7 @@ export const DivContainer = styled.div`
     h1{
         width: fit-content;
         display: flex;
+        flex-direction: ${props => props.lang === "fa" ? "row-reverse" : "row"};
         justify-content: start;
         align-items: flex-start;
         position: absolute;
@@ -39,7 +40,7 @@ export const DivRow = styled.div`
     margin-top: 1rem;
     border-bottom: ${props => props.border_button ? "1px solid var(--whitePen) " : ""};
     padding-bottom: ${props => props.border_button ? "6rem" : ""};
-    margin-bottom: ${props => props.border_button ? "6rem" : ""};
+    margin-bottom: ${props => props.border_button ? "1rem" : ""};
     .text{
         width: 33%;
         color: var(--whitePen);

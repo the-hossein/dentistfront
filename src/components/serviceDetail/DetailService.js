@@ -30,8 +30,8 @@ const DetailService = ({ id, dataService }) => {
           </a>
         </Link>
         <TextContainer lang={lang}>
-          <h1>{t("service")}</h1>
-          <h2>{lang === "fa" ? dataService.title : dataService.titleEn}</h2>
+          <h1 onClick={() => console.log(dataService)}>{t("service")}</h1>
+          <h2>{lang === "fa" ? dataService.title : dataService.titleEn} <span className="hashtag">#{dataService.category === 1 ? t("Treatment") : t("Beauty")} </span></h2>
           <p>
             {lang === "fa"
               ? dataService.description
