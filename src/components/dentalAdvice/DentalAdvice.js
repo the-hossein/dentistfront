@@ -71,7 +71,6 @@ const DentalAdvice = () => {
             headers,
             "POST"
           );
-          console.log(data[0]);
           if (data[0].code === 200) {
             setLoader(false);
             notify(t("successAdvice"), "success");
@@ -105,7 +104,7 @@ const DentalAdvice = () => {
       <DivContainer lang={lang}>
         <TextContainer>
           <h1>{t("dentalAdvice")}</h1>
-          <p>{t("lorem20")}</p>
+          <p>{t("dentalAdviceDescription")}</p>
           <div className="input">
             <label>{t("name")}</label>
             <Input

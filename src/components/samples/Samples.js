@@ -9,22 +9,23 @@ import pic2 from "../../../public/Assets/images/pic2.jpg";
 import pic3 from "../../../public/Assets/images/pic3.jpg";
 import pic4 from "../../../public/Assets/images/pic4.jpg";
 
-const Samples = () => {
+const Samples = ({ data }) => {
   const { t } = useTranslation();
 
   return (
     <BasicSection>
       <DivContainer>
-        <h1>{t("WSamples")}</h1>
+        <h1 onClick={() => console.log(data)}>{t("WSamples")}</h1>
         <div className="row">
-          <div className="col">
-            <CardSample id={"1"} img={pic1} />
-            <CardSample id={"2"} img={pic2} />
-          </div>
-          <div className="col">
-            <CardSample id={"3"} img={pic3} />
-            <CardSample id={"4"} img={pic4} />
-          </div>
+          {data.map((item, index) => (
+            <CardSample
+              key={item.id}
+              id={item.id}
+              img={index % 2 === 0 ? pic1 : index % 6 === 0 ? pic2 : pic3 }
+              name={item.name}
+              nameEn={item.nameEn}
+            />
+          ))}
         </div>
         <KarmaPn />
       </DivContainer>

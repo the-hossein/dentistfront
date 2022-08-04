@@ -7,7 +7,7 @@ import AlbumSection from '../../tools/album/AlbomSection';
 import { useSelector } from 'react-redux';
 
 
-const DetailSection = () => {
+const DetailSection = ({ name,nameEn, description, descriptionEn }) => {
 
     const lang = useSelector(state => state.stateLang.lng)
 
@@ -20,15 +20,15 @@ const DetailSection = () => {
                 <h2>{t("WSamples")}</h2>
                 <DivRow border_button >
                     <div className='text'>
-                        <h3>{t("section")} 1</h3>
-                        <p>{t("lorem40")}</p>
+                        <h3>{lang === "fa" ? name : nameEn}</h3>
+                        <p>{lang === "fa" ? description : descriptionEn}</p>
                     </div>
                     <div className='images'>
                         <AlbumSection reverse={true} lang={lang} />
                     </div>
                 </DivRow>
 
-                <DivRow reverse > 
+                {/* <DivRow reverse > 
                     <div className='text'>
                         <h3>{t("section")} 1</h3>
                         <p>{t("lorem40")}</p>
@@ -36,7 +36,7 @@ const DetailSection = () => {
                     <div className='images'>
                         <AlbumSection reverse={false} lang={lang} />
                     </div>
-                </DivRow>
+                </DivRow> */}
             </DivContainer>
         </BasicSection>
     );
