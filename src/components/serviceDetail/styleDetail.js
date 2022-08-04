@@ -38,6 +38,14 @@ export const TextContainer = styled.div`
     color: var(--whitePen);
     margin-top: 2rem;
     padding: ${props => props.lang === "fa" ? "0 0 0 5rem" : "0 5rem 0 0" } ;
+    .hashtag{
+        margin: 0 2rem;
+        padding: .4rem;
+        background-color: var(--whitePen);
+        color: var(--darkPen);
+        border-radius: var(--inputRadius);
+
+    }
     h1{
         margin: 2rem 0;
         font-size: var(--title-font);
