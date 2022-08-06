@@ -1,5 +1,6 @@
 import styled from "styled-components";
 export const FooterContainer = styled.div`
+  direction: var(--dirRi);
   width: 100%;
   min-height: 20vh;
   padding: 0.5rem 3rem;
