@@ -38,12 +38,12 @@ i18n
 
 function MyApp({ Component, pageProps }) {
   const [showChild, setshowChild] = useState(false);
-  useEffect(() => {
-    setshowChild(true);
-  }, []);
-  if (!showChild) {
-    return null;
-  }
+  // useEffect(() => {
+  //   setshowChild(true);
+  // }, []);
+  // if (!showChild) {
+  //   return null;
+  // }
   return (
     <Provider store={store}>
       <NextProgress
