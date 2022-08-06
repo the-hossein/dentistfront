@@ -44,7 +44,7 @@ export const TextContainer = styled.div`
         background-color: var(--whitePen);
         color: var(--darkPen);
         border-radius: var(--inputRadius);
-
+        font-size: var(--ms-font);
     }
     h1{
         margin: 2rem 0;
