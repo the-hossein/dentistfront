@@ -1,25 +1,27 @@
 import Link from "next/link";
 import React from "react";
+import { useTranslation } from "react-i18next";
 import { useSelector } from "react-redux";
 import { RowJustifyBetween } from "../../../styles/globalStyleComponents";
 import { FooterContainer } from "./styleFooter";
 
 const Footer = () => {
+  const { t } = useTranslation();
   const lang=useSelector(state=>state.stateLang.lng)
   return (
     <FooterContainer>
       <RowJustifyBetween footer>
         <div>
-          <h6>Phone 1: 00000000</h6>
-          <h6>Phone 1: 00000000</h6>
+          <h6>{t("phone")}: 00000000</h6>
+          <h6>{t("phone")}: 00000000</h6>
         </div>
         <div>
-          <h6>Address: St1st1 no1 un1</h6>
-          <h6>Telegram: @loremipsem</h6>
+          <h6>{t("address")}:: {t("address_real")}</h6>
+          <h6>{t("Telegram")}: @loremipsem</h6>
         </div>
         <div>
-          <h6>Instagram1:@instagram</h6>
-          <h6>Instagram1:@instagram</h6>
+          <h6>{t("Instagram")}:@instagram</h6>
+          <h6>{t("Instagram")}:@instagram</h6>
         </div>
       </RowJustifyBetween>
   {  lang==="fa"?  <h3>.تمام حقوق برای <Link href="https://karmaagy.com/">

@@ -26,16 +26,20 @@ padding-top: 1rem;
   }
 
   .parent-col {
-    width: 60%;
+    width: 100%;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     .col {
+      width: 50%;
       margin: 1rem 0;
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      span{
+        font-family: var(--fontFamily-light);
+      }
       svg {
         :nth-child(2) {
           margin: 0 2rem;

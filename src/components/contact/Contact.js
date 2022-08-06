@@ -20,7 +20,7 @@ const Contact = () => {
       <DivContainer>
         <div className="text">
           <h1>{t("contact")}</h1>
-          <p>{t("address")} 1</p>
+          <p>{t("address_real")}</p>
           <p>{t("phone")} 1</p>
           <p>{t("phone")} 2</p>
           <span>{t("typeMessage")}</span>

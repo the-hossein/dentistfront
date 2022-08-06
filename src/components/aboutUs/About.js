@@ -30,7 +30,7 @@ const About = () => {
                             <p>{t("phone")}: 00000000 </p>
                         </div>
                         <div className='col'>
-                            <p>{t("address")}: hello world</p>
+                            <p>{t("address")}:<span> {t("address_real")}</span></p>
                             <div>
                                 <InstagramIcon />
                                 <TelegramIcon />
