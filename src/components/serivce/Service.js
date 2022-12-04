@@ -5,19 +5,17 @@ import { BasicSection } from "../../../styles/globalStyleComponents";
 import KarmaPn from "../../tools/pn/KarmaPn";
 import CardService from "./cardService/CardService";
 import { DivContainer } from "./serviceStyle";
-import ServicePic1 from "../../../public/assets/images/servicePic1.jpg";
-import ServicePic2 from "../../../public/assets/images/servicePic2.jpg";
-import ServicePic3 from "../../../public/assets/images/servicePic3.jpg";
-import ServicePic4 from "../../../public/assets/images/servicePic4.jpg";
-import ServicePic5 from "../../../public/assets/images/pic4.jpg";
+import ServicePic1 from "../../../public/assets/images/tst_servicePic_1.jpg";
+import ServicePic2 from "../../../public/assets/images/tst_servicePic_2.jpg";
+import ServicePic3 from "../../../public/assets/images/tst_servicePic_3.jpg";
+import ServicePic4 from "../../../public/assets/images/tst_servicePic_4.jpg";
+import ServicePic5 from "../../../public/assets/images/tst_pic_4.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Pagination,
   Scrollbar,
   Mousewheel,
   Autoplay,
-  EffectFade,
-  Navigation,
 } from "swiper";
 import "swiper/css/pagination";
 import services from "../../tools/dataApi/services";
@@ -84,100 +82,6 @@ const Service = () => {
               />
             </SwiperSlide>
           ))}
-          {/* <SwiperSlide>
-            <CardService
-              title={t("Pediatricdentistry")}
-              lang={lang}
-              img={ServicePic1}
-              id={1}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <CardService
-              title={t("Dentallaminate")}
-              lang={lang}
-              img={ServicePic2}
-              id={2}
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <CardService
-              title={t("composite")}
-              lang={lang}
-              img={ServicePic3}
-              id={3}
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <CardService
-              title={t("Teethbleaching")}
-              lang={lang}
-              img={ServicePic4}
-              id={4}
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <CardService
-              title={t("Implant")}
-              lang={lang}
-              img={ServicePic5}
-              id={5}
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <CardService
-              title={t("Rootcanal")}
-              lang={lang}
-              img={ServicePic1}
-              id={6}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <CardService
-              title={t("Prosthesisandcover")}
-              lang={lang}
-              img={ServicePic2}
-              id={7}
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <CardService
-              title={t("Orthodontic")}
-              lang={lang}
-              img={ServicePic3}
-              id={8}
-            />
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <CardService
-              title={t("Gumsurgery")}
-              lang={lang}
-              img={ServicePic4}
-              id={9}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <CardService
-              title={t("Oralsurgery")}
-              lang={lang}
-              img={ServicePic5}
-              id={10}
-            />
-          </SwiperSlide>
-          <SwiperSlide>
-            <CardService
-              title={t("Frenectomysurgery")}
-              lang={lang}
-              img={ServicePic5}
-              id={11}
-            />
-          </SwiperSlide> */}
         </Swiper>
 
         <KarmaPn />

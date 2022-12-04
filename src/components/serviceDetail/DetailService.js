@@ -3,15 +3,13 @@ import { useTranslation } from "react-i18next";
 import { BasicSection } from "../../../styles/globalStyleComponents";
 import { Album, MainDiv, TextContainer } from "./styleDetail";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
-import { useRouter } from "next/router";
 import ButtonRound from "../../tools/buttonRound/ButtonRound";
 import Link from "next/link";
 import Image from "next/image";
 
-import image_1 from "../../../public/assets/images/servicePic1.jpg";
-import image_2 from "../../../public/assets/images/servicePic2.jpg";
+import image_1 from "../../../public/assets/images/tst_servicePic_1.jpg";
+import image_2 from "../../../public/assets/images/tst_servicePic_2.jpg";
 import { useSelector } from "react-redux";
-import axios from "axios";
 
 const DetailService = ({ id, dataService }) => {
   const lang = useSelector((state) => state.stateLang.lng);

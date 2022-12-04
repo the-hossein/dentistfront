@@ -7,7 +7,7 @@ import {
   RowJustifyBetweenHome
 } from "../../../styles/globalStyleComponents";
 import Image from "next/image";
-import picLanding from "../../../public/assets/images/l1.jpg";
+import picLanding from "../../../public/assets/images/tst_landing.jpg";
 import ButtonRound from "../../tools/buttonRound/ButtonRound";
 import { ArrowText } from "./style";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";

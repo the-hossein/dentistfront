@@ -1,9 +1,5 @@
 import React from 'react';
 import { Container } from './albumStyle';
-import Image from 'next/image';
-import pic_1 from '../../../public/assets/images/servicePic3.jpg';
-import pic_2 from '../../../public/assets/images/pic2.jpg';
-import pic_3 from '../../../public/assets/images/l1.jpg';
 
 
 

@@ -1,13 +1,11 @@
 import React from "react";
-import { BasicSection } from "../../../styles/globalStyleComponents";
 import { DivContainer, SectionBasicContact } from "./styleContact";
-import picBanner from "../../../public/assets/images/picBanner.jpg";
+import BPicture from "../../../public/assets/images/tst_picBanner.jpg";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import PinterestIcon from "@mui/icons-material/Pinterest";
 import Input from "../../tools/input/Input";
 import SecondlyBtn from "../../tools/secondlyBtn/SecondlyBtn";
-import { t } from "i18next";
 import { useTranslation } from "react-i18next";
 import KarmaPn from "../../tools/pn/KarmaPn";
 import Image from "next/image";
@@ -36,7 +34,7 @@ const Contact = () => {
           <KarmaPn />
         </div>
         <div className="banner">
-          <Image src={picBanner} alt="banner" />
+          <Image src={BPicture} alt="banner" />
         </div>
       </DivContainer>
     </SectionBasicContact>

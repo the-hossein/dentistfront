@@ -1,6 +1,5 @@
 import Head from "next/head";
 import Header from "../../src/components/header/Header";
-import Footer from "../../src/components/footer/Footer";
 import Service from "../../src/components/serivce/Service";
 
 const ServicePage = () => {
