@@ -1,7 +1,7 @@
 import React from "react";
 import { BasicSection } from "../../../styles/globalStyleComponents";
 import { DivContainer, SectionBasicContact } from "./styleContact";
-import picBanner from "../../../public/Assets/images/contactUs.jpg";
+import picBanner from "../../../public/assets/images/picBanner.jpg";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import PinterestIcon from "@mui/icons-material/Pinterest";

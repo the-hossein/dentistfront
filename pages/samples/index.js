@@ -4,19 +4,9 @@ import Samples from "../../src/components/samples/Samples";
 import Footer from "../../src/components/footer/Footer";
 import axios from "axios";
 import { useEffect, useState } from "react";
+import { BASE_URL, GET_ALL_SAMPLE } from "../../src/api/urls";
 
-const SamplesPage = () => {
-
-    const [samples, setSamples] = useState(null);
-
-  useEffect(() => {
-    const fetcher = async () => {
-      const { data } = await axios.get("api/samples");
-      setSamples(data.samples)
-    };
-    fetcher();
-  }, []);
-
+const SamplesPage = ({samples}) => {
   return (
     <div>
       <Head>
@@ -36,12 +26,11 @@ const SamplesPage = () => {
 
 export default SamplesPage;
 
-// export const getServerSideProps = async () => {
-//   const { data } = await axios.get("api/samples");
-//   console.log(data);
-//   return {
-//     props: {
-//       samples: data,
-//     },
-//   };
-// };
+export const getServerSideProps = async () => {
+  const { data } = await axios.get(BASE_URL+GET_ALL_SAMPLE);
+  return {
+    props: {
+      samples: data.code === 200 ? data.data : null,
+    },
+  };
+};

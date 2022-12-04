@@ -1,7 +1,7 @@
 import React from "react";
 import { ScreenLoader } from "./styleLoader";
 import Image from "next/image";
-import loader from "../../../public/Assets/images/loader.gif";
+import loader from "../../../public/assets/images/loader.gif";
 import { useSelector } from "react-redux";
 const FullScreenLoader = () => {
 

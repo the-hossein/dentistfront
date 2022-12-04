@@ -3,30 +3,30 @@ import { BasicSection } from '../../../styles/globalStyleComponents';
 import { Album, DivText, MainDiv } from './styleOurTeam';
 import Image from 'next/image';
 
-import office from '../../../public/Assets/images/officeK.jpg';
-import office_1 from '../../../public/Assets/images/A-1.jpg';
-import office_2 from '../../../public/Assets/images/A-2.jpg';
-import office_3 from '../../../public/Assets/images/teamPic_2.jpg';
-import office_4 from '../../../public/Assets/images/teamPic.jpg';
+import office from '../../../public/assets/images/officeK.jpg';
+import office_1 from '../../../public/assets/images/office_1.jpg';
+import office_2 from '../../../public/assets/images/office_2.jpg';
+import office_3 from '../../../public/assets/images/teamPic_2.jpg';
+import office_4 from '../../../public/assets/images/teamPic.jpg';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import Unit from '../../tools/unit/Unit';
 
-import sina from '../../../public/Assets/images/Sina.jpg';
-import milad from '../../../public/Assets/images/Milad.jpg';
-import erfan from '../../../public/Assets/images/Erfan.jpg';
-import ali from '../../../public/Assets/images/Ali.jpg';
-import hosein from '../../../public/Assets/images/Hossein.jpg';
-import fatemeh from '../../../public/Assets/images/Fatemeh.jpg';
-import ardalen from '../../../public/Assets/images/Ardalan.jpg';
-import parmida from '../../../public/Assets/images/Parmida.jpg';
-import yasi from '../../../public/Assets/images/Yasi.jpg';
-import jhina from '../../../public/Assets/images/Jhina.jpg';
-import Fazeleh from '../../../public/Assets/images/Fazeleh.jpg';
-import mohadese from '../../../public/Assets/images/Mohadese.jpg';
-import sara from '../../../public/Assets/images/Sara.jpg';
-import yasii from '../../../public/Assets/images/Yasii.jpg';
-import faezeh from '../../../public/Assets/images/Faezeh.jpg';
+import sina from '../../../public/assets/images/sina.jpg';
+import milad from '../../../public/assets/images/milad.jpg';
+import erfanPic from '../../../public/assets/images/tst_erfan.jpg';
+import aliPic from '../../../public/assets/images/tst_ali.jpg';
+import hoseinPic from '../../../public/assets/images/tst_hossein.jpg';
+import fatemehPic from '../../../public/assets/images/tst_fatemeh.jpg';
+import ardalenPic from '../../../public/assets/images/tst_ardalan.jpg';
+import parmidaPic from '../../../public/assets/images/parmida.jpg';
+import yasi from '../../../public/assets/images/yasi.jpg';
+import jhina from '../../../public/assets/images/jhina.jpg';
+import FazelehPic from '../../../public/assets/images/tst_fazeleh.jpg';
+import mohadese from '../../../public/assets/images/mohadese.jpg';
+import sara from '../../../public/assets/images/sara.jpg';
+import yasii from '../../../public/assets/images/yasii.jpg';
+import faezehPic from '../../../public/assets/images/tst_faezeh.jpg';
 
 //slider
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -50,21 +50,21 @@ const OurTeam = () => {
         {
             unit: t("itTeam"),
             description: t("itTeamDes"),
-            images: [hosein, erfan, fatemeh, ali]
+            images: [hoseinPic, erfanPic, fatemehPic, aliPic]
         }
     ];
     const teamUi = [
         {
             unit: t("uiTeam"),
             description: t("uiTeamDes"),
-            images: [ardalen, parmida, faezeh]
+            images: [ardalenPic, parmidaPic, faezehPic]
         }
     ];
     const teamCW = [
         {
             unit: t("cwTeam"),
             description: t("cwTeamDes"),
-            images: [Fazeleh, mohadese]
+            images: [FazelehPic, mohadese]
         }
     ];
 

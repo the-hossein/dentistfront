@@ -10,7 +10,7 @@ const CardSample = ({ id,img, name, nameEn }) => {
 
     return (
         <Card lang={lang} >
-            <Image src={img} alt="samples" />
+            <img src={img} alt="samples" />
             <Link href={`/samples/${id}`}><a><div className='showCase' >
                 {lang === "fa" ? name : nameEn}
             </div></a></Link>

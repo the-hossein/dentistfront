@@ -8,8 +8,8 @@ import ButtonRound from "../../tools/buttonRound/ButtonRound";
 import Link from "next/link";
 import Image from "next/image";
 
-import image_1 from "../../../public/Assets/images/ServicePic1.jpg";
-import image_2 from "../../../public/Assets/images/ServicePic2.jpg";
+import image_1 from "../../../public/assets/images/servicePic1.jpg";
+import image_2 from "../../../public/assets/images/servicePic2.jpg";
 import { useSelector } from "react-redux";
 import axios from "axios";
 

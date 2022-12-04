@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { RegisterContainer } from "./styleRegister";
 import Image from "next/image";
-import registrPic from "../../../public/Assets/images/registrPic.png";
+import registrPic from "../../../public/assets/images/registrPic.png";
 import { RowJustifyBetween } from "../../../styles/globalStyleComponents";
 import Input from "../../tools/input/Input";
 import SecondlyBtn from "../../tools/secondlyBtn/SecondlyBtn";

@@ -27,16 +27,6 @@ const DetailSection = ({ name,nameEn, description, descriptionEn, pic1, pic2, pi
                         <AlbumSection reverse={true} lang={lang} pic1={pic1} pic2={pic2} pic3={pic3} />
                     </div>
                 </DivRow>
-
-                {/* <DivRow reverse > 
-                    <div className='text'>
-                        <h3>{t("section")} 1</h3>
-                        <p>{t("lorem40")}</p>
-                    </div>
-                    <div className='images'>
-                        <AlbumSection reverse={false} lang={lang} />
-                    </div>
-                </DivRow> */}
             </DivContainer>
         </BasicSection>
     );

@@ -19,10 +19,18 @@ export const Card = styled.div`
     width: 100% !important;
     height: 100% !important;
     z-index: 2 !important;
-    img {
-      z-index: 2 !important;
-      object-fit: cover;
-    }
+  }
+  img {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: auto !important;
+    bottom: auto !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 2 !important;
+    z-index: 2 !important;
+    object-fit: cover;
   }
   .showCase {
     width: 70%;

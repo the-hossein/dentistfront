@@ -5,11 +5,11 @@ import { BasicSection } from "../../../styles/globalStyleComponents";
 import KarmaPn from "../../tools/pn/KarmaPn";
 import CardService from "./cardService/CardService";
 import { DivContainer } from "./serviceStyle";
-import ServicePic1 from "../../../public/Assets/images/ServicePic1.jpg";
-import ServicePic2 from "../../../public/Assets/images/ServicePic2.jpg";
-import ServicePic3 from "../../../public/Assets/images/ServicePic3.jpg";
-import ServicePic4 from "../../../public/Assets/images/ServicePic4.jpg";
-import ServicePic5 from "../../../public/Assets/images/pic4.jpg";
+import ServicePic1 from "../../../public/assets/images/servicePic1.jpg";
+import ServicePic2 from "../../../public/assets/images/servicePic2.jpg";
+import ServicePic3 from "../../../public/assets/images/servicePic3.jpg";
+import ServicePic4 from "../../../public/assets/images/servicePic4.jpg";
+import ServicePic5 from "../../../public/assets/images/pic4.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Pagination,
@@ -24,7 +24,6 @@ import services from "../../tools/dataApi/services";
 
 const setPic = () => {
   const num = Math.round(Math.random() * 4);
-  console.log(num);
   switch (num) {
     case 0:
       return ServicePic1;
