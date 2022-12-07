@@ -6,7 +6,7 @@ import Header from "../src/components/header/Header";
 import Landing from "../src/components/landing/Landing";
 import { hideVideo } from "../src/redux/video/videoActions";
 import { BasicSection, VideoStyle } from "../styles/globalStyleComponents";
-import DentistVidep from "../public/Assets/images/dentistVideo.mp4"
+
 export default function Home() {
   const video = useSelector(state => state.stateVideo)
   const dispatch = useDispatch()
@@ -25,7 +25,7 @@ export default function Home() {
 
             <video autoPlay playsInline muted preload="true" loop>
               <source
-                src={DentistVidep}
+                src="./public/Assets/images/dentistVideo.mp4"
                 type="video/mp4"
                 Accept-Ranges="bytes"
               />
