@@ -1,6 +1,6 @@
 import React from "react";
 import { DivContainer, SectionBasicContact } from "./styleContact";
-import BPicture from "../../../public/assets/images/tst_picBanner.jpg";
+import BPicture from "../../../public/Assets/images/tst_picBanner.jpg";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import PinterestIcon from "@mui/icons-material/Pinterest";

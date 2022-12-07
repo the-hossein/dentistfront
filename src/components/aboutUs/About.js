@@ -1,7 +1,7 @@
 import React from 'react';
 import { BasicSection, RowJustifyBetween } from '../../../styles/globalStyleComponents';
 import { DivMain } from './styleAbout';
-import aboutUsPic from '/public/assets/images/tst_aboutus.jpg';
+import aboutUsPic from '/public/Assets/images/tst_aboutus.jpg';
 import Image from 'next/image';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
