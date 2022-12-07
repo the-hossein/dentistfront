@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import { toPersianNum, convertDate, convertISOS } from "../../tools/helper";
 import { ResultStyle } from "./styleAppoinment";
 
-import { /* useScreenshot, */ createFileName } from "use-react-screenshot";
+/* import { useScreenshot, createFileName } from "use-react-screenshot"; */
 import { useTranslation } from "react-i18next";
 
 const Result = () => {
@@ -16,12 +16,12 @@ const Result = () => {
     type: "image/jpeg",
     quality: 1.0
   }); */
-  const download = (image, { name = "img", extension = "jpg" } = {}) => {
+/*   const download = (image, { name = "img", extension = "jpg" } = {}) => {
     const a = document.createElement("a");
     a.href = image;
     a.download = createFileName(extension, name);
     a.click();
-  };
+  }; */
   /* const downloadScreenshot = () => takeScreenShot(ref.current).then(download); */
   return (
     <>
