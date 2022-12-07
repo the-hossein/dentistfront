@@ -3,7 +3,7 @@ import React from "react";
 import { useTranslation } from "react-i18next";
 import styled from "styled-components";
 import SecondlyBtn from "../secondlyBtn/SecondlyBtn";
-import iconG from "../../../public/assets/images/err.png";
+import iconG from "../../../public/Assets/images/err.png";
 import Image from "next/image";
 import Link from "next/link";
 

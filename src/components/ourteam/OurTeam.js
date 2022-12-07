@@ -1,26 +1,26 @@
 import React from 'react';
 import { Album, DivText, MainDiv } from './styleOurTeam';
 
-import office from '../../../public/assets/images/tst_officeK.jpg';
-import officeNum1 from '../../../public/assets/images/tst_office_1.jpg';
-import officeNum2 from '../../../public/assets/images/tst_office_2.jpg';
-import officeNum3 from '../../../public/assets/images/teamPic_2.jpg';
-import officeNum4 from '../../../public/assets/images/teamPic.jpg';
+import office from '../../../public/Assets/images/tst_officeK.jpg';
+import officeNum1 from '../../../public/Assets/images/tst_office_1.jpg';
+import officeNum2 from '../../../public/Assets/images/tst_office_2.jpg';
+import officeNum3 from '../../../public/Assets/images/teamPic_2.jpg';
+import officeNum4 from '../../../public/Assets/images/teamPic.jpg';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import Unit from '../../tools/unit/Unit';
 
-import sina from '../../../public/assets/images/sina.jpg';
-import miladPic from '../../../public/assets/images/tst_milad.jpg';
-import erfanPic from '../../../public/assets/images/tst_erfan.jpg';
-import aliPic from '../../../public/assets/images/tst_ali.jpg';
-import hoseinPic from '../../../public/assets/images/tst_hossein.jpg';
-import fatemehPic from '../../../public/assets/images/tst_fatemeh.jpg';
-import ardalenPic from '../../../public/assets/images/tst_ardalan.jpg';
-import parmidaPic from '../../../public/assets/images/tst_parmida.jpg';
-import FazelehPic from '../../../public/assets/images/tst_fazeleh.jpg';
-import mohadesePic from '../../../public/assets/images/tst_mohadese.jpg';
-import faezehPic from '../../../public/assets/images/tst_faezeh.jpg';
+import sina from '../../../public/Assets/images/sina.jpg';
+import miladPic from '../../../public/Assets/images/tst_milad.jpg';
+import erfanPic from '../../../public/Assets/images/tst_erfan.jpg';
+import aliPic from '../../../public/Assets/images/tst_ali.jpg';
+import hoseinPic from '../../../public/Assets/images/tst_hossein.jpg';
+import fatemehPic from '../../../public/Assets/images/tst_fatemeh.jpg';
+import ardalenPic from '../../../public/Assets/images/tst_ardalan.jpg';
+import parmidaPic from '../../../public/Assets/images/tst_parmida.jpg';
+import FazelehPic from '../../../public/Assets/images/tst_fazeleh.jpg';
+import mohadesePic from '../../../public/Assets/images/tst_mohadese.jpg';
+import faezehPic from '../../../public/Assets/images/tst_faezeh.jpg';
 
 //slider
 import { Swiper, SwiperSlide } from "swiper/react";

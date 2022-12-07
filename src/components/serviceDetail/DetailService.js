@@ -7,8 +7,8 @@ import ButtonRound from "../../tools/buttonRound/ButtonRound";
 import Link from "next/link";
 import Image from "next/image";
 
-import image_1 from "../../../public/assets/images/tst_servicePic_1.jpg";
-import image_2 from "../../../public/assets/images/tst_servicePic_2.jpg";
+import image_1 from "../../../public/Assets/images/tst_servicePic_1.jpg";
+import image_2 from "../../../public/Assets/images/tst_servicePic_2.jpg";
 import { useSelector } from "react-redux";
 
 const DetailService = ({ id, dataService }) => {

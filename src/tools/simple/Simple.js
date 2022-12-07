@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 import { MainDiv } from './style';
-import simple from '../../../public/assets/images/simple.png';
+import simple from '../../../public/Assets/images/simple.png';
 import { useSelector } from 'react-redux';
 import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
