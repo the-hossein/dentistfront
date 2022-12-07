@@ -10,7 +10,7 @@ import Link from 'next/link';
 import { useTranslation } from 'react-i18next';
 import Unit from '../../tools/unit/Unit';
 
-import sina from '../../../public/Assets/images/sina.jpg';
+import sina from '../../../public/Assets/images/Sina.jpg';
 import miladPic from '../../../public/Assets/images/tst_milad.jpg';
 import erfanPic from '../../../public/Assets/images/tst_erfan.jpg';
 import aliPic from '../../../public/Assets/images/tst_ali.jpg';
