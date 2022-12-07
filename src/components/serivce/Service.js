@@ -5,11 +5,11 @@ import { BasicSection } from "../../../styles/globalStyleComponents";
 import KarmaPn from "../../tools/pn/KarmaPn";
 import CardService from "./cardService/CardService";
 import { DivContainer } from "./serviceStyle";
-import ServicePic1 from "../../../public/assets/images/tst_servicePic_1.jpg";
-import ServicePic2 from "../../../public/assets/images/tst_servicePic_2.jpg";
-import ServicePic3 from "../../../public/assets/images/tst_servicePic_3.jpg";
-import ServicePic4 from "../../../public/assets/images/tst_servicePic_4.jpg";
-import ServicePic5 from "../../../public/assets/images/tst_pic_4.jpg";
+import ServicePic1 from "../../../public/Assets/images/tst_servicePic_1.jpg";
+import ServicePic2 from "../../../public/Assets/images/tst_servicePic_2.jpg";
+import ServicePic3 from "../../../public/Assets/images/tst_servicePic_3.jpg";
+import ServicePic4 from "../../../public/Assets/images/tst_servicePic_4.jpg";
+import ServicePic5 from "../../../public/Assets/images/tst_pic_4.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
   Pagination,

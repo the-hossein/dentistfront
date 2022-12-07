@@ -1,20 +1,20 @@
 @font-face {
   font-family: "RobotoLight";
-  src: url('../public/assets/fonts/Roboto/Roboto-Light.ttf');
-  src: url("../public/assets/fonts/Roboto/Roboto-Light.ttf") format("truetype");
+  src: url('../public/Assets/fonts/Roboto/Roboto-Light.ttf');
+  src: url("../public/Assets/fonts/Roboto/Roboto-Light.ttf") format("truetype");
   font-weight: 300;
 }
 @font-face {
   font-family: "Roboto";
-  src: url('../public/assets/fonts/Roboto/Roboto-Bold.ttf');
-  src: url("../public/assets/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  src: url('../public/Assets/fonts/Roboto/Roboto-Bold.ttf');
+  src: url("../public/Assets/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
   font-weight: 700;
 }
 
 @font-face {
   font-family: 'IRANSansWeb';
-  src: url('../public/assets/fonts/iranSans/eot/IRANSansWeb.eot');
-  src: url('../public/assets/fonts/iranSans/eot/IRANSansWeb.eot') format('embedded-opentype'), url('../public/assets/fonts/iranSans/woff/IRANSansWeb.woff') format('woff'), url('../public/assets/fonts/iranSans/ttf/IRANSansWeb.ttf') format('truetype');
+  src: url('../public/Assets/fonts/iranSans/eot/IRANSansWeb.eot');
+  src: url('../public/Assets/fonts/iranSans/eot/IRANSansWeb.eot') format('embedded-opentype'), url('../public/Assets/fonts/iranSans/woff/IRANSansWeb.woff') format('woff'), url('../public/Assets/fonts/iranSans/ttf/IRANSansWeb.ttf') format('truetype');
   font-weight: normal;
   font-style: normal;
 }
