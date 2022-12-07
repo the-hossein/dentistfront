@@ -1,7 +1,7 @@
 import React from 'react';
 import { BasicSection, RowJustifyBetween } from '../../../styles/globalStyleComponents';
 import { DivMain } from './styleAbout';
-import aboutUs from '../../../public/Assets/images/aboutUs.jpg';
+import aboutUsPic from '/public/assets/images/tst_aboutus.jpg';
 import Image from 'next/image';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import TelegramIcon from '@mui/icons-material/Telegram';
@@ -40,7 +40,7 @@ const About = () => {
                     </div>
                 </div>
                 <div className='child pic'>
-                    <Image src={aboutUs} alt="Banner" />
+                    <Image src={aboutUsPic} alt="Banner" />
                 </div>
             </DivMain>
             <KarmaPn/>

@@ -25,7 +25,7 @@ export default function Home() {
 
 <video autoPlay playsInline muted preload="true" loop>
      <source
-       src="/Assets/images/dentistVideo.mp4"
+       src="/assets/images/dentistVideo.mp4"
        type="video/mp4"
        Accept-Ranges="bytes"
      />
