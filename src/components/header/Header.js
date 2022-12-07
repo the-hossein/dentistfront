@@ -24,7 +24,7 @@ import { notify } from "../../tools/toast/toast";
 import { useRouter } from "next/router";
 import FullScreenLoader from "../../tools/loader/FullScreenLoader";
 import Image from "next/image";
-import Logo from "../../../public/assets/images/kremLogo.png";
+import Logo from "../../../public/Assets/images/kremLogo.png";
 
 const Header = ({ path }) => {
   const lang = useSelector((state) => state.stateLang.lng);
