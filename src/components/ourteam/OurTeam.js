@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Album, DivText, MainDiv } from './styleOurTeam';
 
 import office from '../../../public/Assets/images/tst_officeK.jpg';
@@ -63,7 +63,9 @@ const OurTeam = () => {
     ];
 
 
-    
+    useEffect(() => {
+        console.log(sina)
+    }, [])
 
     return (
         <MainDiv>
