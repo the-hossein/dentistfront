@@ -1,0 +1,171 @@
+@font-face {
+  font-family: "RobotoLight";
+  src: url('../public/Assets/fonts/Roboto/Roboto-Light.ttf');
+  src: url("../public/Assets/fonts/Roboto/Roboto-Light.ttf") format("truetype");
+  font-weight: 300;
+}
+@font-face {
+  font-family: "Roboto";
+  src: url('../public/Assets/fonts/Roboto/Roboto-Bold.ttf');
+  src: url("../public/Assets/fonts/Roboto/Roboto-Bold.ttf") format("truetype");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: 'IRANSansWeb';
+  src: url('../public/Assets/fonts/iranSans/eot/IRANSansWeb.eot');
+  src: url('../public/Assets/fonts/iranSans/eot/IRANSansWeb.eot') format('embedded-opentype'), url('../public/Assets/fonts/iranSans/woff/IRANSansWeb.woff') format('woff'), url('../public/Assets/fonts/iranSans/ttf/IRANSansWeb.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+:root {
+  --bluePen: #558D96;
+  --mainColor: #8BA588;
+  --whitePen: #ffffff;
+  --darkPen: #707070;
+  --backWhite: #f2f2f2;
+  --redPen: #FF6E6E;
+  --primaryBtnRadius: 30px;
+  --secondlyBtnRadius: 12px;
+  --inputRadius: 12px;
+
+
+  --sm-font: 8pt;
+
+  --xs-font: 10pt;
+  --ms-font: 11pt;
+  --md-font: 12pt;
+  --lg-font: 14pt;
+  --xl-font: 16pt;
+  --xxl-font: 18pt;
+  --titleSecondly: 22pt;
+  --title-font: 30pt;
+  --dirRi: ltr;
+  --floatRi: right;
+  --floatLf: left;
+
+  --fontFamily: "IRANSansWeb";
+  --fontFamily-light: "IRANSansWeb";
+}
+
+
+body {
+  padding: 0;
+  margin: 0;
+  color: var(--darkPen) !important;
+
+  font-family: var(--fontFamily);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+* {
+  font-family: var(--fontFamily);
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  user-select: none;
+}
+
+button {
+  transition: all 0.3s ease-in !important;
+}
+
+.sectionVideo {
+  height: 100vh;
+  overflow: hidden;
+}
+
+#datePicker {
+  opacity: 0;
+  display: none !important;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  width: 100%;
+  background-color: var(--backWhite);
+  border: none;
+}
+
+
+.item::-webkit-scrollbar {
+  width: 0px;
+  scrollbar-width: none;
+}
+
+.item::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+.item::-webkit-scrollbar-thumb {
+  background: rgb(188, 188, 188);
+  border-radius: 4px;
+}
+
+.JDatePicker {
+  width: 100% !important;
+  background-color: var(--backWhite) !important;
+  direction: rtl;
+  display: block !important;
+}
+
+.JDatePicker .JDheader .right,
+.JDatePicker .JDheader .left {
+  width: 100% !important;
+}
+
+.Toastify__toast,
+.Toastify__toast>div {
+  font-family: var(--fontFamily) !important;
+  border-radius: 12px !important;
+  font-size: var(--xs-font) !important;
+  text-align: var(--right);
+}
+
+
+.swiper {
+  width: 100%;
+  height: 100%;
+  direction: initial !important;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+
+
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.swiperKarma {
+  object-fit: cover;
+  position: sticky !important;
+  bottom: 15vh !important;
+  width: 100%;
+  height: 100vh;
+}

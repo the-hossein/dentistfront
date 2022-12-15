@@ -1,0 +1,41 @@
+{
+  "name": "dentistfront",
+  "version": "1.0.0",
+  "private": false,
+  "scripts": {
+    "dev": "next dev -p 5000",
+    "build": "next build",
+    "start": "next start -p 5000",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/icons-material": "^5.10.16",
+    "@mui/material": "^5.10.17",
+    "axios": "^0.27.2",
+    "babel-preset-next": "^1.4.0",
+    "html2canvas": "^1.4.1",
+    "i18next": "^21.8.13",
+    "i18next-browser-languagedetector": "^6.1.4",
+    "i18next-http-backend": "^1.4.1",
+    "js-cookie": "^3.0.1",
+    "next": "^12.2.2",
+    "next-progress": "^2.2.0",
+    "react": "^18.2.0",
+    "react-advance-jalaali-datepicker": "^1.4.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^11.18.0",
+    "react-redux": "^8.0.2",
+    "react-toastify": "^9.0.5",
+    "redux": "^4.2.0",
+    "redux-logger": "^3.0.6",
+    "redux-thunk": "^2.4.1",
+    "styled-components": "^5.3.5",
+    "swiper": "^8.3.1"
+  },
+  "devDependencies": {
+    "eslint": "8.19.0",
+    "eslint-config-next": "12.2.2"
+  }
+}
