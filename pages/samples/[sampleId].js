@@ -46,7 +46,7 @@ const SectionSamples = ({ sample }) => {
   );
 };
 
-export default SectionSamples;
+
 
 export async function getServerSideProps(context) {
   const { query } = context;
@@ -57,3 +57,4 @@ export async function getServerSideProps(context) {
     },
   };
 }
+export default SectionSamples;
