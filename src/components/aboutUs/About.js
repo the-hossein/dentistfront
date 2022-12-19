@@ -26,15 +26,15 @@ const About = () => {
                     </p>
                     <div className='parent-col'>
                         <div className='col'>
-                            <p>{t("phone")}: 00000000 </p>
-                            <p>{t("phone")}: 00000000 </p>
+                            <p>{t("phone")}: 09037891868 </p>
+                           {/*  <p>{t("phone")}: 00000000 </p> */}
                         </div>
                         <div className='col'>
                             <p>{t("address")}:<span> {t("address_real")}</span></p>
                             <div>
-                                <InstagramIcon />
+                              {/*   <InstagramIcon />
                                 <TelegramIcon />
-                                <PinterestIcon />
+                                <PinterestIcon /> */}
                             </div>
                         </div>
                     </div>

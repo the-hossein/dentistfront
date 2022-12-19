@@ -7,6 +7,7 @@ const CardService = ({ title, lang, img, id }) => {
   return (
     <Card lang={lang}>
       <Image src={img} alt="service" />
+      {console.log(img)}
       <Link href={`/service/${id}`}>
         <a>
           <div className="name">{title}</div>

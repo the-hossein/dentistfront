@@ -11,34 +11,32 @@ import ServicePic3 from "../../../public/Assets/images/tst_servicePic_3.jpg";
 import ServicePic4 from "../../../public/Assets/images/tst_servicePic_4.jpg";
 import ServicePic5 from "../../../public/Assets/images/tst_pic_4.jpg";
 import { Swiper, SwiperSlide } from "swiper/react";
-import {
-  Pagination,
-  Scrollbar,
-  Mousewheel,
-  Autoplay,
-} from "swiper";
+import { Pagination, Scrollbar, Mousewheel, Autoplay } from "swiper";
 import "swiper/css/pagination";
 import services from "../../tools/dataApi/services";
 
-const setPic = () => {
-  const num = Math.round(Math.random() * 4);
-  switch (num) {
-    case 0:
-      return ServicePic1;
-    case 1:
-      return ServicePic2;
-    case 2:
-      return ServicePic3;
-    case 3:
-      return ServicePic4;
-    case 4:
-      return ServicePic5;
-    default:
-      break;
-  }
-};
+
 
 const Service = () => {
+  const setPic = (num) => {
+    
+    console.log(num);
+    switch (num) {
+      case 1:
+        return ServicePic1;
+      case 2:
+        return ServicePic2;
+      case 3:
+        return ServicePic3;
+      case 4:
+        return ServicePic4;
+      case 5:
+        return ServicePic5;
+      default:
+        return ServicePic5;
+        break;
+    }
+  };
   const lang = useSelector((state) => state.stateLang.lng);
 
   const [size, setSize] = useState(0);
@@ -72,12 +70,12 @@ const Service = () => {
           autoplay
           loop
         >
-          {services.map((item, index) => (
+          {services.map((item) => (
             <SwiperSlide key={item.id}>
               <CardService
                 title={lang === "fa" ? item.title : item.titleEn}
                 lang={lang}
-                img={setPic()}
+                img={setPic(item.img)}
                 id={item.id}
               />
             </SwiperSlide>
@@ -91,4 +89,3 @@ const Service = () => {
 };
 
 export default Service;
-

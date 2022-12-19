@@ -4,6 +4,7 @@ import Appointment from "../src/components/appointment/Appointment";
 import Footer from "../src/components/footer/Footer";
 import Header from "../src/components/header/Header";
 import FullScreenLoader from "../src/tools/loader/FullScreenLoader";
+import KarmaPn from "../src/tools/pn/KarmaPn";
 import { BasicSection } from "../styles/globalStyleComponents";
 
 export default function AppointmentPage() {
@@ -19,12 +20,11 @@ export default function AppointmentPage() {
       {state.userDataLoader && <FullScreenLoader />}
       <Header path={"Home"} />
       <main>
-        <BasicSection footer={true}>
+        <BasicSection footer={false}>
           <Appointment />
+          <KarmaPn/>
         </BasicSection>
-        <footer>
-          <Footer />
-        </footer>
+       
       </main>
     </div>
   );

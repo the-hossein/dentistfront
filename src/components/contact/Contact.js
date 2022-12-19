@@ -19,18 +19,18 @@ const Contact = () => {
         <div className="text">
           <h1>{t("contact")}</h1>
           <p>{t("address_real")}</p>
-          <p>{t("phone")} 1</p>
-          <p>{t("phone")} 2</p>
-          <span>{t("typeMessage")}</span>
-          <Input type="text" />
-          <div>
+          <p>{t("phone")} 09037891868</p>
+         {/*  <p>{t("phone")} 2</p> */}
+          {/* <span>{t("typeMessage")}</span> */}
+       {/*    <Input type="text" /> */}
+          {/* <div>
             <SecondlyBtn text={t("done")} fontFamily={"light"} />
           </div>
           <div className="icons">
             <InstagramIcon />
             <TelegramIcon />
             <PinterestIcon />
-          </div>
+          </div> */}
           <KarmaPn />
         </div>
         <div className="banner">

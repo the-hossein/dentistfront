@@ -7,7 +7,7 @@ import {
   RowJustifyBetweenHome
 } from "../../../styles/globalStyleComponents";
 import Image from "next/image";
-import picLanding from "../../../public/Assets/images/tst_landing.jpg";
+import picLanding from "../../../public/Assets/images/pic3.jpg";
 import ButtonRound from "../../tools/buttonRound/ButtonRound";
 import { ArrowText } from "./style";
 import ArrowLeftIcon from "@mui/icons-material/ArrowLeft";
@@ -39,7 +39,7 @@ const Landing = () => {
              </a>
             
               </Link>
-              <Simple />
+            {/*   <Simple /> */}
             </div>
             <div className="col col-text">
               <div className="child-col">

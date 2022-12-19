@@ -1,3 +1,5 @@
+
+
 let services = [
   {
     id: 1,
@@ -8,6 +10,7 @@ let services = [
     descriptionEn:
       "The presence of plaque in the mouth can cause infection in the teeth or gum tissue. When the tooth gets plaque, it should be removed so that it does not cause more serious damage to the mouth, teeth and gums. People who don't floss and brush regularly need to have their teeth scaled at least once a year. In Saadat Abad dental clinic, dental scaling services are performed by its specialist. You can make an appointment through the website.",
     category: 1,
+    img:1,
   },
   {
     id: 2,
@@ -18,6 +21,7 @@ let services = [
     descriptionEn:
       "An important part of the beauty of the face is the teeth. There are various methods for beautifying teeth, one of which is laminate. Laminate or veneer is a thin coating of ceramic that is placed on the teeth to make the appearance of the teeth more beautiful. When the crowns are placed on the teeth, they eliminate the defects of the teeth and give a beautiful appearance to the teeth. Laminate is used to fix broken, discolored, cracked and irregular teeth. Laminate can be used instead of orthodontics. Specialist dentists of Saadat Abad Clinic perform your laminate services with the most up-to-date methods and the use of necessary materials and facilities. After examining your teeth by a dentist, if you need laminate, your teeth will be molded and you will be given an appointment. The time of laminate service in our clinic is 4 to 5 hours. Our doctors provide services for only one client during the day because quality is very important to us. You can laminate your teeth in a completely hygienic environment under the supervision of the best dentists. We are with you from the time of check-up to the completion of the work.",
     category: 0,
+    img:2,
   },
   {
     id: 3,
@@ -28,6 +32,7 @@ let services = [
     descriptionEn:
       "Having a beautiful smile is important for everyone. Sometimes the tooth has problems such as broken or discolored, which can be very annoying. Today, there are many ways to do cosmetic work on teeth. One of these methods is composite. Composite is a paste material that is used to fix tooth defects. Composites do not need to be molded. These materials are placed on the teeth by a specialist dentist and given a shape to cover the problems of the teeth. You can visit Saadat Abad dental clinic, get checked up by our doctors and make an appointment for services if needed. Composite services are performed for only one person in our clinic every day and it takes 4-5 hours.",
     category: 0,
+    img:3,
   },
   {
     id: 4,
@@ -38,6 +43,7 @@ let services = [
     descriptionEn:
       "Teeth whiteness is very important for people and makes the smile more beautiful. To whiten teeth, you can use the bleaching method, which is an effective treatment to remove the bad color of teeth. To do this, you must first visit a specialist dentist and after his diagnosis, you can bleach your teeth. Bleaching is the least complicated treatment for teeth whitening. In Saadat Abad dental clinic, bleaching is done in one hour session, but doing this work must be continued in order to get results. The continuation of the procedures can be done at home by yourself, but you can also continue bleaching in the clinic and by the dentist.",
     category: 1,
+    img:4,
   },
   {
     id: 5,
@@ -48,6 +54,7 @@ let services = [
     descriptionEn:
       "Teeth can be lost for a number of reasons, such as pulling or aging. To replace them, the implant will be a very effective method. An implant is a base made of titanium that is placed inside the gum or bone and the artificial tooth is placed on it. First, it is necessary to have your teeth checked by the dentists of our clinic and make an appointment to visit the clinic for the next steps. In Saadat Abad dental clinic, one-hour implant is performed. You can contact our numbers to make an initial appointment.",
     category: 1,
+    img:5,
   },
   {
     id: 6,
@@ -58,6 +65,7 @@ let services = [
     descriptionEn:
       "Nerve removal is a treatment for the root of the tooth. This method is used instead of tooth extraction. When the tooth is decayed or infected, the dentist removes the infection from the inner part of the tooth called the pulp and fills its place with special materials. The specialist dentist of Saadat Abad Clinic, after examining your teeth, if necessary, de-nerves your teeth, which will take one hour.",
     category: 1,
+    img:1,
   },
   {
     id: 7,
@@ -68,8 +76,9 @@ let services = [
     descriptionEn:
       "Prosthetics or dental veneers are used to solve the appearance problems of the teeth, such as fractures, filling empty spaces, and the like. Dental prosthesis is one of the beauty services that has two types, fixed and mobile. In the fixed type, veneers are used for teeth that have damage such as fractures. After denervation of the tooth, they use a fixed prosthesis for its strength. Removable dentures are artificial teeth that can be moved. After the examination at the Saadat Abad Dental Clinic, the doctor will determine the type of veneer suitable for your tooth and start the necessary services for your tooth.",
     category: 1,
+    img:2,
   },
-  {
+  /* {
     id: 8,
     title: "ارتودنسی",
     titleEn: "Orthodontic",
@@ -77,7 +86,7 @@ let services = [
       "گاهی دندان‌ها در جای مناسب خود قرار ندارند و بسیار نامرتب هستند. این امر تمیز نگه داشتن دندان‌ها را دشوار می‌کند و در نهایت باعث پوسیدگی آن‌ها می‌شود. ارتودنسی روشی مناسب برای درمان و زیبایی دندان‌هایی که به درستی کنار هم قرار نگرفته‌اند. تنها یک متخصص ارتودنسی می‌تواند تشخیص دهد که دندان شما به این خدمات احتیاج دارد یا خیر. لازم است ابتدا دندان‌پزشک متخصص ارتودنسی دندان‌های شما را معاینه کند، سپس در صورت نیاز برای انجام آن به شما نوبت داده می‌شود. از ارتودنسی برای رفع ناهنجاری‌های فک نیز استفاده می‌شود. ارتودنسی در دو نوع ثابت و متحرک انجام می‌شود و می‌تواند به صورت نامرئی، هم رنگ دندان یا پشت دندان‌ها قرار بگیرد تا مشخص نباشد. برای انجام خدمات ارتودنسی در کلینیک دندانپزشکی سعادت آباد می‌توانید از طریق راه‌های ارتباطی با ما در تماس باشید.",
     descriptionEn:
       "Sometimes the teeth are not in their proper place and are very messy. This makes it difficult to keep the teeth clean and eventually causes them to decay. Orthodontics is a suitable method to treat and beautify teeth that are not properly aligned. Only an orthodontist can determine if your tooth needs these services or not. It is necessary to first examine your teeth with an orthodontist, then if necessary, you will be given an appointment to do it. Orthodontics is also used to correct jaw abnormalities. Orthodontics is performed in two types, fixed and mobile, and can be invisible, the same color as the teeth, or behind the teeth so that it is not visible. To perform orthodontic services at Saadat Abad Dental Clinic, you can contact us through communication channels.",
-  },
+  }, */
   {
     id: 9,
     title: "جراحی لثه",
@@ -87,8 +96,9 @@ let services = [
     descriptionEn:
       "Gums can require surgery for various reasons. Sometimes the gums may become infected or develop cysts and tumors. The use of certain drugs, infectious diseases, and the accumulation of bacteria and plaque around the teeth and gums are among the reasons that require surgery. Diseases such as gingivitis and periodontitis also require surgery. When your gums have a problem for any reason, you should visit a specialist dentist and start the treatment process. Gum surgery is also performed to increase the crown of the tooth, which has a cosmetic aspect. All gum surgeries in Saadat Abad dental clinic are performed under the supervision of the most experienced dentists. You can call the numbers on the website to make an appointment.",
     category: 1,
+    img:4,
   },
-  {
+/*   {
     id: 10,
     title: "جراحی دهان و دندان",
     titleEn: "Oral Surgery",
@@ -97,7 +107,7 @@ let services = [
     descriptionEn:
       "Extraction of hidden teeth, gum surgery and implants are among oral and dental surgeries. Each of these services requires a specialist doctor to provide the best treatment services with a correct diagnosis. Saadat Abad dental clinic guarantees the health of your teeth by having expert dentists with sufficient facilities.",
     category: 1,
-  },
+  }, */
   {
     id: 11,
     title: "جراحی فرنکتومی",
@@ -107,6 +117,7 @@ let services = [
     descriptionEn:
       "Babies may be born with a tongue or lip knot called a frenum. These knots interfere with the movement of the lips and tongue or cause tooth decay. Speech problems, distance between teeth, and breathing and digestive problems are among the problems caused by these knots. That is why they should be removed. The process of removing nodes is called frenectomy or frenotomy, which is performed by a specialist doctor in Saadat Abad Dental Clinic. After the doctor's examination and diagnosis, if necessary, frenectomy procedures are performed for clients.",
     category: 1,
+    img:5,
   },
   {
     id: 12,
@@ -117,6 +128,7 @@ let services = [
     descriptionEn:
       "Tooth decay is one of the problems that can happen to any person. Tooth decay can have various causes. Non-observance of oral and dental hygiene and the type of teeth also affect tooth decay. When the decay reaches the tooth enamel, it must be repaired. In this way, first the decayed part is emptied by a specialist dentist, then the empty space of the tooth is filled with amalgam, which is a material made of silver, tin, zinc, copper and mercury. You can make an appointment through the website and visit the clinic at the appointed time to have your tooth decay service performed by the specialist doctor of Saadat Abad Dental Clinic.",
     category: 1,
+    img:1,
   },
   {
     id: 13,
@@ -127,6 +139,7 @@ let services = [
     descriptionEn:
       "Wisdom teeth appear between the ages of 17 and 25. Some people may never have wisdom teeth. Four wisdom teeth are located in the corners and upper and lower back of the mouth. When the wisdom tooth does not have space to grow, it causes pain, infection and similar problems. In such a situation, it is obligatory to extract the wisdom teeth. Wisdom teeth can become impacted, causing problems such as pain, decay, and infection. Wisdom tooth extraction services are performed by a specialist dentist in Saadat Abad Dental Clinic. You can make an appointment through this site.",
     category: 1,
+     img:2,
   },
   {
     id: 14,
@@ -137,6 +150,7 @@ let services = [
     descriptionEn:
       "When the root of the tooth is damaged and decayed, it should be pulled. In order to perform implant services, it is necessary to remove the root of the main tooth first, then implant services are performed for the clients. It is necessary to visit a specialist doctor so that after the examination, the root extraction service of your tooth will begin. To make an appointment at Saadat Abad dental clinic, you can apply through the website.",
     category: 1,
+    img:3,
   },
 ];
 
